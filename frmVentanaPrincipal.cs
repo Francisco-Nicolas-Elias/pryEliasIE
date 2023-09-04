@@ -37,11 +37,11 @@ namespace pryEliasIE
             
             //Nombre del archivo
 
-            ruta += txtNombreArchivo.Text;
+            ruta += lblDireccionDeArchivo.Text;
 
             StreamWriter manejoArchivo = new StreamWriter(ruta);
 
-            MessageBox.Show("Archivo creado" + txtNombreArchivo.Text);
+            MessageBox.Show("Archivo creado" + lblDireccionDeArchivo.Text);
 
         }
     }

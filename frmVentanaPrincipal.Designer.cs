@@ -34,8 +34,6 @@
             this.lblDireccionDeArchivo = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnGrabarArchivo = new System.Windows.Forms.Button();
-            this.txtNombreArchivo = new System.Windows.Forms.TextBox();
-            this.lblBuscarNombreArchivo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSeleccionarCarpeta
@@ -78,31 +76,12 @@
             this.btnGrabarArchivo.UseVisualStyleBackColor = true;
             this.btnGrabarArchivo.Click += new System.EventHandler(this.btnGrabarArchivo_Click);
             // 
-            // txtNombreArchivo
-            // 
-            this.txtNombreArchivo.Location = new System.Drawing.Point(344, 21);
-            this.txtNombreArchivo.Name = "txtNombreArchivo";
-            this.txtNombreArchivo.Size = new System.Drawing.Size(112, 22);
-            this.txtNombreArchivo.TabIndex = 4;
-            // 
-            // lblBuscarNombreArchivo
-            // 
-            this.lblBuscarNombreArchivo.AutoSize = true;
-            this.lblBuscarNombreArchivo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarNombreArchivo.Location = new System.Drawing.Point(198, 24);
-            this.lblBuscarNombreArchivo.Name = "lblBuscarNombreArchivo";
-            this.lblBuscarNombreArchivo.Size = new System.Drawing.Size(136, 16);
-            this.lblBuscarNombreArchivo.TabIndex = 5;
-            this.lblBuscarNombreArchivo.Text = "Nombre del archivo:";
-            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(472, 365);
-            this.Controls.Add(this.lblBuscarNombreArchivo);
-            this.Controls.Add(this.txtNombreArchivo);
+            this.ClientSize = new System.Drawing.Size(325, 365);
             this.Controls.Add(this.btnGrabarArchivo);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lblDireccionDeArchivo);
@@ -126,7 +105,5 @@
         private System.Windows.Forms.Label lblDireccionDeArchivo;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button btnGrabarArchivo;
-        private System.Windows.Forms.TextBox txtNombreArchivo;
-        private System.Windows.Forms.Label lblBuscarNombreArchivo;
     }
 }
