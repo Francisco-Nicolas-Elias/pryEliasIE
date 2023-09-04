@@ -33,6 +33,9 @@
             this.btnSeleccionarCarpeta = new System.Windows.Forms.Button();
             this.lblDireccionDeArchivo = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.btnGrabarArchivo = new System.Windows.Forms.Button();
+            this.txtNombreArchivo = new System.Windows.Forms.TextBox();
+            this.lblBuscarNombreArchivo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSeleccionarCarpeta
@@ -45,6 +48,7 @@
             this.btnSeleccionarCarpeta.TabIndex = 0;
             this.btnSeleccionarCarpeta.Text = "Seleccionar carpeta";
             this.btnSeleccionarCarpeta.UseVisualStyleBackColor = true;
+            this.btnSeleccionarCarpeta.Click += new System.EventHandler(this.btnSeleccionarCarpeta_Click);
             // 
             // lblDireccionDeArchivo
             // 
@@ -62,12 +66,44 @@
             this.treeView1.Size = new System.Drawing.Size(185, 189);
             this.treeView1.TabIndex = 2;
             // 
+            // btnGrabarArchivo
+            // 
+            this.btnGrabarArchivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrabarArchivo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabarArchivo.Location = new System.Drawing.Point(12, 312);
+            this.btnGrabarArchivo.Name = "btnGrabarArchivo";
+            this.btnGrabarArchivo.Size = new System.Drawing.Size(84, 41);
+            this.btnGrabarArchivo.TabIndex = 3;
+            this.btnGrabarArchivo.Text = "Grabar Archivo";
+            this.btnGrabarArchivo.UseVisualStyleBackColor = true;
+            this.btnGrabarArchivo.Click += new System.EventHandler(this.btnGrabarArchivo_Click);
+            // 
+            // txtNombreArchivo
+            // 
+            this.txtNombreArchivo.Location = new System.Drawing.Point(344, 21);
+            this.txtNombreArchivo.Name = "txtNombreArchivo";
+            this.txtNombreArchivo.Size = new System.Drawing.Size(112, 22);
+            this.txtNombreArchivo.TabIndex = 4;
+            // 
+            // lblBuscarNombreArchivo
+            // 
+            this.lblBuscarNombreArchivo.AutoSize = true;
+            this.lblBuscarNombreArchivo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarNombreArchivo.Location = new System.Drawing.Point(198, 24);
+            this.lblBuscarNombreArchivo.Name = "lblBuscarNombreArchivo";
+            this.lblBuscarNombreArchivo.Size = new System.Drawing.Size(136, 16);
+            this.lblBuscarNombreArchivo.TabIndex = 5;
+            this.lblBuscarNombreArchivo.Text = "Nombre del archivo:";
+            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(429, 365);
+            this.ClientSize = new System.Drawing.Size(472, 365);
+            this.Controls.Add(this.lblBuscarNombreArchivo);
+            this.Controls.Add(this.txtNombreArchivo);
+            this.Controls.Add(this.btnGrabarArchivo);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lblDireccionDeArchivo);
             this.Controls.Add(this.btnSeleccionarCarpeta);
@@ -77,6 +113,7 @@
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentanaPrincipal";
+            this.Load += new System.EventHandler(this.frmVentanaPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +125,8 @@
         private System.Windows.Forms.Button btnSeleccionarCarpeta;
         private System.Windows.Forms.Label lblDireccionDeArchivo;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button btnGrabarArchivo;
+        private System.Windows.Forms.TextBox txtNombreArchivo;
+        private System.Windows.Forms.Label lblBuscarNombreArchivo;
     }
 }
