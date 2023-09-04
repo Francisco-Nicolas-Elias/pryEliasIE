@@ -67,7 +67,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(391, 365);
+            this.ClientSize = new System.Drawing.Size(429, 365);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lblDireccionDeArchivo);
             this.Controls.Add(this.btnSeleccionarCarpeta);
