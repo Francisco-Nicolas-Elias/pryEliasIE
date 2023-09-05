@@ -91,7 +91,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmVentanaPrincipal";
+            this.Text = "FNE Venta de seguros";
             this.Load += new System.EventHandler(this.frmVentanaPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
