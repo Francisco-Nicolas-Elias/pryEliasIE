@@ -37,9 +37,9 @@ namespace pryEliasIE
                 timer1.Stop();
                 
                 frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
-                frmVentanaPrincipal.ShowDialog();
+                frmVentanaPrincipal.Show();
                 
-                this.Close();
+                this.Hide();
             }
         }
 
