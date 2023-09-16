@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABM));
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -51,9 +52,9 @@
             // 
             this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(40, 314);
+            this.btnGrabar.Location = new System.Drawing.Point(15, 263);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(88, 32);
+            this.btnGrabar.Size = new System.Drawing.Size(101, 59);
             this.btnGrabar.TabIndex = 0;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -62,9 +63,9 @@
             // 
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(202, 314);
+            this.btnModificar.Location = new System.Drawing.Point(122, 263);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(88, 32);
+            this.btnModificar.Size = new System.Drawing.Size(101, 59);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -73,9 +74,9 @@
             // 
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(343, 314);
+            this.btnBorrar.Location = new System.Drawing.Point(239, 263);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(88, 32);
+            this.btnBorrar.Size = new System.Drawing.Size(101, 59);
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(12, 26);
+            this.lblNumero.Location = new System.Drawing.Point(12, 20);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(25, 16);
             this.lblNumero.TabIndex = 3;
@@ -94,7 +95,7 @@
             // 
             this.lblEntidad.AutoSize = true;
             this.lblEntidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntidad.Location = new System.Drawing.Point(12, 54);
+            this.lblEntidad.Location = new System.Drawing.Point(12, 48);
             this.lblEntidad.Name = "lblEntidad";
             this.lblEntidad.Size = new System.Drawing.Size(59, 16);
             this.lblEntidad.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             this.lblNumeroDeExpediente.AutoSize = true;
             this.lblNumeroDeExpediente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroDeExpediente.Location = new System.Drawing.Point(12, 95);
+            this.lblNumeroDeExpediente.Location = new System.Drawing.Point(12, 76);
             this.lblNumeroDeExpediente.Name = "lblNumeroDeExpediente";
             this.lblNumeroDeExpediente.Size = new System.Drawing.Size(121, 16);
             this.lblNumeroDeExpediente.TabIndex = 5;
@@ -114,7 +115,7 @@
             // 
             this.lblJuzgado.AutoSize = true;
             this.lblJuzgado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJuzgado.Location = new System.Drawing.Point(12, 127);
+            this.lblJuzgado.Location = new System.Drawing.Point(12, 103);
             this.lblJuzgado.Name = "lblJuzgado";
             this.lblJuzgado.Size = new System.Drawing.Size(65, 16);
             this.lblJuzgado.TabIndex = 6;
@@ -124,7 +125,7 @@
             // 
             this.lblJurisdiccion.AutoSize = true;
             this.lblJurisdiccion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJurisdiccion.Location = new System.Drawing.Point(12, 159);
+            this.lblJurisdiccion.Location = new System.Drawing.Point(12, 133);
             this.lblJurisdiccion.Name = "lblJurisdiccion";
             this.lblJurisdiccion.Size = new System.Drawing.Size(87, 16);
             this.lblJurisdiccion.TabIndex = 7;
@@ -134,7 +135,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(12, 184);
+            this.lblDireccion.Location = new System.Drawing.Point(12, 163);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(71, 16);
             this.lblDireccion.TabIndex = 8;
@@ -145,7 +146,7 @@
             // 
             this.lblLiquidadorResponsable.AutoSize = true;
             this.lblLiquidadorResponsable.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiquidadorResponsable.Location = new System.Drawing.Point(0, 206);
+            this.lblLiquidadorResponsable.Location = new System.Drawing.Point(12, 198);
             this.lblLiquidadorResponsable.Name = "lblLiquidadorResponsable";
             this.lblLiquidadorResponsable.Size = new System.Drawing.Size(161, 16);
             this.lblLiquidadorResponsable.TabIndex = 9;
@@ -153,49 +154,49 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(165, 20);
+            this.txtNumero.Location = new System.Drawing.Point(190, 17);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 11;
             // 
             // txtEntidad
             // 
-            this.txtEntidad.Location = new System.Drawing.Point(165, 48);
+            this.txtEntidad.Location = new System.Drawing.Point(190, 42);
             this.txtEntidad.Name = "txtEntidad";
             this.txtEntidad.Size = new System.Drawing.Size(100, 22);
             this.txtEntidad.TabIndex = 12;
             // 
             // txtNumeroDeExpediente
             // 
-            this.txtNumeroDeExpediente.Location = new System.Drawing.Point(165, 89);
+            this.txtNumeroDeExpediente.Location = new System.Drawing.Point(190, 70);
             this.txtNumeroDeExpediente.Name = "txtNumeroDeExpediente";
             this.txtNumeroDeExpediente.Size = new System.Drawing.Size(100, 22);
             this.txtNumeroDeExpediente.TabIndex = 13;
             // 
             // txtJuzgado
             // 
-            this.txtJuzgado.Location = new System.Drawing.Point(165, 117);
+            this.txtJuzgado.Location = new System.Drawing.Point(190, 97);
             this.txtJuzgado.Name = "txtJuzgado";
             this.txtJuzgado.Size = new System.Drawing.Size(100, 22);
             this.txtJuzgado.TabIndex = 14;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(165, 145);
+            this.textBox5.Location = new System.Drawing.Point(190, 125);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 15;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(165, 173);
+            this.txtDireccion.Location = new System.Drawing.Point(190, 157);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 22);
             this.txtDireccion.TabIndex = 16;
             // 
             // txtLiquidadorResponsable
             // 
-            this.txtLiquidadorResponsable.Location = new System.Drawing.Point(165, 203);
+            this.txtLiquidadorResponsable.Location = new System.Drawing.Point(190, 192);
             this.txtLiquidadorResponsable.Name = "txtLiquidadorResponsable";
             this.txtLiquidadorResponsable.Size = new System.Drawing.Size(100, 22);
             this.txtLiquidadorResponsable.TabIndex = 17;
@@ -204,7 +205,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 385);
+            this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(474, 363);
             this.Controls.Add(this.txtLiquidadorResponsable);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.textBox5);
@@ -223,6 +226,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnGrabar);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmABM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

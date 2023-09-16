@@ -58,6 +58,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanaPrincipal.resx">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
@@ -100,6 +109,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoSistemaDeSeguros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo de ventanas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo de ventanas1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_de_ventanas-mejor calidad.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

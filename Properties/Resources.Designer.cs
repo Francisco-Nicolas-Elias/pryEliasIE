@@ -63,6 +63,36 @@ namespace pryEliasIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_de_ventanas {
+            get {
+                object obj = ResourceManager.GetObject("fondo de ventanas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_de_ventanas_mejor_calidad {
+            get {
+                object obj = ResourceManager.GetObject("fondo_de_ventanas-mejor calidad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_de_ventanas1 {
+            get {
+                object obj = ResourceManager.GetObject("fondo de ventanas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoSistemaDeSeguros {
             get {
                 object obj = ResourceManager.GetObject("LogoSistemaDeSeguros", resourceCulture);
