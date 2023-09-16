@@ -50,6 +50,7 @@
             // 
             // btnGrabar
             // 
+            this.btnGrabar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(15, 263);
@@ -57,10 +58,11 @@
             this.btnGrabar.Size = new System.Drawing.Size(101, 59);
             this.btnGrabar.TabIndex = 0;
             this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.UseVisualStyleBackColor = false;
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(122, 263);
@@ -68,18 +70,19 @@
             this.btnModificar.Size = new System.Drawing.Size(101, 59);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // btnBorrar
             // 
+            this.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(239, 263);
+            this.btnBorrar.Location = new System.Drawing.Point(229, 263);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(101, 59);
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // lblNumero
             // 
