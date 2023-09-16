@@ -87,6 +87,7 @@
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
+            this.lblNumero.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNumero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.Location = new System.Drawing.Point(12, 20);
             this.lblNumero.Name = "lblNumero";
@@ -97,6 +98,7 @@
             // lblEntidad
             // 
             this.lblEntidad.AutoSize = true;
+            this.lblEntidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblEntidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntidad.Location = new System.Drawing.Point(12, 48);
             this.lblEntidad.Name = "lblEntidad";
@@ -107,6 +109,7 @@
             // lblNumeroDeExpediente
             // 
             this.lblNumeroDeExpediente.AutoSize = true;
+            this.lblNumeroDeExpediente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNumeroDeExpediente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroDeExpediente.Location = new System.Drawing.Point(12, 76);
             this.lblNumeroDeExpediente.Name = "lblNumeroDeExpediente";
@@ -117,6 +120,7 @@
             // lblJuzgado
             // 
             this.lblJuzgado.AutoSize = true;
+            this.lblJuzgado.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblJuzgado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJuzgado.Location = new System.Drawing.Point(12, 103);
             this.lblJuzgado.Name = "lblJuzgado";
@@ -127,6 +131,7 @@
             // lblJurisdiccion
             // 
             this.lblJurisdiccion.AutoSize = true;
+            this.lblJurisdiccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblJurisdiccion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJurisdiccion.Location = new System.Drawing.Point(12, 133);
             this.lblJurisdiccion.Name = "lblJurisdiccion";
@@ -137,6 +142,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
+            this.lblDireccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDireccion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.Location = new System.Drawing.Point(12, 163);
             this.lblDireccion.Name = "lblDireccion";
@@ -148,6 +154,7 @@
             // lblLiquidadorResponsable
             // 
             this.lblLiquidadorResponsable.AutoSize = true;
+            this.lblLiquidadorResponsable.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblLiquidadorResponsable.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquidadorResponsable.Location = new System.Drawing.Point(12, 198);
             this.lblLiquidadorResponsable.Name = "lblLiquidadorResponsable";
