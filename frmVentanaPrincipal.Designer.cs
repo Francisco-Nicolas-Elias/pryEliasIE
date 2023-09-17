@@ -48,6 +48,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -59,8 +60,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1030, 599);
-            this.splitContainer1.SplitterDistance = 343;
+            this.splitContainer1.Size = new System.Drawing.Size(1221, 662);
+            this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 0;
             // 
             // treeView1
@@ -69,9 +70,10 @@
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.imageList1;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(343, 599);
+            this.treeView1.Size = new System.Drawing.Size(407, 662);
             this.treeView1.TabIndex = 0;
             // 
             // imageList1
@@ -88,10 +90,12 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(683, 599);
+            this.listView1.Size = new System.Drawing.Size(810, 662);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -114,9 +118,10 @@
             this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(12, 532);
+            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(14, 532);
+            this.btnVolverVentanaPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
-            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(130, 55);
+            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(151, 55);
             this.btnVolverVentanaPrincipal.TabIndex = 1;
             this.btnVolverVentanaPrincipal.Text = "Volver";
             this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
@@ -124,16 +129,16 @@
             // 
             // frmVentanaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1030, 599);
+            this.ClientSize = new System.Drawing.Size(1221, 662);
             this.Controls.Add(this.splitContainer1);
-            this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
