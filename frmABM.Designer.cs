@@ -226,7 +226,7 @@
             this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverABM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverABM.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverABM.Location = new System.Drawing.Point(12, 614);
+            this.btnVolverABM.Location = new System.Drawing.Point(9, 629);
             this.btnVolverABM.Name = "btnVolverABM";
             this.btnVolverABM.Size = new System.Drawing.Size(121, 52);
             this.btnVolverABM.TabIndex = 18;

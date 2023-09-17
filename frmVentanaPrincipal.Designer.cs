@@ -118,7 +118,7 @@
             this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(14, 532);
+            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(13, 595);
             this.btnVolverVentanaPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
             this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(151, 55);
