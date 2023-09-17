@@ -31,12 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanaPrincipal));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnVolverVentanaPrincipal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnVolverVentanaPrincipal);
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
@@ -60,13 +62,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(738, 496);
             this.splitContainer1.SplitterDistance = 246;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "carpeta.png");
-            this.imageList1.Images.SetKeyName(1, "documento.png");
             // 
             // treeView1
             // 
@@ -78,6 +73,13 @@
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(246, 496);
             this.treeView1.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "carpeta.png");
+            this.imageList1.Images.SetKeyName(1, "documento.png");
             // 
             // listView1
             // 
@@ -106,6 +108,18 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Última modificación";
+            // 
+            // btnVolverVentanaPrincipal
+            // 
+            this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(12, 438);
+            this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
+            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(101, 46);
+            this.btnVolverVentanaPrincipal.TabIndex = 1;
+            this.btnVolverVentanaPrincipal.Text = "Volver";
+            this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverVentanaPrincipal.Click += new System.EventHandler(this.btnVolverVentanaPrincipal_Click);
             // 
             // frmVentanaPrincipal
             // 
@@ -140,5 +154,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnVolverVentanaPrincipal;
     }
 }

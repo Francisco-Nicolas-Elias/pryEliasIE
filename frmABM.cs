@@ -28,5 +28,12 @@ namespace pryEliasIE
         {
 
         }
+
+        private void btnVolverABM_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
+            frmMenuPrincipal.Show();
+            this.Close();
+        }
     }
 }

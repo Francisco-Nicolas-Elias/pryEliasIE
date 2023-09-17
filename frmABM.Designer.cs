@@ -46,6 +46,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtLiquidadorResponsable = new System.Windows.Forms.TextBox();
+            this.btnVolverABM = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGrabar
@@ -211,13 +212,26 @@
             this.txtLiquidadorResponsable.Size = new System.Drawing.Size(100, 22);
             this.txtLiquidadorResponsable.TabIndex = 17;
             // 
+            // btnVolverABM
+            // 
+            this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverABM.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverABM.Location = new System.Drawing.Point(12, 397);
+            this.btnVolverABM.Name = "btnVolverABM";
+            this.btnVolverABM.Size = new System.Drawing.Size(104, 52);
+            this.btnVolverABM.TabIndex = 18;
+            this.btnVolverABM.Text = "Volver";
+            this.btnVolverABM.UseVisualStyleBackColor = false;
+            this.btnVolverABM.Click += new System.EventHandler(this.btnVolverABM_Click);
+            // 
             // frmABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(474, 363);
+            this.ClientSize = new System.Drawing.Size(488, 461);
+            this.Controls.Add(this.btnVolverABM);
             this.Controls.Add(this.txtLiquidadorResponsable);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.textBox5);
@@ -266,5 +280,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtLiquidadorResponsable;
+        private System.Windows.Forms.Button btnVolverABM;
     }
 }

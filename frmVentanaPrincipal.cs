@@ -103,5 +103,12 @@ namespace pryEliasIE
         {
 
         }
+
+        private void btnVolverVentanaPrincipal_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
+            frmMenuPrincipal.Show();
+            this.Close();
+        }
     }
 }

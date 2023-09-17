@@ -16,5 +16,19 @@ namespace pryEliasIE
         {
             InitializeComponent();
         }
+
+        private void carpetasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
+            frmVentanaPrincipal.Show();
+            this.Hide();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABM frmABM= new frmABM();
+            frmABM.Show();
+            this.Hide();
+        }
     }
 }

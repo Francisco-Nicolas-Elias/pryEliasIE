@@ -34,9 +34,9 @@ namespace pryEliasIE
             if (progressBar1.Value == progressBar1.Maximum)
             {
                 timer1.Stop();
-                
-                frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
-                frmVentanaPrincipal.Show();
+
+                frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
+                frmMenuPrincipal.Show();
                 
                 this.Hide();
             }
