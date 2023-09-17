@@ -59,8 +59,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
-            this.splitContainer1.Size = new System.Drawing.Size(738, 496);
-            this.splitContainer1.SplitterDistance = 246;
+            this.splitContainer1.Size = new System.Drawing.Size(1030, 599);
+            this.splitContainer1.SplitterDistance = 343;
             this.splitContainer1.TabIndex = 0;
             // 
             // treeView1
@@ -71,7 +71,7 @@
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(246, 496);
+            this.treeView1.Size = new System.Drawing.Size(343, 599);
             this.treeView1.TabIndex = 0;
             // 
             // imageList1
@@ -91,7 +91,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(488, 496);
+            this.listView1.Size = new System.Drawing.Size(683, 599);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -112,10 +112,11 @@
             // btnVolverVentanaPrincipal
             // 
             this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(12, 438);
+            this.btnVolverVentanaPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(12, 532);
             this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
-            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(101, 46);
+            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(130, 55);
             this.btnVolverVentanaPrincipal.TabIndex = 1;
             this.btnVolverVentanaPrincipal.Text = "Volver";
             this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
@@ -128,7 +129,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(738, 496);
+            this.ClientSize = new System.Drawing.Size(1030, 599);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
