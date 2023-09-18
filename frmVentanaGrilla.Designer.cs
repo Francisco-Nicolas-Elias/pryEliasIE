@@ -54,43 +54,57 @@
             this.Column8});
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(12, 12);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
-            this.dtvMostrarArchivo.Size = new System.Drawing.Size(880, 517);
+            this.dtvMostrarArchivo.Size = new System.Drawing.Size(942, 517);
             this.dtvMostrarArchivo.TabIndex = 0;
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column1.HeaderText = "Nº";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 55;
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column2.HeaderText = "Entidad";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 97;
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column3.HeaderText = "Apertura";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 105;
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column4.HeaderText = "Nº de expediente";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 172;
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column5.HeaderText = "Juzgado";
             this.Column5.Name = "Column5";
+            this.Column5.Width = 105;
             // 
             // Column6
             // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column6.HeaderText = "Jurisdicción";
             this.Column6.Name = "Column6";
+            this.Column6.Width = 131;
             // 
             // Column7
             // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column7.HeaderText = "Dirección";
             this.Column7.Name = "Column7";
+            this.Column7.Width = 111;
             // 
             // Column8
             // 
@@ -103,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 534);
+            this.ClientSize = new System.Drawing.Size(966, 534);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
