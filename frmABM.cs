@@ -35,5 +35,10 @@ namespace pryEliasIE
             frmMenuPrincipal.Show();
             this.Close();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,5 +30,10 @@ namespace pryEliasIE
             frmABM.Show();
             this.Hide();
         }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanaPrincipal));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnVolverVentanaPrincipal = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnVolverVentanaPrincipal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,6 +63,21 @@
             this.splitContainer1.Size = new System.Drawing.Size(1221, 662);
             this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnVolverVentanaPrincipal
+            // 
+            this.btnVolverVentanaPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverVentanaPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(13, 595);
+            this.btnVolverVentanaPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
+            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(151, 55);
+            this.btnVolverVentanaPrincipal.TabIndex = 1;
+            this.btnVolverVentanaPrincipal.Text = "Volver";
+            this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverVentanaPrincipal.Click += new System.EventHandler(this.btnVolverVentanaPrincipal_Click);
             // 
             // treeView1
             // 
@@ -113,20 +128,6 @@
             // 
             this.columnHeader3.Text = "Última modificación";
             // 
-            // btnVolverVentanaPrincipal
-            // 
-            this.btnVolverVentanaPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVolverVentanaPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverVentanaPrincipal.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaPrincipal.Location = new System.Drawing.Point(13, 595);
-            this.btnVolverVentanaPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnVolverVentanaPrincipal.Name = "btnVolverVentanaPrincipal";
-            this.btnVolverVentanaPrincipal.Size = new System.Drawing.Size(151, 55);
-            this.btnVolverVentanaPrincipal.TabIndex = 1;
-            this.btnVolverVentanaPrincipal.Text = "Volver";
-            this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
-            this.btnVolverVentanaPrincipal.Click += new System.EventHandler(this.btnVolverVentanaPrincipal_Click);
-            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -138,7 +139,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";

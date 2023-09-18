@@ -46,7 +46,7 @@
             this.mnsMenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsMenuPrincipal.Name = "mnsMenuPrincipal";
             this.mnsMenuPrincipal.Padding = new System.Windows.Forms.Padding(12, 3, 0, 3);
-            this.mnsMenuPrincipal.Size = new System.Drawing.Size(1323, 34);
+            this.mnsMenuPrincipal.Size = new System.Drawing.Size(1284, 34);
             this.mnsMenuPrincipal.TabIndex = 0;
             this.mnsMenuPrincipal.Text = "menuStrip1";
             // 
@@ -62,7 +62,7 @@
             // carpetasToolStripMenuItem
             // 
             this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
-            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.carpetasToolStripMenuItem.Text = "Carpetas";
             this.carpetasToolStripMenuItem.Click += new System.EventHandler(this.carpetasToolStripMenuItem_Click);
             // 
@@ -78,7 +78,7 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
@@ -89,16 +89,17 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1323, 701);
+            this.ClientSize = new System.Drawing.Size(1284, 701);
             this.Controls.Add(this.mnsMenuPrincipal);
             this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnsMenuPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.mnsMenuPrincipal.ResumeLayout(false);
             this.mnsMenuPrincipal.PerformLayout();
             this.ResumeLayout(false);
