@@ -132,7 +132,7 @@
             // txtApertura
             // 
             this.txtApertura.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApertura.Location = new System.Drawing.Point(295, 86);
+            this.txtApertura.Location = new System.Drawing.Point(295, 92);
             this.txtApertura.Name = "txtApertura";
             this.txtApertura.Size = new System.Drawing.Size(100, 32);
             this.txtApertura.TabIndex = 36;
@@ -142,7 +142,7 @@
             this.lblApertura.AutoSize = true;
             this.lblApertura.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblApertura.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApertura.Location = new System.Drawing.Point(10, 94);
+            this.lblApertura.Location = new System.Drawing.Point(10, 100);
             this.lblApertura.Name = "lblApertura";
             this.lblApertura.Size = new System.Drawing.Size(105, 24);
             this.lblApertura.TabIndex = 35;
@@ -151,7 +151,7 @@
             // txtLiquidadorResponsable
             // 
             this.txtLiquidadorResponsable.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLiquidadorResponsable.Location = new System.Drawing.Point(295, 303);
+            this.txtLiquidadorResponsable.Location = new System.Drawing.Point(295, 297);
             this.txtLiquidadorResponsable.Name = "txtLiquidadorResponsable";
             this.txtLiquidadorResponsable.Size = new System.Drawing.Size(279, 32);
             this.txtLiquidadorResponsable.TabIndex = 34;
@@ -159,7 +159,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(295, 259);
+            this.txtDireccion.Location = new System.Drawing.Point(295, 256);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(279, 32);
             this.txtDireccion.TabIndex = 33;
@@ -167,7 +167,7 @@
             // txtJurisdiccion
             // 
             this.txtJurisdiccion.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJurisdiccion.Location = new System.Drawing.Point(295, 214);
+            this.txtJurisdiccion.Location = new System.Drawing.Point(295, 215);
             this.txtJurisdiccion.Name = "txtJurisdiccion";
             this.txtJurisdiccion.Size = new System.Drawing.Size(279, 32);
             this.txtJurisdiccion.TabIndex = 32;
@@ -175,7 +175,7 @@
             // txtJuzgado
             // 
             this.txtJuzgado.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJuzgado.Location = new System.Drawing.Point(295, 169);
+            this.txtJuzgado.Location = new System.Drawing.Point(295, 174);
             this.txtJuzgado.Name = "txtJuzgado";
             this.txtJuzgado.Size = new System.Drawing.Size(279, 32);
             this.txtJuzgado.TabIndex = 31;
@@ -183,7 +183,7 @@
             // txtNumeroDeExpediente
             // 
             this.txtNumeroDeExpediente.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroDeExpediente.Location = new System.Drawing.Point(295, 128);
+            this.txtNumeroDeExpediente.Location = new System.Drawing.Point(295, 133);
             this.txtNumeroDeExpediente.Name = "txtNumeroDeExpediente";
             this.txtNumeroDeExpediente.Size = new System.Drawing.Size(129, 32);
             this.txtNumeroDeExpediente.TabIndex = 30;
@@ -191,7 +191,7 @@
             // txtEntidad
             // 
             this.txtEntidad.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntidad.Location = new System.Drawing.Point(295, 48);
+            this.txtEntidad.Location = new System.Drawing.Point(295, 51);
             this.txtEntidad.Name = "txtEntidad";
             this.txtEntidad.Size = new System.Drawing.Size(279, 32);
             this.txtEntidad.TabIndex = 29;
@@ -209,7 +209,7 @@
             this.lblLiquidadorResponsable.AutoSize = true;
             this.lblLiquidadorResponsable.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblLiquidadorResponsable.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiquidadorResponsable.Location = new System.Drawing.Point(10, 311);
+            this.lblLiquidadorResponsable.Location = new System.Drawing.Point(10, 305);
             this.lblLiquidadorResponsable.Name = "lblLiquidadorResponsable";
             this.lblLiquidadorResponsable.Size = new System.Drawing.Size(256, 24);
             this.lblLiquidadorResponsable.TabIndex = 27;
@@ -220,7 +220,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDireccion.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(10, 267);
+            this.lblDireccion.Location = new System.Drawing.Point(10, 264);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(112, 24);
             this.lblDireccion.TabIndex = 26;
@@ -231,7 +231,7 @@
             this.lblJurisdiccion.AutoSize = true;
             this.lblJurisdiccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblJurisdiccion.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJurisdiccion.Location = new System.Drawing.Point(10, 222);
+            this.lblJurisdiccion.Location = new System.Drawing.Point(10, 223);
             this.lblJurisdiccion.Name = "lblJurisdiccion";
             this.lblJurisdiccion.Size = new System.Drawing.Size(140, 24);
             this.lblJurisdiccion.TabIndex = 25;
@@ -242,7 +242,7 @@
             this.lblJuzgado.AutoSize = true;
             this.lblJuzgado.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblJuzgado.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJuzgado.Location = new System.Drawing.Point(10, 177);
+            this.lblJuzgado.Location = new System.Drawing.Point(10, 182);
             this.lblJuzgado.Name = "lblJuzgado";
             this.lblJuzgado.Size = new System.Drawing.Size(104, 24);
             this.lblJuzgado.TabIndex = 24;
@@ -253,7 +253,7 @@
             this.lblNumeroDeExpediente.AutoSize = true;
             this.lblNumeroDeExpediente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNumeroDeExpediente.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroDeExpediente.Location = new System.Drawing.Point(10, 136);
+            this.lblNumeroDeExpediente.Location = new System.Drawing.Point(10, 141);
             this.lblNumeroDeExpediente.Name = "lblNumeroDeExpediente";
             this.lblNumeroDeExpediente.Size = new System.Drawing.Size(187, 24);
             this.lblNumeroDeExpediente.TabIndex = 23;
@@ -264,7 +264,7 @@
             this.lblEntidad.AutoSize = true;
             this.lblEntidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblEntidad.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntidad.Location = new System.Drawing.Point(10, 56);
+            this.lblEntidad.Location = new System.Drawing.Point(10, 59);
             this.lblEntidad.Name = "lblEntidad";
             this.lblEntidad.Size = new System.Drawing.Size(94, 24);
             this.lblEntidad.TabIndex = 22;

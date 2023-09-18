@@ -16,5 +16,12 @@ namespace pryEliasIE
         {
             InitializeComponent();
         }
+
+        private void btnVolverVentanaGrilla_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
+            frmMenuPrincipal.Show();
+            this.Close();
+        }
     }
 }

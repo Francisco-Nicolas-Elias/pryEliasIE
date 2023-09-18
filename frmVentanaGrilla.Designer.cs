@@ -37,6 +37,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +114,26 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 204;
             // 
+            // btnVolverVentanaGrilla
+            // 
+            this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 540);
+            this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
+            this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
+            this.btnVolverVentanaGrilla.TabIndex = 1;
+            this.btnVolverVentanaGrilla.Text = "Volver";
+            this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
+            this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
+            // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 534);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(962, 608);
+            this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -141,5 +157,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button btnVolverVentanaGrilla;
     }
 }
