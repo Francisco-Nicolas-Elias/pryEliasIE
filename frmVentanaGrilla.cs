@@ -22,6 +22,8 @@ namespace pryEliasIE
             frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
             frmMenuPrincipal.Show();
             this.Close();
+
+            dtvMostrarArchivo.Rows.Clear();
         }
     }
 }

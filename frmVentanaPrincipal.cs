@@ -26,7 +26,7 @@ namespace pryEliasIE
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../..");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores y aseguradores");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
