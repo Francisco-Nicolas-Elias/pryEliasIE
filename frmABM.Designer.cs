@@ -58,7 +58,7 @@
             this.btnGrabar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(259, 386);
+            this.btnGrabar.Location = new System.Drawing.Point(246, 387);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(118, 59);
             this.btnGrabar.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(383, 386);
+            this.btnModificar.Location = new System.Drawing.Point(370, 387);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(117, 59);
             this.btnModificar.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(506, 386);
+            this.btnBorrar.Location = new System.Drawing.Point(493, 387);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(118, 59);
             this.btnBorrar.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverABM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverABM.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverABM.Location = new System.Drawing.Point(17, 566);
+            this.btnVolverABM.Location = new System.Drawing.Point(3, 386);
             this.btnVolverABM.Name = "btnVolverABM";
             this.btnVolverABM.Size = new System.Drawing.Size(118, 59);
             this.btnVolverABM.TabIndex = 18;
@@ -123,7 +123,7 @@
             this.gbDatosProveedores.Controls.Add(this.lblNumeroDeExpediente);
             this.gbDatosProveedores.Controls.Add(this.lblEntidad);
             this.gbDatosProveedores.Controls.Add(this.lblNumero);
-            this.gbDatosProveedores.Location = new System.Drawing.Point(17, 22);
+            this.gbDatosProveedores.Location = new System.Drawing.Point(3, 22);
             this.gbDatosProveedores.Name = "gbDatosProveedores";
             this.gbDatosProveedores.Size = new System.Drawing.Size(607, 358);
             this.gbDatosProveedores.TabIndex = 21;
@@ -287,7 +287,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(801, 659);
+            this.ClientSize = new System.Drawing.Size(758, 456);
             this.Controls.Add(this.gbDatosProveedores);
             this.Controls.Add(this.btnVolverABM);
             this.Controls.Add(this.btnBorrar);
@@ -299,7 +299,6 @@
             this.Name = "frmABM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmABM_Load);
             this.gbDatosProveedores.ResumeLayout(false);
             this.gbDatosProveedores.PerformLayout();

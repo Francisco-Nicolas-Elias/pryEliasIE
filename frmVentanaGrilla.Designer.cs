@@ -38,7 +38,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
-            this.btnMostrarGrilla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +120,7 @@
             this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 596);
+            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 538);
             this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
             this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
             this.btnVolverVentanaGrilla.TabIndex = 1;
@@ -129,27 +128,12 @@
             this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
             this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
             // 
-            // btnMostrarGrilla
-            // 
-            this.btnMostrarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnMostrarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarGrilla.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMostrarGrilla.Location = new System.Drawing.Point(960, 464);
-            this.btnMostrarGrilla.Name = "btnMostrarGrilla";
-            this.btnMostrarGrilla.Size = new System.Drawing.Size(132, 56);
-            this.btnMostrarGrilla.TabIndex = 2;
-            this.btnMostrarGrilla.Text = "Mostrar";
-            this.btnMostrarGrilla.UseVisualStyleBackColor = false;
-            this.btnMostrarGrilla.Click += new System.EventHandler(this.btnMostrarGrilla_Click);
-            // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1098, 664);
-            this.Controls.Add(this.btnMostrarGrilla);
+            this.ClientSize = new System.Drawing.Size(1040, 606);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +141,7 @@
             this.Name = "frmVentanaGrilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmVentanaGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).EndInit();
             this.ResumeLayout(false);
 
@@ -165,7 +149,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtvMostrarArchivo;
+        public System.Windows.Forms.DataGridView dtvMostrarArchivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -175,6 +159,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Button btnVolverVentanaGrilla;
-        private System.Windows.Forms.Button btnMostrarGrilla;
     }
 }

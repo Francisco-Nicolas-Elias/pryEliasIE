@@ -56,8 +56,9 @@
             this.carpetasToolStripMenuItem});
             this.mostrarToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(99, 28);
-            this.mostrarToolStripMenuItem.Text = "Mostrar";
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(97, 28);
+            this.mostrarToolStripMenuItem.Text = "Listado";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
             // carpetasToolStripMenuItem
             // 
@@ -72,14 +73,14 @@
             this.proveedoresToolStripMenuItem});
             this.cargarModificarOBorrarToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cargarModificarOBorrarToolStripMenuItem.Name = "cargarModificarOBorrarToolStripMenuItem";
-            this.cargarModificarOBorrarToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
-            this.cargarModificarOBorrarToolStripMenuItem.Text = "Cargar, modificar o borrar";
+            this.cargarModificarOBorrarToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.cargarModificarOBorrarToolStripMenuItem.Text = "Registro";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.proveedoresToolStripMenuItem.Text = "Añadir, editar, modificar";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal

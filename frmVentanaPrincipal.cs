@@ -115,6 +115,9 @@ namespace pryEliasIE
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla();
+
+            frmVentanaGrilla.dtvMostrarArchivo.Rows.Add("ejemplo");
+
             frmVentanaGrilla.Show();
             this.Hide();
 
