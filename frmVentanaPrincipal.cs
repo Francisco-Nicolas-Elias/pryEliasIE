@@ -22,6 +22,7 @@ namespace pryEliasIE
             this.treeView1.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
 
+
         private void PopulateTreeView()
         {
             TreeNode rootNode;
@@ -109,6 +110,13 @@ namespace pryEliasIE
             frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
             frmMenuPrincipal.Show();
             this.Close();
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla();
+            frmVentanaGrilla.Show();
+            this.Hide();
         }
     }
 }

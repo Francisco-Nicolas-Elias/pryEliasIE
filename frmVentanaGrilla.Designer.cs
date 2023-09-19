@@ -38,6 +38,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
+            this.btnMostrarGrilla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column4.HeaderText = "Nº de expediente";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 172;
+            this.Column4.Width = 157;
             // 
             // Column5
             // 
@@ -118,8 +119,9 @@
             // 
             this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 540);
+            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 596);
             this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
             this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
             this.btnVolverVentanaGrilla.TabIndex = 1;
@@ -127,12 +129,27 @@
             this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
             this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
             // 
+            // btnMostrarGrilla
+            // 
+            this.btnMostrarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMostrarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarGrilla.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMostrarGrilla.Location = new System.Drawing.Point(960, 464);
+            this.btnMostrarGrilla.Name = "btnMostrarGrilla";
+            this.btnMostrarGrilla.Size = new System.Drawing.Size(132, 56);
+            this.btnMostrarGrilla.TabIndex = 2;
+            this.btnMostrarGrilla.Text = "Mostrar";
+            this.btnMostrarGrilla.UseVisualStyleBackColor = false;
+            this.btnMostrarGrilla.Click += new System.EventHandler(this.btnMostrarGrilla_Click);
+            // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(962, 608);
+            this.ClientSize = new System.Drawing.Size(1098, 664);
+            this.Controls.Add(this.btnMostrarGrilla);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,5 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Button btnVolverVentanaGrilla;
+        private System.Windows.Forms.Button btnMostrarGrilla;
     }
 }
