@@ -18,8 +18,8 @@ namespace pryEliasIE
         }
         private void btnVolverVentanaGrilla_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
-            frmMenuPrincipal.Show();
+            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
+            frmVentanaPrincipal.Show();
             this.Close();
 
             dtvMostrarArchivo.Rows.Clear();
