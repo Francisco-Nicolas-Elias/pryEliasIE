@@ -22,6 +22,7 @@ namespace pryEliasIE
             this.treeView1.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
 
+        public string rutaActual = "";
 
         private void PopulateTreeView()
         {
@@ -114,18 +115,58 @@ namespace pryEliasIE
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
+            string a = listView1.SelectedItems[0].Text.ToString();
+
+            string b = treeView1.SelectedNode.Text.ToString();
+
+            string rutaArchivoFinal = Path.Combine(rutaActual, a);
+
+            string c = Path.Combine(@"../../Resources", rutaArchivoFinal);
+
+            var archivo = File.ReadAllLines(c);
+
             frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla();
 
-            frmVentanaGrilla.dtvMostrarArchivo.Rows.Add("ejemplo");
+            foreach (var linea in archivo)
+            {
+                string[] parametros = linea.Split(';');
+
+                frmVentanaGrilla.dtvMostrarArchivo.Rows.Add(parametros);
+            }
 
             frmVentanaGrilla.Show();
             this.Hide();
 
         }
 
+        private string GetNodePath(TreeNode node)
+        {
+            // Recorre los nodos ascendentes para construir la ruta completa
+            string path = node.Text;
+            TreeNode currentNode = node.Parent;
+
+            while (currentNode != null)
+            {
+                path = currentNode.Text + "\\" + path;
+                currentNode = currentNode.Parent;
+            }
+
+            return path;
+        }
+        
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+        {
+            // Obtener el nodo seleccionado
+            TreeNode selectedNode = e.Node;
+
+            // Actualizar la ruta actual con la ruta del nodo seleccionado
+            rutaActual = GetNodePath(selectedNode);
         }
     }
 }
