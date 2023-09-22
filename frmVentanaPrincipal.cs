@@ -123,20 +123,37 @@ namespace pryEliasIE
 
             string c = Path.Combine(@"../../Resources", rutaArchivoFinal);
 
-            var archivo = File.ReadAllLines(c);
+            //var archivo = File.ReadAllLines(c);
 
             frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla();
 
-            foreach (var linea in archivo)
-            {
-                string[] parametros = linea.Split(';');
+            //foreach (var linea in archivo)
+            //{
+            //    string[] parametros = linea.Split(';');
+            //
+            //    frmVentanaGrilla.dtvMostrarArchivo.Rows.Add(parametros);
+            //}
 
-                frmVentanaGrilla.dtvMostrarArchivo.Rows.Add(parametros);
+            // Abre el archivo para lectura
+            using (StreamReader reader = new StreamReader(c))
+            {
+                // Lee y descarta la primera línea (encabezado)
+                reader.ReadLine();
+
+                // Lee el resto de las líneas
+                string linea;
+                while ((linea = reader.ReadLine()) != null)
+                {
+                    // Procesa la línea actual aquí
+                    string[] parametros = linea.Split(';');
+                    //agregar a la datagrid
+                    frmVentanaGrilla.dtvMostrarArchivo.Rows.Add(parametros);
+                }
             }
 
             frmVentanaGrilla.Show();
             this.Hide();
-
+            
         }
 
         private string GetNodePath(TreeNode node)
