@@ -115,27 +115,20 @@ namespace pryEliasIE
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
-            string a = listView1.SelectedItems[0].Text.ToString();
+            //Obtengo el texto que tiene el item seleccionado lstView
+            string a = listView1.SelectedItems[0].Text.ToString();       
 
-            string b = treeView1.SelectedNode.Text.ToString();
+            //En una variable concateno la ruta del treeview + el nombre del archivo anterior
+            string rutaArchivoParcial = Path.Combine(rutaActual, a); 
 
-            string rutaArchivoFinal = Path.Combine(rutaActual, a);
+            //Aca esta la ruta final del archivo
+            string rutaArchivoFinal = Path.Combine(@"../../Resources", rutaArchivoParcial); 
 
-            string c = Path.Combine(@"../../Resources", rutaArchivoFinal);
-
-            //var archivo = File.ReadAllLines(c);
-
-            frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla();
-
-            //foreach (var linea in archivo)
-            //{
-            //    string[] parametros = linea.Split(';');
-            //
-            //    frmVentanaGrilla.dtvMostrarArchivo.Rows.Add(parametros);
-            //}
+            //Instanciar la ventana de la grilla
+            frmVentanaGrilla frmVentanaGrilla = new frmVentanaGrilla(); 
 
             // Abre el archivo para lectura
-            using (StreamReader reader = new StreamReader(c))
+            using (StreamReader reader = new StreamReader(rutaArchivoFinal))
             {
                 // Lee y descarta la primera línea (encabezado)
                 reader.ReadLine();

@@ -59,7 +59,7 @@
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(0, 0);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
             this.dtvMostrarArchivo.ReadOnly = true;
-            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 702);
+            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 932);
             this.dtvMostrarArchivo.TabIndex = 0;
             // 
             // btnVolverVentanaGrilla
@@ -68,7 +68,7 @@
             this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 708);
+            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 944);
             this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
             this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
             this.btnVolverVentanaGrilla.TabIndex = 1;
@@ -145,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1453, 776);
+            this.ClientSize = new System.Drawing.Size(1453, 1012);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
