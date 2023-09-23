@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanaGrilla));
             this.dtvMostrarArchivo = new System.Windows.Forms.DataGridView();
-            this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +38,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,20 +62,6 @@
             this.dtvMostrarArchivo.ReadOnly = true;
             this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 932);
             this.dtvMostrarArchivo.TabIndex = 0;
-            // 
-            // btnVolverVentanaGrilla
-            // 
-            this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 944);
-            this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
-            this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
-            this.btnVolverVentanaGrilla.TabIndex = 1;
-            this.btnVolverVentanaGrilla.Text = "Volver";
-            this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
-            this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
             // 
             // Column1
             // 
@@ -140,6 +127,20 @@
             this.Column8.ReadOnly = true;
             this.Column8.Width = 204;
             // 
+            // btnVolverVentanaGrilla
+            // 
+            this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 944);
+            this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
+            this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
+            this.btnVolverVentanaGrilla.TabIndex = 1;
+            this.btnVolverVentanaGrilla.Text = "Volver";
+            this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
+            this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
+            // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -149,6 +150,7 @@
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmVentanaGrilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
