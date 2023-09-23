@@ -38,7 +38,39 @@ namespace pryEliasIE
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            txtNumero.Clear();
+            txtEntidad.Clear();
+            txtApertura.Clear();
+            txtNumeroDeExpediente.Clear();
+            txtJuzgado.Clear();
+            txtJurisdiccion.Clear();   
+            txtDireccion.Clear();
+            txtLiquidadorResponsable.Clear();
 
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            txtNumero.Clear();
+            txtEntidad.Clear();
+            txtApertura.Clear();
+            txtNumeroDeExpediente.Clear();
+            txtJuzgado.Clear();
+            txtJurisdiccion.Clear();
+            txtDireccion.Clear();
+            txtLiquidadorResponsable.Clear();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            txtNumero.Clear();
+            txtEntidad.Clear();
+            txtApertura.Clear();
+            txtNumeroDeExpediente.Clear();
+            txtJuzgado.Clear();
+            txtJurisdiccion.Clear();
+            txtDireccion.Clear();
+            txtLiquidadorResponsable.Clear();
         }
     }
 }
