@@ -19,7 +19,7 @@ namespace pryEliasIE
             InitializeComponent();
             PopulateTreeView();
 
-            this.treeView1.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.trvMostrar.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
 
         public string rutaActual = "";
@@ -34,7 +34,7 @@ namespace pryEliasIE
                 rootNode = new TreeNode(info.Name);
                 rootNode.Tag = info;
                 GetDirectories(info.GetDirectories(), rootNode);
-                treeView1.Nodes.Add(rootNode);
+                trvMostrar.Nodes.Add(rootNode);
             }
         }
 
@@ -61,7 +61,7 @@ namespace pryEliasIE
     TreeNodeMouseClickEventArgs e)
         {
             TreeNode newSelected = e.Node;
-            listView1.Items.Clear();
+            lstMostrar.Items.Clear();
             DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
             ListViewItem.ListViewSubItem[] subItems;
             ListViewItem item = null;
@@ -72,7 +72,7 @@ namespace pryEliasIE
                 subItems = new ListViewItem.ListViewSubItem[]
                     {new ListViewItem.ListViewSubItem(item, "Directory"),new ListViewItem.ListViewSubItem(item,dir.LastAccessTime.ToShortDateString())};
                 item.SubItems.AddRange(subItems);
-                listView1.Items.Add(item);
+                lstMostrar.Items.Add(item);
             }
             foreach (FileInfo file in nodeDirInfo.GetFiles())
             {
@@ -81,10 +81,10 @@ namespace pryEliasIE
                     { new ListViewItem.ListViewSubItem(item, "File"),new ListViewItem.ListViewSubItem(item,file.LastAccessTime.ToShortDateString())};
 
                 item.SubItems.AddRange(subItems);
-                listView1.Items.Add(item);
+                lstMostrar.Items.Add(item);
             }
 
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            lstMostrar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
         private void btnSeleccionarCarpeta_Click(object sender, EventArgs e)
         {
@@ -116,7 +116,7 @@ namespace pryEliasIE
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             //Obtengo el texto que tiene el item seleccionado lstView
-            string a = listView1.SelectedItems[0].Text.ToString();       
+            string a = lstMostrar.SelectedItems[0].Text.ToString();       
 
             //En una variable concateno la ruta del treeview + el nombre del archivo anterior
             string rutaArchivoParcial = Path.Combine(rutaActual, a); 

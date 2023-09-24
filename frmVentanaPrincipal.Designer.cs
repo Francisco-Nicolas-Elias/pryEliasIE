@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanaPrincipal));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnVolverVentanaPrincipal = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.trvMostrar = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstMostrar = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,12 +54,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnVolverVentanaPrincipal);
-            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.trvMostrar);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.listView1);
+            this.splitContainer1.Panel2.Controls.Add(this.lstMostrar);
             this.splitContainer1.Size = new System.Drawing.Size(1221, 662);
             this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 0;
@@ -79,18 +79,18 @@
             this.btnVolverVentanaPrincipal.UseVisualStyleBackColor = false;
             this.btnVolverVentanaPrincipal.Click += new System.EventHandler(this.btnVolverVentanaPrincipal_Click);
             // 
-            // treeView1
+            // trvMostrar
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(407, 662);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
+            this.trvMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvMostrar.ImageIndex = 0;
+            this.trvMostrar.ImageList = this.imageList1;
+            this.trvMostrar.Location = new System.Drawing.Point(0, 0);
+            this.trvMostrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.trvMostrar.Name = "trvMostrar";
+            this.trvMostrar.SelectedImageIndex = 0;
+            this.trvMostrar.Size = new System.Drawing.Size(407, 662);
+            this.trvMostrar.TabIndex = 0;
+            this.trvMostrar.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
             // 
             // imageList1
             // 
@@ -99,25 +99,25 @@
             this.imageList1.Images.SetKeyName(0, "carpeta.png");
             this.imageList1.Images.SetKeyName(1, "documento.png");
             // 
-            // listView1
+            // lstMostrar
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstMostrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(810, 662);
-            this.listView1.SmallImageList = this.imageList1;
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            this.lstMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstMostrar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMostrar.HideSelection = false;
+            this.lstMostrar.Location = new System.Drawing.Point(0, 0);
+            this.lstMostrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lstMostrar.Name = "lstMostrar";
+            this.lstMostrar.Size = new System.Drawing.Size(810, 662);
+            this.lstMostrar.SmallImageList = this.imageList1;
+            this.lstMostrar.TabIndex = 0;
+            this.lstMostrar.UseCompatibleStateImageBehavior = false;
+            this.lstMostrar.View = System.Windows.Forms.View.Details;
+            this.lstMostrar.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lstMostrar.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -161,8 +161,8 @@
         #endregion
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TreeView trvMostrar;
+        private System.Windows.Forms.ListView lstMostrar;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
