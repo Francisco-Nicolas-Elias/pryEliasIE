@@ -215,9 +215,9 @@
             this.lblExplicacionGrabar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplicacionGrabar.Location = new System.Drawing.Point(7, 862);
             this.lblExplicacionGrabar.Name = "lblExplicacionGrabar";
-            this.lblExplicacionGrabar.Size = new System.Drawing.Size(716, 22);
+            this.lblExplicacionGrabar.Size = new System.Drawing.Size(721, 22);
             this.lblExplicacionGrabar.TabIndex = 7;
-            this.lblExplicacionGrabar.Text = "Si quiere \"Grabar\" un registro solo debe hacer click sobre el botón \"Grabar\"";
+            this.lblExplicacionGrabar.Text = "Si quiere \"Grabar\" un registro solo debe hacer click sobre el botón \"Grabar\".";
             // 
             // frmVentanaGrilla
             // 
