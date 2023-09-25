@@ -38,32 +38,6 @@ namespace pryEliasIE
             this.Close();
         }
 
-        private void btnGrabar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNumeroDeExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
-
-            // Agregar la nueva línea al archivo
-            File.AppendAllText(rutaArchivoAbm, nuevaLinea + Environment.NewLine);
-
-            txtNumero.Clear();
-            txtEntidad.Clear();
-            txtApertura.Clear();
-            txtNumeroDeExpediente.Clear();
-            txtJuzgado.Clear();
-            txtJurisdiccion.Clear();
-            txtDireccion.Clear();
-            txtLiquidadorResponsable.Clear();
-
-            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
-            frmVentanaPrincipal.Show();
-            this.Close();
-        }
-
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             
@@ -167,6 +141,29 @@ namespace pryEliasIE
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
+            
+            
+            txtNumero.Clear();
+            txtEntidad.Clear();
+            txtApertura.Clear();
+            txtNumeroDeExpediente.Clear();
+            txtJuzgado.Clear();
+            txtJurisdiccion.Clear();
+            txtDireccion.Clear();
+            txtLiquidadorResponsable.Clear();
+
+            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
+            frmVentanaPrincipal.Show();
+            this.Close();
+        }
+
+        private void btnGrabar_Click_1(object sender, EventArgs e)
+        {
+            string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNumeroDeExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
+
+            // Agregar la nueva línea al archivo
+            File.AppendAllText(rutaArchivoAbm, nuevaLinea + Environment.NewLine);
+
             txtNumero.Clear();
             txtEntidad.Clear();
             txtApertura.Clear();

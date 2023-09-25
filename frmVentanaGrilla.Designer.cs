@@ -43,7 +43,7 @@
             this.btnBorrarGrilla = new System.Windows.Forms.Button();
             this.btnModificarGrilla = new System.Windows.Forms.Button();
             this.btnGrabarGrilla = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblExplicacionModificar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,16 +197,16 @@
             this.btnGrabarGrilla.UseVisualStyleBackColor = false;
             this.btnGrabarGrilla.Click += new System.EventHandler(this.btnGrabarGrilla_Click);
             // 
-            // label1
+            // lblExplicacionModificar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 895);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1496, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Si quiere \"Grabar\" o \"Modificar\" un registro debe hacer click sobre el y presiona" +
-    "r respectivo botón con el cual sera redireccionado a la ventana correspondiente";
+            this.lblExplicacionModificar.AutoSize = true;
+            this.lblExplicacionModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplicacionModificar.Location = new System.Drawing.Point(8, 895);
+            this.lblExplicacionModificar.Name = "lblExplicacionModificar";
+            this.lblExplicacionModificar.Size = new System.Drawing.Size(833, 22);
+            this.lblExplicacionModificar.TabIndex = 6;
+            this.lblExplicacionModificar.Text = "Si quiere \"Modificar\" un registro debe hacer click sobre el y presionar el botón " +
+    "modificar.";
             // 
             // frmVentanaGrilla
             // 
@@ -214,7 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1909, 1012);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblExplicacionModificar);
             this.Controls.Add(this.btnBorrarGrilla);
             this.Controls.Add(this.btnModificarGrilla);
             this.Controls.Add(this.btnGrabarGrilla);
@@ -251,6 +251,6 @@
         private System.Windows.Forms.Button btnBorrarGrilla;
         private System.Windows.Forms.Button btnModificarGrilla;
         private System.Windows.Forms.Button btnGrabarGrilla;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblExplicacionModificar;
     }
 }
