@@ -66,7 +66,7 @@
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(0, 0);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
             this.dtvMostrarArchivo.ReadOnly = true;
-            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1909, 850);
+            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1284, 761);
             this.dtvMostrarArchivo.TabIndex = 0;
             this.dtvMostrarArchivo.DoubleClick += new System.EventHandler(this.dtvMostrarArchivo_DoubleClick);
             // 
@@ -139,7 +139,7 @@
             this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 944);
             this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
             this.btnVolverVentanaGrilla.Size = new System.Drawing.Size(131, 56);
@@ -152,7 +152,7 @@
             // 
             this.lblExplicacionBorrar.AutoSize = true;
             this.lblExplicacionBorrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacionBorrar.Location = new System.Drawing.Point(7, 885);
+            this.lblExplicacionBorrar.Location = new System.Drawing.Point(-4, 787);
             this.lblExplicacionBorrar.Name = "lblExplicacionBorrar";
             this.lblExplicacionBorrar.Size = new System.Drawing.Size(800, 22);
             this.lblExplicacionBorrar.TabIndex = 2;
@@ -161,10 +161,11 @@
             // 
             // btnBorrarGrilla
             // 
+            this.btnBorrarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBorrarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarGrilla.Location = new System.Drawing.Point(1782, 941);
+            this.btnBorrarGrilla.Location = new System.Drawing.Point(1144, 941);
             this.btnBorrarGrilla.Name = "btnBorrarGrilla";
             this.btnBorrarGrilla.Size = new System.Drawing.Size(118, 59);
             this.btnBorrarGrilla.TabIndex = 5;
@@ -174,10 +175,11 @@
             // 
             // btnModificarGrilla
             // 
+            this.btnModificarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarGrilla.Location = new System.Drawing.Point(1659, 941);
+            this.btnModificarGrilla.Location = new System.Drawing.Point(1021, 941);
             this.btnModificarGrilla.Name = "btnModificarGrilla";
             this.btnModificarGrilla.Size = new System.Drawing.Size(117, 59);
             this.btnModificarGrilla.TabIndex = 4;
@@ -187,10 +189,11 @@
             // 
             // btnGrabarGrilla
             // 
+            this.btnGrabarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGrabarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGrabarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabarGrilla.Location = new System.Drawing.Point(1535, 941);
+            this.btnGrabarGrilla.Location = new System.Drawing.Point(897, 941);
             this.btnGrabarGrilla.Name = "btnGrabarGrilla";
             this.btnGrabarGrilla.Size = new System.Drawing.Size(118, 59);
             this.btnGrabarGrilla.TabIndex = 3;
@@ -202,7 +205,7 @@
             // 
             this.lblExplicacionModificar.AutoSize = true;
             this.lblExplicacionModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacionModificar.Location = new System.Drawing.Point(7, 908);
+            this.lblExplicacionModificar.Location = new System.Drawing.Point(-4, 810);
             this.lblExplicacionModificar.Name = "lblExplicacionModificar";
             this.lblExplicacionModificar.Size = new System.Drawing.Size(852, 22);
             this.lblExplicacionModificar.TabIndex = 6;
@@ -213,7 +216,7 @@
             // 
             this.lblExplicacionGrabar.AutoSize = true;
             this.lblExplicacionGrabar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacionGrabar.Location = new System.Drawing.Point(7, 862);
+            this.lblExplicacionGrabar.Location = new System.Drawing.Point(-4, 764);
             this.lblExplicacionGrabar.Name = "lblExplicacionGrabar";
             this.lblExplicacionGrabar.Size = new System.Drawing.Size(721, 22);
             this.lblExplicacionGrabar.TabIndex = 7;
@@ -224,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1909, 1012);
+            this.ClientSize = new System.Drawing.Size(1284, 1005);
             this.Controls.Add(this.lblExplicacionGrabar);
             this.Controls.Add(this.lblExplicacionModificar);
             this.Controls.Add(this.btnBorrarGrilla);

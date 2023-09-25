@@ -70,7 +70,7 @@
             this.btnVolverABM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverABM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverABM.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverABM.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverABM.Location = new System.Drawing.Point(3, 390);
             this.btnVolverABM.Name = "btnVolverABM";
             this.btnVolverABM.Size = new System.Drawing.Size(118, 59);
