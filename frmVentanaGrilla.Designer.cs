@@ -39,11 +39,12 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
-            this.lblExplicacion = new System.Windows.Forms.Label();
+            this.lblExplicacionBorrar = new System.Windows.Forms.Label();
             this.btnBorrarGrilla = new System.Windows.Forms.Button();
             this.btnModificarGrilla = new System.Windows.Forms.Button();
             this.btnGrabarGrilla = new System.Windows.Forms.Button();
             this.lblExplicacionModificar = new System.Windows.Forms.Label();
+            this.lblExplicacionGrabar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,16 +148,16 @@
             this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
             this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
             // 
-            // lblExplicacion
+            // lblExplicacionBorrar
             // 
-            this.lblExplicacion.AutoSize = true;
-            this.lblExplicacion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacion.Location = new System.Drawing.Point(8, 864);
-            this.lblExplicacion.Name = "lblExplicacion";
-            this.lblExplicacion.Size = new System.Drawing.Size(780, 22);
-            this.lblExplicacion.TabIndex = 2;
-            this.lblExplicacion.Text = "Si quiere borrar un registro debe hacer click sobre él y presionar el botón \"Borr" +
-    "ar\".";
+            this.lblExplicacionBorrar.AutoSize = true;
+            this.lblExplicacionBorrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplicacionBorrar.Location = new System.Drawing.Point(7, 885);
+            this.lblExplicacionBorrar.Name = "lblExplicacionBorrar";
+            this.lblExplicacionBorrar.Size = new System.Drawing.Size(800, 22);
+            this.lblExplicacionBorrar.TabIndex = 2;
+            this.lblExplicacionBorrar.Text = "Si quiere \"Borrar\" un registro debe hacer click sobre él y presionar el botón \"Bo" +
+    "rrar\".";
             // 
             // btnBorrarGrilla
             // 
@@ -201,12 +202,22 @@
             // 
             this.lblExplicacionModificar.AutoSize = true;
             this.lblExplicacionModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacionModificar.Location = new System.Drawing.Point(8, 895);
+            this.lblExplicacionModificar.Location = new System.Drawing.Point(7, 908);
             this.lblExplicacionModificar.Name = "lblExplicacionModificar";
-            this.lblExplicacionModificar.Size = new System.Drawing.Size(833, 22);
+            this.lblExplicacionModificar.Size = new System.Drawing.Size(852, 22);
             this.lblExplicacionModificar.TabIndex = 6;
-            this.lblExplicacionModificar.Text = "Si quiere \"Modificar\" un registro debe hacer click sobre el y presionar el botón " +
-    "modificar.";
+            this.lblExplicacionModificar.Text = "Si quiere \"Modificar\" un registro debe hacer click sobre él y presionar el botón " +
+    "\"Modificar\".";
+            // 
+            // lblExplicacionGrabar
+            // 
+            this.lblExplicacionGrabar.AutoSize = true;
+            this.lblExplicacionGrabar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplicacionGrabar.Location = new System.Drawing.Point(7, 862);
+            this.lblExplicacionGrabar.Name = "lblExplicacionGrabar";
+            this.lblExplicacionGrabar.Size = new System.Drawing.Size(716, 22);
+            this.lblExplicacionGrabar.TabIndex = 7;
+            this.lblExplicacionGrabar.Text = "Si quiere \"Grabar\" un registro solo debe hacer click sobre el botón \"Grabar\"";
             // 
             // frmVentanaGrilla
             // 
@@ -214,11 +225,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1909, 1012);
+            this.Controls.Add(this.lblExplicacionGrabar);
             this.Controls.Add(this.lblExplicacionModificar);
             this.Controls.Add(this.btnBorrarGrilla);
             this.Controls.Add(this.btnModificarGrilla);
             this.Controls.Add(this.btnGrabarGrilla);
-            this.Controls.Add(this.lblExplicacion);
+            this.Controls.Add(this.lblExplicacionBorrar);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,10 +259,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Label lblExplicacion;
+        private System.Windows.Forms.Label lblExplicacionBorrar;
         private System.Windows.Forms.Button btnBorrarGrilla;
         private System.Windows.Forms.Button btnModificarGrilla;
         private System.Windows.Forms.Button btnGrabarGrilla;
         private System.Windows.Forms.Label lblExplicacionModificar;
+        private System.Windows.Forms.Label lblExplicacionGrabar;
     }
 }
