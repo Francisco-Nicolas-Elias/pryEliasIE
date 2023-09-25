@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABM));
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnVolverABM = new System.Windows.Forms.Button();
             this.gbDatosProveedores = new System.Windows.Forms.GroupBox();
             this.txtApertura = new System.Windows.Forms.TextBox();
@@ -53,44 +51,18 @@
             this.gbDatosProveedores.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnGrabar
+            // btnAceptar
             // 
-            this.btnGrabar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrabar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(246, 387);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(118, 59);
-            this.btnGrabar.TabIndex = 0;
-            this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = false;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(370, 387);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(117, 59);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBorrar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(493, 387);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(118, 59);
-            this.btnBorrar.TabIndex = 2;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = false;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(493, 390);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(117, 59);
+            this.btnAceptar.TabIndex = 1;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnVolverABM
             // 
@@ -300,9 +272,7 @@
             this.ClientSize = new System.Drawing.Size(762, 460);
             this.Controls.Add(this.gbDatosProveedores);
             this.Controls.Add(this.btnVolverABM);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.btnAceptar);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -317,21 +287,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGrabar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnVolverABM;
         private System.Windows.Forms.GroupBox gbDatosProveedores;
-        private System.Windows.Forms.TextBox txtApertura;
         private System.Windows.Forms.Label lblApertura;
-        private System.Windows.Forms.TextBox txtLiquidadorResponsable;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtJurisdiccion;
-        private System.Windows.Forms.TextBox txtJuzgado;
-        private System.Windows.Forms.TextBox txtNumeroDeExpediente;
-        private System.Windows.Forms.TextBox txtEntidad;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblLiquidadorResponsable;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblJurisdiccion;
@@ -339,5 +298,13 @@
         private System.Windows.Forms.Label lblNumeroDeExpediente;
         private System.Windows.Forms.Label lblEntidad;
         private System.Windows.Forms.Label lblNumero;
+        public System.Windows.Forms.TextBox txtApertura;
+        public System.Windows.Forms.TextBox txtLiquidadorResponsable;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtJurisdiccion;
+        public System.Windows.Forms.TextBox txtJuzgado;
+        public System.Windows.Forms.TextBox txtNumeroDeExpediente;
+        public System.Windows.Forms.TextBox txtEntidad;
+        public System.Windows.Forms.TextBox txtNumero;
     }
 }

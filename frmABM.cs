@@ -23,10 +23,6 @@ namespace pryEliasIE
 
         private void frmABM_Load(object sender, EventArgs e)
         {
-         
-            btnGrabar.Enabled = false;
-            btnModificar.Enabled = false;
-            btnBorrar.Enabled = false;
 
         }
 
@@ -44,19 +40,13 @@ namespace pryEliasIE
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            txtNumero.Clear();
-            txtEntidad.Clear();
-            txtApertura.Clear();
-            txtNumeroDeExpediente.Clear();
-            txtJuzgado.Clear();
-            txtJurisdiccion.Clear();   
-            txtDireccion.Clear();
-            txtLiquidadorResponsable.Clear();
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
+            
             txtNumero.Clear();
             txtEntidad.Clear();
             txtApertura.Clear();
@@ -65,33 +55,26 @@ namespace pryEliasIE
             txtJurisdiccion.Clear();
             txtDireccion.Clear();
             txtLiquidadorResponsable.Clear();
+
+            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
+            frmVentanaPrincipal.Show();
+            this.Close();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            txtNumero.Clear();
-            txtEntidad.Clear();
-            txtApertura.Clear();
-            txtNumeroDeExpediente.Clear();
-            txtJuzgado.Clear();
-            txtJurisdiccion.Clear();
-            txtDireccion.Clear();
-            txtLiquidadorResponsable.Clear();
+            
         }
 
         private void txtNumero_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
-            {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+            {              
+                btnAceptar.Enabled = true;               
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;              
             }
         }
 
@@ -99,15 +82,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -115,15 +94,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -131,15 +106,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -147,15 +118,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -163,15 +130,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -179,15 +142,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
 
@@ -195,15 +154,11 @@ namespace pryEliasIE
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
-                btnGrabar.Enabled = true;
-                btnModificar.Enabled = true;
-                btnBorrar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             else
             {
-                btnGrabar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnBorrar.Enabled = false;
+                btnAceptar.Enabled = false;
             }
         }
     }

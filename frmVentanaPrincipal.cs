@@ -144,6 +144,8 @@ namespace pryEliasIE
                 }
             }
 
+            frmVentanaGrilla.rutaArchivoGrilla = rutaArchivoFinal;
+
             frmVentanaGrilla.Show();
             this.Hide();
             

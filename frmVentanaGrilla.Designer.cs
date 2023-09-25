@@ -40,6 +40,10 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
             this.lblExplicacion = new System.Windows.Forms.Label();
+            this.btnBorrarGrilla = new System.Windows.Forms.Button();
+            this.btnModificarGrilla = new System.Windows.Forms.Button();
+            this.btnGrabarGrilla = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +65,7 @@
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(0, 0);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
             this.dtvMostrarArchivo.ReadOnly = true;
-            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 850);
+            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1909, 850);
             this.dtvMostrarArchivo.TabIndex = 0;
             this.dtvMostrarArchivo.DoubleClick += new System.EventHandler(this.dtvMostrarArchivo_DoubleClick);
             // 
@@ -147,19 +151,73 @@
             // 
             this.lblExplicacion.AutoSize = true;
             this.lblExplicacion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplicacion.Location = new System.Drawing.Point(12, 875);
+            this.lblExplicacion.Location = new System.Drawing.Point(8, 864);
             this.lblExplicacion.Name = "lblExplicacion";
-            this.lblExplicacion.Size = new System.Drawing.Size(980, 22);
+            this.lblExplicacion.Size = new System.Drawing.Size(780, 22);
             this.lblExplicacion.TabIndex = 2;
-            this.lblExplicacion.Text = "Si quiere cargar un cliente, modificarlo o borrar hacer click en la fila para ir " +
-    "a la ventana correspondiente.";
+            this.lblExplicacion.Text = "Si quiere borrar un registro debe hacer click sobre él y presionar el botón \"Borr" +
+    "ar\".";
+            // 
+            // btnBorrarGrilla
+            // 
+            this.btnBorrarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBorrarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarGrilla.Location = new System.Drawing.Point(1782, 941);
+            this.btnBorrarGrilla.Name = "btnBorrarGrilla";
+            this.btnBorrarGrilla.Size = new System.Drawing.Size(118, 59);
+            this.btnBorrarGrilla.TabIndex = 5;
+            this.btnBorrarGrilla.Text = "Borrar";
+            this.btnBorrarGrilla.UseVisualStyleBackColor = false;
+            this.btnBorrarGrilla.Click += new System.EventHandler(this.btnBorrarGrilla_Click);
+            // 
+            // btnModificarGrilla
+            // 
+            this.btnModificarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModificarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarGrilla.Location = new System.Drawing.Point(1659, 941);
+            this.btnModificarGrilla.Name = "btnModificarGrilla";
+            this.btnModificarGrilla.Size = new System.Drawing.Size(117, 59);
+            this.btnModificarGrilla.TabIndex = 4;
+            this.btnModificarGrilla.Text = "Modificar";
+            this.btnModificarGrilla.UseVisualStyleBackColor = false;
+            this.btnModificarGrilla.Click += new System.EventHandler(this.btnModificarGrilla_Click);
+            // 
+            // btnGrabarGrilla
+            // 
+            this.btnGrabarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGrabarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrabarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabarGrilla.Location = new System.Drawing.Point(1535, 941);
+            this.btnGrabarGrilla.Name = "btnGrabarGrilla";
+            this.btnGrabarGrilla.Size = new System.Drawing.Size(118, 59);
+            this.btnGrabarGrilla.TabIndex = 3;
+            this.btnGrabarGrilla.Text = "Grabar";
+            this.btnGrabarGrilla.UseVisualStyleBackColor = false;
+            this.btnGrabarGrilla.Click += new System.EventHandler(this.btnGrabarGrilla_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 895);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1496, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Si quiere \"Grabar\" o \"Modificar\" un registro debe hacer click sobre el y presiona" +
+    "r respectivo botón con el cual sera redireccionado a la ventana correspondiente";
             // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1453, 1012);
+            this.ClientSize = new System.Drawing.Size(1909, 1012);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBorrarGrilla);
+            this.Controls.Add(this.btnModificarGrilla);
+            this.Controls.Add(this.btnGrabarGrilla);
             this.Controls.Add(this.lblExplicacion);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
@@ -190,5 +248,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Label lblExplicacion;
+        private System.Windows.Forms.Button btnBorrarGrilla;
+        private System.Windows.Forms.Button btnModificarGrilla;
+        private System.Windows.Forms.Button btnGrabarGrilla;
+        private System.Windows.Forms.Label label1;
     }
 }
