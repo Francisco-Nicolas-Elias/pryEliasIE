@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABM));
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.btnVolverABM = new System.Windows.Forms.Button();
             this.gbDatosProveedores = new System.Windows.Forms.GroupBox();
             this.txtApertura = new System.Windows.Forms.TextBox();
@@ -48,21 +48,22 @@
             this.lblNumeroDeExpediente = new System.Windows.Forms.Label();
             this.lblEntidad = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.gbDatosProveedores.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAceptar
+            // btnGrabar
             // 
-            this.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(493, 390);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(117, 59);
-            this.btnAceptar.TabIndex = 1;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnGrabar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrabar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabar.Location = new System.Drawing.Point(493, 391);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(117, 59);
+            this.btnGrabar.TabIndex = 1;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = false;
+            this.btnGrabar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnVolverABM
             // 
@@ -263,6 +264,19 @@
             this.lblNumero.TabIndex = 21;
             this.lblNumero.Text = "Nº:";
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(432, 391);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(117, 59);
+            this.btnModificar.TabIndex = 22;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            // 
             // frmABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -270,9 +284,10 @@
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(762, 460);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.gbDatosProveedores);
             this.Controls.Add(this.btnVolverABM);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnGrabar);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -287,7 +302,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnVolverABM;
         private System.Windows.Forms.GroupBox gbDatosProveedores;
         private System.Windows.Forms.Label lblApertura;
@@ -306,5 +320,7 @@
         public System.Windows.Forms.TextBox txtNumeroDeExpediente;
         public System.Windows.Forms.TextBox txtEntidad;
         public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.Button btnGrabar;
+        public System.Windows.Forms.Button btnModificar;
     }
 }

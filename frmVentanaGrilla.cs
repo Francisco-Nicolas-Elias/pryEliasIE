@@ -48,9 +48,19 @@ namespace pryEliasIE
 
         private void btnGrabarGrilla_Click(object sender, EventArgs e)
         {
-            
-
             frmABM frmABM = new frmABM();
+
+            //Hago que cuente la cantidad de filas de la grilla y pone el número siguiente en el txt de la ventana ABM 
+            int contadoraDeFilas = dtvMostrarArchivo.Rows.Count;
+            string ultimoNumero = dtvMostrarArchivo.Rows[contadoraDeFilas - 1].Cells[0].Value.ToString();
+            int numeroDelTxt = Convert.ToInt32(ultimoNumero) + 1;
+            frmABM.txtNumero.Text = numeroDelTxt.ToString();
+            frmABM.txtNumero.ReadOnly = true;
+
+
+            frmABM.btnModificar.Visible = false;
+            frmABM.btnGrabar.Visible = true;
+            frmABM.rutaArchivoAbm = rutaArchivoGrilla;
             frmABM.Show();
             this.Hide();
         }
@@ -74,6 +84,9 @@ namespace pryEliasIE
 
             string ID = Convert.ToString(dtvMostrarArchivo.Rows[n].Cells[0].Value);
 
+            frmABM.btnModificar.Visible = true;
+            frmABM.btnGrabar.Visible = false;
+            frmABM.rutaArchivoAbm = rutaArchivoGrilla;
             frmABM.Show();
             this.Hide();
         }
@@ -93,8 +106,6 @@ namespace pryEliasIE
 
                 using (StreamReader reader = new StreamReader(rutaArchivoGrilla))
                 {
-                    // Lee y descarta la primera línea (encabezado)
-                    reader.ReadLine();
 
                     // Lee el resto de las líneas
                     string linea;
