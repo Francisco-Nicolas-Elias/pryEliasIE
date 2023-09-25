@@ -39,6 +39,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolverVentanaGrilla = new System.Windows.Forms.Button();
+            this.lblExplicacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,8 +61,9 @@
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(0, 0);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
             this.dtvMostrarArchivo.ReadOnly = true;
-            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 932);
+            this.dtvMostrarArchivo.Size = new System.Drawing.Size(1453, 850);
             this.dtvMostrarArchivo.TabIndex = 0;
+            this.dtvMostrarArchivo.DoubleClick += new System.EventHandler(this.dtvMostrarArchivo_DoubleClick);
             // 
             // Column1
             // 
@@ -141,12 +143,24 @@
             this.btnVolverVentanaGrilla.UseVisualStyleBackColor = false;
             this.btnVolverVentanaGrilla.Click += new System.EventHandler(this.btnVolverVentanaGrilla_Click);
             // 
+            // lblExplicacion
+            // 
+            this.lblExplicacion.AutoSize = true;
+            this.lblExplicacion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplicacion.Location = new System.Drawing.Point(12, 875);
+            this.lblExplicacion.Name = "lblExplicacion";
+            this.lblExplicacion.Size = new System.Drawing.Size(980, 22);
+            this.lblExplicacion.TabIndex = 2;
+            this.lblExplicacion.Text = "Si quiere cargar un cliente, modificarlo o borrar hacer click en la fila para ir " +
+    "a la ventana correspondiente.";
+            // 
             // frmVentanaGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1453, 1012);
+            this.Controls.Add(this.lblExplicacion);
             this.Controls.Add(this.btnVolverVentanaGrilla);
             this.Controls.Add(this.dtvMostrarArchivo);
             this.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,6 +173,7 @@
             this.Load += new System.EventHandler(this.frmVentanaGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Label lblExplicacion;
     }
 }

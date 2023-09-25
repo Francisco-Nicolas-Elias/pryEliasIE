@@ -63,7 +63,7 @@
             // carpetasToolStripMenuItem
             // 
             this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
-            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
             this.carpetasToolStripMenuItem.Text = "Carpetas";
             this.carpetasToolStripMenuItem.Click += new System.EventHandler(this.carpetasToolStripMenuItem_Click);
             // 
@@ -73,14 +73,12 @@
             this.proveedoresToolStripMenuItem});
             this.cargarModificarOBorrarToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cargarModificarOBorrarToolStripMenuItem.Name = "cargarModificarOBorrarToolStripMenuItem";
-            this.cargarModificarOBorrarToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
-            this.cargarModificarOBorrarToolStripMenuItem.Text = "Registro";
+            this.cargarModificarOBorrarToolStripMenuItem.Size = new System.Drawing.Size(12, 28);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
-            this.proveedoresToolStripMenuItem.Text = "Añadir, editar, modificar";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal

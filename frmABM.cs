@@ -19,8 +19,14 @@ namespace pryEliasIE
             InitializeComponent();
         }
 
+
+
         private void frmABM_Load(object sender, EventArgs e)
         {
+         
+            btnGrabar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnBorrar.Enabled = false;
 
         }
 
@@ -31,8 +37,8 @@ namespace pryEliasIE
 
         private void btnVolverABM_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
-            frmMenuPrincipal.Show();
+            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
+            frmVentanaPrincipal.Show();
             this.Close();
         }
 
@@ -71,6 +77,134 @@ namespace pryEliasIE
             txtJurisdiccion.Clear();
             txtDireccion.Clear();
             txtLiquidadorResponsable.Clear();
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtEntidad_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtApertura_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtNumeroDeExpediente_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtJuzgado_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtJurisdiccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtLiquidadorResponsable_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumeroDeExpediente.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
+            {
+                btnGrabar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnBorrar.Enabled = false;
+            }
         }
     }
 }

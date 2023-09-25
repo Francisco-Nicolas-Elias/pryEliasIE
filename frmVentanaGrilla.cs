@@ -34,5 +34,12 @@ namespace pryEliasIE
         {
 
         }
+
+        private void dtvMostrarArchivo_DoubleClick(object sender, EventArgs e)
+        {
+            frmABM frmABM = new frmABM();
+            frmABM.Show();
+            this.Hide();
+        }
     }
 }

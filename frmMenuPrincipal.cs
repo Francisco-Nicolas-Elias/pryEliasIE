@@ -26,9 +26,7 @@ namespace pryEliasIE
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmABM frmABM= new frmABM();
-            frmABM.Show();
-            this.Hide();
+            
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)

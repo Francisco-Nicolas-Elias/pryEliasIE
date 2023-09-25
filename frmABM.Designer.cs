@@ -98,7 +98,7 @@
             this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverABM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverABM.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverABM.Location = new System.Drawing.Point(3, 386);
+            this.btnVolverABM.Location = new System.Drawing.Point(3, 390);
             this.btnVolverABM.Name = "btnVolverABM";
             this.btnVolverABM.Size = new System.Drawing.Size(118, 59);
             this.btnVolverABM.TabIndex = 18;
@@ -138,6 +138,7 @@
             this.txtApertura.Name = "txtApertura";
             this.txtApertura.Size = new System.Drawing.Size(100, 32);
             this.txtApertura.TabIndex = 36;
+            this.txtApertura.TextChanged += new System.EventHandler(this.txtApertura_TextChanged);
             // 
             // lblApertura
             // 
@@ -157,6 +158,7 @@
             this.txtLiquidadorResponsable.Name = "txtLiquidadorResponsable";
             this.txtLiquidadorResponsable.Size = new System.Drawing.Size(279, 32);
             this.txtLiquidadorResponsable.TabIndex = 34;
+            this.txtLiquidadorResponsable.TextChanged += new System.EventHandler(this.txtLiquidadorResponsable_TextChanged);
             // 
             // txtDireccion
             // 
@@ -165,6 +167,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(279, 32);
             this.txtDireccion.TabIndex = 33;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtJurisdiccion
             // 
@@ -173,6 +176,7 @@
             this.txtJurisdiccion.Name = "txtJurisdiccion";
             this.txtJurisdiccion.Size = new System.Drawing.Size(279, 32);
             this.txtJurisdiccion.TabIndex = 32;
+            this.txtJurisdiccion.TextChanged += new System.EventHandler(this.txtJurisdiccion_TextChanged);
             // 
             // txtJuzgado
             // 
@@ -181,6 +185,7 @@
             this.txtJuzgado.Name = "txtJuzgado";
             this.txtJuzgado.Size = new System.Drawing.Size(279, 32);
             this.txtJuzgado.TabIndex = 31;
+            this.txtJuzgado.TextChanged += new System.EventHandler(this.txtJuzgado_TextChanged);
             // 
             // txtNumeroDeExpediente
             // 
@@ -189,6 +194,7 @@
             this.txtNumeroDeExpediente.Name = "txtNumeroDeExpediente";
             this.txtNumeroDeExpediente.Size = new System.Drawing.Size(129, 32);
             this.txtNumeroDeExpediente.TabIndex = 30;
+            this.txtNumeroDeExpediente.TextChanged += new System.EventHandler(this.txtNumeroDeExpediente_TextChanged);
             // 
             // txtEntidad
             // 
@@ -197,6 +203,7 @@
             this.txtEntidad.Name = "txtEntidad";
             this.txtEntidad.Size = new System.Drawing.Size(279, 32);
             this.txtEntidad.TabIndex = 29;
+            this.txtEntidad.TextChanged += new System.EventHandler(this.txtEntidad_TextChanged);
             // 
             // txtNumero
             // 
@@ -205,6 +212,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(59, 32);
             this.txtNumero.TabIndex = 28;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblLiquidadorResponsable
             // 
@@ -289,7 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(758, 456);
+            this.ClientSize = new System.Drawing.Size(762, 460);
             this.Controls.Add(this.gbDatosProveedores);
             this.Controls.Add(this.btnVolverABM);
             this.Controls.Add(this.btnBorrar);
