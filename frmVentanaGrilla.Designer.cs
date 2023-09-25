@@ -66,6 +66,7 @@
             this.dtvMostrarArchivo.Location = new System.Drawing.Point(0, 0);
             this.dtvMostrarArchivo.Name = "dtvMostrarArchivo";
             this.dtvMostrarArchivo.ReadOnly = true;
+            this.dtvMostrarArchivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvMostrarArchivo.Size = new System.Drawing.Size(1284, 761);
             this.dtvMostrarArchivo.TabIndex = 0;
             this.dtvMostrarArchivo.DoubleClick += new System.EventHandler(this.dtvMostrarArchivo_DoubleClick);
