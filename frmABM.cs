@@ -154,9 +154,9 @@ namespace pryEliasIE
                 string linea;
                 while ((linea = reader.ReadLine()) != null)
                 {
-                    // Procesa la línea actual aquí
+                    // Procesa la línea actual aquí y la separa los campos por ";"
                     string[] parametros = linea.Split(';');
-                    //Copia todas las lineas que no coincide con el ID para sobreescribir el archivo sin la linea que quiero borrar
+                    //Copia todas las lineas que no coincide con el ID para sobreescribir el archivo sin la linea que debo borrar para poder sobreescribirla modificada
                     if (parametros[0] != ID)
                     {
                         lineasArchivo.Add(linea);
@@ -173,7 +173,8 @@ namespace pryEliasIE
             {
                 foreach (string elemento in lineasArchivo)
                 {
-                    writer.WriteLine(elemento); // Escribe cada elemento en una línea del archivo
+                    // Escribe cada elemento en una línea del archivo
+                    writer.WriteLine(elemento); 
                 }
             }
 
@@ -200,7 +201,7 @@ namespace pryEliasIE
         {
             string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNumeroDeExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
 
-            // Agregar la nueva línea al archivo
+            // Agregar la nueva línea al archivo, usando los datos de la variable nuevaLinea que son los que se ingresan en los txt
             File.AppendAllText(rutaArchivoAbm, nuevaLinea + Environment.NewLine);
 
             MessageBox.Show("El registro fue grabado correctamente.");

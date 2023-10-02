@@ -67,12 +67,14 @@ namespace pryEliasIE
 
         private void btnModificarGrilla_Click(object sender, EventArgs e)
         {
+            //En la variable n guardo el indice de la fila seleccionada en la grilla
             int n = dtvMostrarArchivo.CurrentCell.RowIndex;
 
             frmABM frmABM = new frmABM();
                
             //El ReadOnly solo deja ver el contenido del txt no deja que se modifique
             frmABM.txtNumero.ReadOnly = true;
+            //Cargo todos los txt del formulario ABM para que solo modifique lo que quiera, sin tener que cargar todo de nuevo
             frmABM.txtNumero.Text = dtvMostrarArchivo.Rows[n].Cells[0].Value.ToString();
             frmABM.txtEntidad.Text = dtvMostrarArchivo.Rows[n].Cells[1].Value.ToString();
             frmABM.txtApertura.Text = dtvMostrarArchivo.Rows[n].Cells[2].Value.ToString();
@@ -93,7 +95,7 @@ namespace pryEliasIE
 
         private void btnBorrarGrilla_Click(object sender, EventArgs e)
         {
-            //n es el número de fila seleccionado 
+            //n es el número de fila seleccionado en la grilla
             int n = dtvMostrarArchivo.CurrentCell.RowIndex;
 
             if (n != -1)
@@ -111,7 +113,7 @@ namespace pryEliasIE
                     string linea;
                     while ((linea = reader.ReadLine()) != null)
                     {
-                        // Procesa la línea actual aquí
+                        // Procesa la línea actual aquí y separo los campos con ";"
                         string[] parametros = linea.Split(';');
                         //Copia todas las lineas que no coincide con el ID para sobreescribir el archivo sin la linea que quiero borrar
                         if (parametros[0] != ID)
@@ -125,7 +127,8 @@ namespace pryEliasIE
                 {
                     foreach (string elemento in lineasArchivo)
                     {
-                        writer.WriteLine(elemento); // Escribe cada elemento en una línea del archivo
+                        // Escribe cada elemento en una línea del archivo
+                        writer.WriteLine(elemento); 
                     }
                 }
 
@@ -133,6 +136,11 @@ namespace pryEliasIE
 
                 dtvMostrarArchivo.Rows.RemoveAt(n);
             }
+        }
+
+        private void dtvMostrarArchivo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

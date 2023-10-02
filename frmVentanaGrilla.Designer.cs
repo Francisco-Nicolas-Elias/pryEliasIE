@@ -69,6 +69,7 @@
             this.dtvMostrarArchivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvMostrarArchivo.Size = new System.Drawing.Size(1284, 761);
             this.dtvMostrarArchivo.TabIndex = 0;
+            this.dtvMostrarArchivo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMostrarArchivo_CellContentClick);
             this.dtvMostrarArchivo.DoubleClick += new System.EventHandler(this.dtvMostrarArchivo_DoubleClick);
             // 
             // Column1
