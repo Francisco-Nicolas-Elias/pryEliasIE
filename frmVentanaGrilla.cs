@@ -127,7 +127,7 @@ namespace pryEliasIE
                 {
                     foreach (string elemento in lineasArchivo)
                     {
-                        // Escribe cada elemento en una línea del archivo
+                        // Escribe cada elemento en una línea del archivo, el elemento contiene la línea guardada en el índice momentáneo de la lista
                         writer.WriteLine(elemento); 
                     }
                 }
