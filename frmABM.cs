@@ -201,7 +201,8 @@ namespace pryEliasIE
         {
             string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNumeroDeExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
 
-            // Agregar la nueva línea al archivo, usando los datos de la variable nuevaLinea que son los que se ingresan en los txt
+            // Agregue la nueva línea al archivo, usando los datos de la variable nuevaLinea que son los que se ingresan en los txt
+            //AppendAllText es un método de la clase File para agregar la linea con la variable nuevaLinea
             File.AppendAllText(rutaArchivoAbm, nuevaLinea + Environment.NewLine);
 
             MessageBox.Show("El registro fue grabado correctamente.");
