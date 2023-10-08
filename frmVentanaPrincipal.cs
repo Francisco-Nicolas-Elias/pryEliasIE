@@ -28,17 +28,16 @@ namespace pryEliasIE
         {
             TreeNode nodoMadre;
 
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores y aseguradores");
-            if (info.Exists)
+            DirectoryInfo directorioCarpeta = new DirectoryInfo(@"../../Resources/Proveedores y aseguradores");
+            if (directorioCarpeta.Exists)
             {
-                nodoMadre = new TreeNode(info.Name);
-                nodoMadre.Tag = info;
-                obtenerCarpetas(info.GetDirectories(), nodoMadre);
+                nodoMadre = new TreeNode(directorioCarpeta.Name);
+                nodoMadre.Tag = directorioCarpeta;
+                obtenerCarpetas(directorioCarpeta.GetDirectories(), nodoMadre);
                 trvMostrar.Nodes.Add(nodoMadre);
             }
         }
-
-        //Desde info.GetDirectories() nos da todos los nombres de carpetas
+        //Desde directorioCarpeta.GetDirectories() nos da todos los nombres de carpetas
 
         private void obtenerCarpetas(DirectoryInfo[] subDirs,TreeNode nodeToAddTo)
         {
@@ -50,7 +49,7 @@ namespace pryEliasIE
                 aNode.Tag = subDir;
                 aNode.ImageKey = "folder";
 
-                //recursiva - se llama a si mismo para buscar más carpetas
+                //Recursiva - se llama a sí mismo para buscar más carpetas
 
                 subSubDirs = subDir.GetDirectories();
                 if (subSubDirs.Length != 0)
@@ -61,33 +60,45 @@ namespace pryEliasIE
             }
         }
         
-        void treeView1_NodeMouseClick(object sender,
-    TreeNodeMouseClickEventArgs e)
+        void treeView1_NodeMouseClick(object sender,TreeNodeMouseClickEventArgs e)
         {
-            TreeNode newSelected = e.Node;
+            //Guardo el nodo seleccionado en una variable
+            TreeNode nodoSeleccionado = e.Node;
             lstMostrar.Items.Clear();
-            DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
+
+            //Guardo el directorio del nodo seleccionado en una variable
+            DirectoryInfo directorioNodoSeleccionado = (DirectoryInfo)nodoSeleccionado.Tag;
             ListViewItem.ListViewSubItem[] subItems;
             ListViewItem item = null;
+            
+            //Foreach que recorre las carpetas dentro del directorio y
+            //crea elementos para después mostrar los items (Carpetas) en la listView
 
-            foreach (DirectoryInfo dir in nodeDirInfo.GetDirectories())
+            //También se agrega una etiqueta indicando que es un directorio y la fecha del último acceso del directorio
+            foreach (DirectoryInfo carpetas in directorioNodoSeleccionado.GetDirectories())
             {
-                item = new ListViewItem(dir.Name, 0);
+                item = new ListViewItem(carpetas.Name, 0);
                 subItems = new ListViewItem.ListViewSubItem[]
-                    {new ListViewItem.ListViewSubItem(item, "Directory"),new ListViewItem.ListViewSubItem(item,dir.LastAccessTime.ToShortDateString())};
+                    {new ListViewItem.ListViewSubItem(item, "Directory"),new ListViewItem.ListViewSubItem(item,carpetas.LastAccessTime.ToShortDateString())};
                 item.SubItems.AddRange(subItems);
                 lstMostrar.Items.Add(item);
             }
-            foreach (FileInfo file in nodeDirInfo.GetFiles())
+            
+            //Foreach que recorre los archivos dentro del directorio y
+            //crea elementos para después mostrar los items (Archivos) en la listView
+
+            //También se agrega una etiqueta indicando que es un archivo y la fecha del último acceso del archivo
+            foreach (FileInfo archivos in directorioNodoSeleccionado.GetFiles())
             {
-                item = new ListViewItem(file.Name, 1);
+                item = new ListViewItem(archivos.Name, 1);
                 subItems = new ListViewItem.ListViewSubItem[]
-                    { new ListViewItem.ListViewSubItem(item, "File"),new ListViewItem.ListViewSubItem(item,file.LastAccessTime.ToShortDateString())};
+                    { new ListViewItem.ListViewSubItem(item, "File"),new ListViewItem.ListViewSubItem(item,archivos.LastAccessTime.ToShortDateString())};
 
                 item.SubItems.AddRange(subItems);
                 lstMostrar.Items.Add(item);
             }
-
+           
+            //Ajusta el ancho de las columnas en la listView asi se ven los nombres de los archivos completos
             lstMostrar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
         
@@ -157,19 +168,20 @@ namespace pryEliasIE
             
         }
 
+        //Función para obtener la ruta completa del nodo seleccionado
         private string GetNodePath(TreeNode node)
         {
-            // Recorre los nodos ascendentes para construir la ruta completa
-            string path = node.Text;
+            //Recorre los nodos ascendentes para construir la ruta completa
+            string nombreNodoSeleccionado = node.Text;
             TreeNode currentNode = node.Parent;
 
             while (currentNode != null)
             {
-                path = currentNode.Text + "\\" + path;
+                nombreNodoSeleccionado = currentNode.Text + "\\" + nombreNodoSeleccionado;
                 currentNode = currentNode.Parent;
             }
 
-            return path;
+            return nombreNodoSeleccionado;
         }
         
 
@@ -180,10 +192,10 @@ namespace pryEliasIE
 
         private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
         {
-            // Obtener el nodo seleccionado
+            //Obtener el nodo seleccionado
             TreeNode selectedNode = e.Node;
 
-            // Actualizar la ruta actual con la ruta del nodo seleccionado
+            //Actualizar la ruta actual con la ruta del nodo seleccionado
             rutaActual = GetNodePath(selectedNode);
         }
     }
