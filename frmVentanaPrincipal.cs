@@ -172,16 +172,16 @@ namespace pryEliasIE
         private string GetNodePath(TreeNode node)
         {
             //Recorre los nodos ascendentes para construir la ruta completa
-            string nombreNodoSeleccionado = node.Text;
+            string rutaNodoSeleccionado = node.Text;
             TreeNode currentNode = node.Parent;
 
             while (currentNode != null)
             {
-                nombreNodoSeleccionado = currentNode.Text + "\\" + nombreNodoSeleccionado;
+                rutaNodoSeleccionado = currentNode.Text + "\\" + rutaNodoSeleccionado;
                 currentNode = currentNode.Parent;
             }
 
-            return nombreNodoSeleccionado;
+            return rutaNodoSeleccionado;
         }
         
 
