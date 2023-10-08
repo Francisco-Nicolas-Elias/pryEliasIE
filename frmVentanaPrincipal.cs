@@ -17,29 +17,30 @@ namespace pryEliasIE
         public frmVentanaPrincipal()
         {
             InitializeComponent();
-            PopulateTreeView();
+            LlenarTreeView();
 
             this.trvMostrar.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
 
         public string rutaActual = "";
 
-        private void PopulateTreeView()
+        private void LlenarTreeView()
         {
-            TreeNode rootNode;
+            TreeNode nodoMadre;
 
             DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores y aseguradores");
             if (info.Exists)
             {
-                rootNode = new TreeNode(info.Name);
-                rootNode.Tag = info;
-                GetDirectories(info.GetDirectories(), rootNode);
-                trvMostrar.Nodes.Add(rootNode);
+                nodoMadre = new TreeNode(info.Name);
+                nodoMadre.Tag = info;
+                obtenerCarpetas(info.GetDirectories(), nodoMadre);
+                trvMostrar.Nodes.Add(nodoMadre);
             }
         }
 
-        private void GetDirectories(DirectoryInfo[] subDirs,
-            TreeNode nodeToAddTo)
+        //Desde info.GetDirectories() nos da todos los nombres de carpetas
+
+        private void obtenerCarpetas(DirectoryInfo[] subDirs,TreeNode nodeToAddTo)
         {
             TreeNode aNode;
             DirectoryInfo[] subSubDirs;
@@ -48,15 +49,18 @@ namespace pryEliasIE
                 aNode = new TreeNode(subDir.Name, 0, 0);
                 aNode.Tag = subDir;
                 aNode.ImageKey = "folder";
+
+                //recursiva - se llama a si mismo para buscar más carpetas
+
                 subSubDirs = subDir.GetDirectories();
                 if (subSubDirs.Length != 0)
                 {
-                    GetDirectories(subSubDirs, aNode);
+                    obtenerCarpetas(subSubDirs, aNode);
                 }
                 nodeToAddTo.Nodes.Add(aNode);
             }
         }
-
+        
         void treeView1_NodeMouseClick(object sender,
     TreeNodeMouseClickEventArgs e)
         {
@@ -86,6 +90,8 @@ namespace pryEliasIE
 
             lstMostrar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
+        
+
         private void btnSeleccionarCarpeta_Click(object sender, EventArgs e)
         {
             
