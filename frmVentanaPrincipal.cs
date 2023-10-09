@@ -41,6 +41,7 @@ namespace pryEliasIE
 
         private void obtenerCarpetas(DirectoryInfo[] subDirs,TreeNode nodeToAddTo)
         {
+            //aNode se utiliza para crear nodos para cada subcarpeta
             TreeNode aNode;
             DirectoryInfo[] subSubDirs;
             foreach (DirectoryInfo subDir in subDirs)
@@ -62,11 +63,11 @@ namespace pryEliasIE
         
         void treeView1_NodeMouseClick(object sender,TreeNodeMouseClickEventArgs e)
         {
-            //Guardo el nodo seleccionado en una variable
+            //Guardo el nodo seleccionado en una variable de la clase TreeNode
             TreeNode nodoSeleccionado = e.Node;
             lstMostrar.Items.Clear();
 
-            //Guardo el directorio del nodo seleccionado en una variable
+            //Guardo el directorio del nodo seleccionado en una variable de la clase DirectoryInfo
             DirectoryInfo directorioNodoSeleccionado = (DirectoryInfo)nodoSeleccionado.Tag;
             ListViewItem.ListViewSubItem[] subItems;
             ListViewItem item = null;
@@ -135,7 +136,7 @@ namespace pryEliasIE
             //Obtengo el texto que tiene el item seleccionado lstView
             string a = lstMostrar.SelectedItems[0].Text.ToString();       
 
-            //En una variable concateno la ruta del treeview + el nombre del archivo anterior
+            //En una variable concateno la ruta del nodo seleccionado en el treeview + el nombre del archivo 
             string rutaArchivoParcial = Path.Combine(rutaActual, a); 
 
             //Aca esta la ruta final del archivo
