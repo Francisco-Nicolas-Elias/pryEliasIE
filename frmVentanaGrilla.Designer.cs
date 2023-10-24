@@ -141,6 +141,7 @@
             this.btnVolverVentanaGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVolverVentanaGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverVentanaGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverVentanaGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolverVentanaGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverVentanaGrilla.Location = new System.Drawing.Point(12, 944);
             this.btnVolverVentanaGrilla.Name = "btnVolverVentanaGrilla";
@@ -166,6 +167,7 @@
             this.btnBorrarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBorrarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrarGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarGrilla.Location = new System.Drawing.Point(1144, 941);
             this.btnBorrarGrilla.Name = "btnBorrarGrilla";
@@ -180,6 +182,7 @@
             this.btnModificarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarGrilla.Location = new System.Drawing.Point(1021, 941);
             this.btnModificarGrilla.Name = "btnModificarGrilla";
@@ -194,6 +197,7 @@
             this.btnGrabarGrilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGrabarGrilla.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGrabarGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrabarGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGrabarGrilla.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabarGrilla.Location = new System.Drawing.Point(897, 941);
             this.btnGrabarGrilla.Name = "btnGrabarGrilla";

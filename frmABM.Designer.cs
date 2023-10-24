@@ -56,6 +56,7 @@
             // 
             this.btnGrabar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGrabar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(493, 391);
             this.btnGrabar.Name = "btnGrabar";
@@ -70,6 +71,7 @@
             this.btnVolverABM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVolverABM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolverABM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverABM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolverABM.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverABM.Location = new System.Drawing.Point(3, 390);
             this.btnVolverABM.Name = "btnVolverABM";
@@ -268,6 +270,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(493, 391);
             this.btnModificar.Name = "btnModificar";
