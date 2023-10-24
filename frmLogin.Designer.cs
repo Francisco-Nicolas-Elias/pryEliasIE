@@ -156,6 +156,7 @@
             this.btnReestablecerContraseña.TabIndex = 6;
             this.btnReestablecerContraseña.Text = "Reestablecer contraseña";
             this.btnReestablecerContraseña.UseVisualStyleBackColor = false;
+            this.btnReestablecerContraseña.Click += new System.EventHandler(this.btnReestablecerContraseña_Click);
             // 
             // frmLogin
             // 

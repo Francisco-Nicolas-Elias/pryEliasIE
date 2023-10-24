@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace pryEliasIE
+{
+    public partial class frmReestablecerContraseña : Form
+    {
+        public frmReestablecerContraseña()
+        {
+            InitializeComponent();
+        }
+
+        private void btnVolverReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
+    }
+}

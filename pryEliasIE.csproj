@@ -52,6 +52,12 @@
     <Compile Include="frmABM.Designer.cs">
       <DependentUpon>frmABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearCuenta.Designer.cs">
+      <DependentUpon>frmCrearCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReestablecerContraseña.Designer.cs">
+      <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentanaGrilla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,9 @@
     <EmbeddedResource Include="frmABM.resx">
       <DependentUpon>frmABM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearCuenta.resx">
+      <DependentUpon>frmCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReestablecerContraseña.resx">
+      <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanaGrilla.resx">
       <DependentUpon>frmVentanaGrilla.cs</DependentUpon>

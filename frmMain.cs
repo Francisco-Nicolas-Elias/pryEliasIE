@@ -37,7 +37,9 @@ namespace pryEliasIE
 
                 frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
                 frmMenuPrincipal.Show();
-                
+                //frmLogin frmLogin = new frmLogin();
+                //frmLogin.Show();
+
                 this.Hide();
             }
         }

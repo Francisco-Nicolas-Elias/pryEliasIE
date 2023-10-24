@@ -26,5 +26,12 @@ namespace pryEliasIE
         {
 
         }
+
+        private void btnReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
+            frmReestablecerContraseña.Show();
+            this.Close();
+        }
     }
 }
