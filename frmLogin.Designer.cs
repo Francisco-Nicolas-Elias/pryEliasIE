@@ -46,9 +46,9 @@
             // 
             this.pctLogo.BackColor = System.Drawing.SystemColors.Control;
             this.pctLogo.Image = global::pryEliasIE.Properties.Resources.LogoSistemaDeSeguros;
-            this.pctLogo.Location = new System.Drawing.Point(150, 12);
+            this.pctLogo.Location = new System.Drawing.Point(388, 12);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(193, 190);
+            this.pctLogo.Size = new System.Drawing.Size(209, 195);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
@@ -57,11 +57,11 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(29, 230);
+            this.lblUsuario.Location = new System.Drawing.Point(15, 18);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(89, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(76, 19);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -69,26 +69,28 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.lblContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.White;
-            this.lblContraseña.Location = new System.Drawing.Point(29, 270);
+            this.lblContraseña.Location = new System.Drawing.Point(15, 58);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(125, 22);
+            this.lblContraseña.Size = new System.Drawing.Size(106, 19);
             this.lblContraseña.TabIndex = 2;
             this.lblContraseña.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(164, 230);
+            this.txtUsuario.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(138, 14);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(193, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(193, 25);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(164, 272);
+            this.txtContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(138, 54);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(193, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(193, 25);
             this.txtContraseña.TabIndex = 4;
             // 
             // btnIngresar
@@ -97,9 +99,9 @@
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(64, 315);
+            this.btnIngresar.Location = new System.Drawing.Point(19, 103);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(262, 46);
+            this.btnIngresar.Size = new System.Drawing.Size(312, 46);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -110,7 +112,7 @@
             this.lblCrearCuenta.BackColor = System.Drawing.Color.Transparent;
             this.lblCrearCuenta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCrearCuenta.ForeColor = System.Drawing.Color.White;
-            this.lblCrearCuenta.Location = new System.Drawing.Point(131, 456);
+            this.lblCrearCuenta.Location = new System.Drawing.Point(117, 244);
             this.lblCrearCuenta.Name = "lblCrearCuenta";
             this.lblCrearCuenta.Size = new System.Drawing.Size(129, 16);
             this.lblCrearCuenta.TabIndex = 9;
@@ -121,8 +123,8 @@
             this.btnCrearCuenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCrearCuenta.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(64, 475);
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.Location = new System.Drawing.Point(50, 263);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(262, 44);
             this.btnCrearCuenta.TabIndex = 8;
@@ -136,7 +138,7 @@
             this.lblOlvidasteContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContraseña.ForeColor = System.Drawing.Color.White;
-            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(109, 377);
+            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(95, 165);
             this.lblOlvidasteContraseña.Name = "lblOlvidasteContraseña";
             this.lblOlvidasteContraseña.Size = new System.Drawing.Size(172, 16);
             this.lblOlvidasteContraseña.TabIndex = 7;
@@ -147,8 +149,8 @@
             this.btnReestablecerContraseña.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnReestablecerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReestablecerContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReestablecerContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReestablecerContraseña.Location = new System.Drawing.Point(67, 396);
+            this.btnReestablecerContraseña.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReestablecerContraseña.Location = new System.Drawing.Point(53, 184);
             this.btnReestablecerContraseña.Name = "btnReestablecerContraseña";
             this.btnReestablecerContraseña.Size = new System.Drawing.Size(257, 46);
             this.btnReestablecerContraseña.TabIndex = 6;
@@ -162,7 +164,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(506, 564);
+            this.ClientSize = new System.Drawing.Size(609, 372);
             this.Controls.Add(this.lblCrearCuenta);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.pctLogo);
