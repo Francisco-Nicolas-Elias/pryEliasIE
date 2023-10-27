@@ -199,5 +199,10 @@ namespace pryEliasIE
             //Actualizar la ruta actual con la ruta del nodo seleccionado
             rutaActual = GetNodePath(selectedNode);
         }
+
+        private void frmVentanaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

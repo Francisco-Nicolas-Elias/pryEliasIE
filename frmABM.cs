@@ -179,10 +179,7 @@ namespace pryEliasIE
             }
 
             MessageBox.Show("El registro fue modificado correctamente.");
-
-                
-            
-
+                    
             txtNumero.Clear();
             txtEntidad.Clear();
             txtApertura.Clear();
@@ -219,6 +216,11 @@ namespace pryEliasIE
             frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
             frmVentanaPrincipal.Show();
             this.Close();
+        }
+
+        private void frmABM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

@@ -150,6 +150,7 @@
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmVentanaPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.frmVentanaPrincipal_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

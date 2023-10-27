@@ -142,5 +142,10 @@ namespace pryEliasIE
         {
 
         }
+
+        private void frmVentanaGrilla_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -298,6 +298,7 @@
             this.Name = "frmABM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmABM_FormClosed);
             this.Load += new System.EventHandler(this.frmABM_Load);
             this.gbDatosProveedores.ResumeLayout(false);
             this.gbDatosProveedores.PerformLayout();

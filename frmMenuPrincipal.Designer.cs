@@ -34,6 +34,8 @@
             this.carpetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarModificarOBorrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eLCLUBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +44,8 @@
             this.mnsMenuPrincipal.BackColor = System.Drawing.Color.CornflowerBlue;
             this.mnsMenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem,
-            this.cargarModificarOBorrarToolStripMenuItem});
+            this.cargarModificarOBorrarToolStripMenuItem,
+            this.eLCLUBToolStripMenuItem});
             this.mnsMenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsMenuPrincipal.Name = "mnsMenuPrincipal";
             this.mnsMenuPrincipal.Padding = new System.Windows.Forms.Padding(12, 3, 0, 3);
@@ -63,7 +66,7 @@
             // carpetasToolStripMenuItem
             // 
             this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
-            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.carpetasToolStripMenuItem.Text = "Carpetas";
             this.carpetasToolStripMenuItem.Click += new System.EventHandler(this.carpetasToolStripMenuItem_Click);
             // 
@@ -78,8 +81,24 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(70, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
+            // 
+            // eLCLUBToolStripMenuItem
+            // 
+            this.eLCLUBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem});
+            this.eLCLUBToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eLCLUBToolStripMenuItem.Name = "eLCLUBToolStripMenuItem";
+            this.eLCLUBToolStripMenuItem.Size = new System.Drawing.Size(112, 28);
+            this.eLCLUBToolStripMenuItem.Text = "EL CLUB";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -115,5 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarModificarOBorrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eLCLUBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }

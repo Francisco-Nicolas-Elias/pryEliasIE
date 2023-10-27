@@ -249,6 +249,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmVentanaGrilla_FormClosed);
             this.Load += new System.EventHandler(this.frmVentanaGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarArchivo)).EndInit();
             this.ResumeLayout(false);

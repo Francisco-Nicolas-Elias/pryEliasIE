@@ -54,5 +54,12 @@ namespace pryEliasIE
                 this.Close(); // Cierra el formulario cuando se presiona la tecla Escape
             }
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmElClub frmElClub = new frmElClub();
+            frmElClub.Show();
+            this.Hide();
+        }
     }
 }

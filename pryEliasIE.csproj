@@ -59,6 +59,12 @@
     <Compile Include="frmCrearCuenta.Designer.cs">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmElClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElClub.Designer.cs">
+      <DependentUpon>frmElClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearCuenta.resx">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmElClub.resx">
+      <DependentUpon>frmElClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
