@@ -178,7 +178,7 @@ namespace pryEliasIE
             {
                 while (lectorBD.Read())
                 {
-                    if (lectorBD[3].ToString() == apellidoSocio)
+                    if (lectorBD[2].ToString() == apellidoSocio)
                     {
                         MessageBox.Show("Cliente existe", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         seEncuentra = true;
