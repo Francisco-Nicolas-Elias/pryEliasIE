@@ -94,5 +94,17 @@ namespace pryEliasIE
         {
             Application.Exit();
         }
+
+        private void pctOcultarContraseña_Click(object sender, EventArgs e)
+        {
+            pctOcultarConstraseña.BringToFront();
+            txtContraseña.PasswordChar = '*';
+        }
+
+        private void pctMostrarConstraseña_Click(object sender, EventArgs e)
+        {
+            pctMostrarContraseña.BringToFront();
+            txtContraseña.PasswordChar = '\0';         
+        }
     }
 }

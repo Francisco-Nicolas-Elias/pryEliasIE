@@ -44,7 +44,7 @@ namespace pryEliasIE
 
         private void frmMenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void frmMenuPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -60,6 +60,23 @@ namespace pryEliasIE
             frmElClub frmElClub = new frmElClub();
             frmElClub.Show();
             this.Hide();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
         }
     }
 }

@@ -44,9 +44,12 @@
             // 
             // dtvDatosElClub
             // 
+            this.dtvDatosElClub.AllowUserToAddRows = false;
+            this.dtvDatosElClub.AllowUserToDeleteRows = false;
             this.dtvDatosElClub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvDatosElClub.Location = new System.Drawing.Point(12, 12);
             this.dtvDatosElClub.Name = "dtvDatosElClub";
+            this.dtvDatosElClub.ReadOnly = true;
             this.dtvDatosElClub.Size = new System.Drawing.Size(710, 198);
             this.dtvDatosElClub.TabIndex = 1;
             this.dtvDatosElClub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDatosElClub_CellContentClick);

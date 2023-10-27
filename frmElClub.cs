@@ -32,6 +32,10 @@ namespace pryEliasIE
 
 
             objBaseDatos.TraerDatosElClub(dtvDatosElClub);
+
+            btnBuscarCliente.Enabled = false;
+
+            btnBuscarClientePorApellido.Enabled = false;
         }
 
         private void dtvDatosElClub_CellContentClick(object sender, DataGridViewCellEventArgs e)

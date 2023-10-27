@@ -93,6 +93,26 @@ namespace pryEliasIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foto_mostrar_contraseña {
+            get {
+                object obj = ResourceManager.GetObject("foto mostrar contraseña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_ocultar_contraseña {
+            get {
+                object obj = ResourceManager.GetObject("foto ocultar contraseña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoSistemaDeSeguros {
             get {
                 object obj = ResourceManager.GetObject("LogoSistemaDeSeguros", resourceCulture);

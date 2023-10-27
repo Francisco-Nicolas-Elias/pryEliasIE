@@ -165,5 +165,11 @@
   <ItemGroup>
     <None Include="Resources\fondo_de_ventanas-mejor calidad.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto mostrar contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto ocultar contraseña.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,7 +39,11 @@
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.lblOlvidasteContraseña = new System.Windows.Forms.Label();
             this.btnReestablecerContraseña = new System.Windows.Forms.Button();
+            this.pctOcultarConstraseña = new System.Windows.Forms.PictureBox();
+            this.pctMostrarContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarConstraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // pctLogo
@@ -90,6 +94,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(138, 54);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(193, 25);
             this.txtContraseña.TabIndex = 4;
             // 
@@ -159,6 +164,28 @@
             this.btnReestablecerContraseña.UseVisualStyleBackColor = false;
             this.btnReestablecerContraseña.Click += new System.EventHandler(this.btnReestablecerContraseña_Click);
             // 
+            // pctOcultarConstraseña
+            // 
+            this.pctOcultarConstraseña.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
+            this.pctOcultarConstraseña.Location = new System.Drawing.Point(337, 56);
+            this.pctOcultarConstraseña.Name = "pctOcultarConstraseña";
+            this.pctOcultarConstraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctOcultarConstraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOcultarConstraseña.TabIndex = 17;
+            this.pctOcultarConstraseña.TabStop = false;
+            this.pctOcultarConstraseña.Click += new System.EventHandler(this.pctMostrarConstraseña_Click);
+            // 
+            // pctMostrarContraseña
+            // 
+            this.pctMostrarContraseña.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
+            this.pctMostrarContraseña.Location = new System.Drawing.Point(337, 56);
+            this.pctMostrarContraseña.Name = "pctMostrarContraseña";
+            this.pctMostrarContraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctMostrarContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrarContraseña.TabIndex = 18;
+            this.pctMostrarContraseña.TabStop = false;
+            this.pctMostrarContraseña.Click += new System.EventHandler(this.pctOcultarContraseña_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -167,6 +194,8 @@
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(609, 372);
+            this.Controls.Add(this.pctMostrarContraseña);
+            this.Controls.Add(this.pctOcultarConstraseña);
             this.Controls.Add(this.lblCrearCuenta);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.pctLogo);
@@ -189,6 +218,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarConstraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +237,7 @@
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.Label lblOlvidasteContraseña;
         private System.Windows.Forms.Button btnReestablecerContraseña;
+        private System.Windows.Forms.PictureBox pctOcultarConstraseña;
+        private System.Windows.Forms.PictureBox pctMostrarContraseña;
     }
 }
