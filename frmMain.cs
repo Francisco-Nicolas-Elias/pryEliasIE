@@ -35,10 +35,8 @@ namespace pryEliasIE
             {
                 timer1.Stop();
 
-                frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
-                frmMenuPrincipal.Show();
-                //frmLogin frmLogin = new frmLogin();
-                //frmLogin.Show();
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
 
                 this.Hide();
             }
