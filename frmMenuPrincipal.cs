@@ -51,7 +51,7 @@ namespace pryEliasIE
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape.
+                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape
             }
         }
     }

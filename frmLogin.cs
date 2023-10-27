@@ -51,6 +51,7 @@ namespace pryEliasIE
             clsLogin login = new clsLogin();
             login.BuscarUsuario();
 
+            //Si el usuario y contraseña son correctos, ingresa
             if (clsLogin.acceso == true)
             {
                 this.Hide();
@@ -66,7 +67,7 @@ namespace pryEliasIE
                 {
                     MessageBox.Show("Le queda un solo intento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
+                //Si intenta ingresar 3 veces se bloquea el botón de ingreso
                 if (contador > 2)
                 {
                     btnIngresar.Enabled = false;
@@ -80,7 +81,7 @@ namespace pryEliasIE
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape.
+                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape
             }
         }
 
