@@ -17,7 +17,7 @@ namespace pryEliasIE
         OleDbCommand comandoBD = new OleDbCommand(); //Sirve para datos, editar y borrar 
         OleDbDataReader lectorBD;
 
-        string cadenaConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
+        string cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
 
         public string datosTabla = "";
 
@@ -26,14 +26,14 @@ namespace pryEliasIE
         public void ConectarBD()
         {
             conexionBD = new OleDbConnection();
-            conexionBD.ConnectionString = cadenaConexion;
+            conexionBD.ConnectionString = cadenaConexionBase;
             conexionBD.Open();
         }
 
         public void BuscarUsuario()
         {
             conexionBD = new OleDbConnection();
-            conexionBD.ConnectionString = cadenaConexion;
+            conexionBD.ConnectionString = cadenaConexionBase;
             conexionBD.Open();
             comandoBD = new OleDbCommand();
 

@@ -15,6 +15,9 @@ namespace pryEliasIE
         public frmMenuPrincipal()
         {
             InitializeComponent();
+            this.KeyPreview = true; // Asegura que el formulario capture las teclas presionadas
+            this.KeyDown += new KeyEventHandler(frmMenuPrincipal_KeyDown); // Suscribe el controlador de eventos
+            this.Focus(); // Establece el foco en el formulario
         }
 
         private void carpetasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,6 +40,19 @@ namespace pryEliasIE
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMenuPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape.
+            }
         }
     }
 }

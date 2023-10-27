@@ -17,6 +17,9 @@ namespace pryEliasIE
         public frmLogin()
         {
             InitializeComponent();
+            this.KeyPreview = true; // Asegura que el formulario capture las teclas presionadas
+            this.KeyDown += new KeyEventHandler(frmLogin_KeyDown); // Suscribe el controlador de eventos
+            this.Focus(); // Establece el foco en el formulario
         }
 
         public static string usuario;
@@ -57,13 +60,38 @@ namespace pryEliasIE
             else
             {
                 contador = contador + 1;
-                MessageBox.Show("Usuario o Contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (contador == 2)
+                {
+                    MessageBox.Show("Le queda un solo intento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 if (contador > 2)
                 {
                     btnIngresar.Enabled = false;
+                    MessageBox.Show("Ingreso bloqueado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     contador = 0;
                 }
             }
+        }
+
+        private void frmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close(); // Cierra el formulario cuando se presiona la tecla Escape.
+            }
+        }
+
+        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
