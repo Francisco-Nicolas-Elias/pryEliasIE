@@ -84,6 +84,8 @@ namespace pryEliasIE
             }
         }
 
+        //Al final no la uso
+        /*
         public void TraerDatosElClub()
         {
             comandoBD = new OleDbCommand();
@@ -102,7 +104,7 @@ namespace pryEliasIE
                 }
             }
         }
-
+        */
         public void TraerDatosElClub(DataGridView grilla)
         {
             comandoBD = new OleDbCommand();
@@ -149,7 +151,7 @@ namespace pryEliasIE
                 {
                     if (int.Parse(lectorBD[0].ToString()) == codigoSocio)
                     {
-                        MessageBox.Show("Cliente existe", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cliente existente: \n" + lectorBD[1].ToString() + " " + lectorBD[2].ToString(), "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         seEncuentra = true;
                         break;
                     }
@@ -180,7 +182,7 @@ namespace pryEliasIE
                 {
                     if (lectorBD[2].ToString() == apellidoSocio)
                     {
-                        MessageBox.Show("Cliente existe", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cliente existente: \n" + lectorBD[1].ToString() + " " + lectorBD[2].ToString(), "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         seEncuentra = true;
                         break;
                     }
