@@ -33,14 +33,23 @@ namespace pryEliasIE
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
-
+            frmCrearCuenta frmCrearCuenta = new frmCrearCuenta();
+            frmCrearCuenta.Show();
+            this.Hide();
         }
 
         private void btnReestablecerContraseña_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            if (objLogs.estadoDeConexion == "Registro exitoso de log")
+            {              
+                objLogs.RegistroLogReestablecerContraseña();
+            }
+
             frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
             frmReestablecerContraseña.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -51,15 +60,23 @@ namespace pryEliasIE
             clsLogin login = new clsLogin();
             login.BuscarUsuario();
 
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.ValidarUsuario(txtUsuario.Text, txtContraseña.Text);
+
             //Si el usuario y contraseña son correctos, ingresa
             if (clsLogin.acceso == true)
             {
+                objLogs.RegistroLogInicioSesionExitoso();
+
                 this.Hide();
                 frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
                 frmMenuPrincipal.Show();
             }
             else
             {
+                objLogs.RegistroLogInicioSesionFallido();
+
                 contador = contador + 1;
                 MessageBox.Show("Usuario o contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

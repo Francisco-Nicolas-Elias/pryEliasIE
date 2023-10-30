@@ -23,5 +23,10 @@ namespace pryEliasIE
             frmLogin.Show();
             this.Close();
         }
+
+        private void btnCrearCuentaNuevoUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

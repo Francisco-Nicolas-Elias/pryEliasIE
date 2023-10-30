@@ -37,13 +37,15 @@
             this.txtNuevoUsuario = new System.Windows.Forms.TextBox();
             this.lblNuevaContraseñaUsuarioNuevo = new System.Windows.Forms.Label();
             this.lblNuevoUsuario = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.txtPerfil = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoReestablecerContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // txtRepitaNuevaContraseñaUsuarioNuevo
             // 
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepitaNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(223, 102);
+            this.txtRepitaNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(171, 102);
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Name = "txtRepitaNuevaContraseñaUsuarioNuevo";
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtRepitaNuevaContraseñaUsuarioNuevo.TabIndex = 17;
@@ -56,9 +58,9 @@
             this.lblRepitaNuevaContraseñaUsuarioNuevo.ForeColor = System.Drawing.Color.White;
             this.lblRepitaNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(12, 108);
             this.lblRepitaNuevaContraseñaUsuarioNuevo.Name = "lblRepitaNuevaContraseñaUsuarioNuevo";
-            this.lblRepitaNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(210, 19);
+            this.lblRepitaNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(158, 19);
             this.lblRepitaNuevaContraseñaUsuarioNuevo.TabIndex = 16;
-            this.lblRepitaNuevaContraseñaUsuarioNuevo.Text = "Repita nueva contraseña:";
+            this.lblRepitaNuevaContraseñaUsuarioNuevo.Text = "Repita contraseña:";
             // 
             // btnVolverCrearCuenta
             // 
@@ -81,12 +83,13 @@
             this.btnCrearCuentaNuevoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuentaNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrearCuentaNuevoUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuentaNuevoUsuario.Location = new System.Drawing.Point(16, 155);
+            this.btnCrearCuentaNuevoUsuario.Location = new System.Drawing.Point(16, 169);
             this.btnCrearCuentaNuevoUsuario.Name = "btnCrearCuentaNuevoUsuario";
             this.btnCrearCuentaNuevoUsuario.Size = new System.Drawing.Size(357, 42);
             this.btnCrearCuentaNuevoUsuario.TabIndex = 14;
             this.btnCrearCuentaNuevoUsuario.Text = "Crear cuenta";
             this.btnCrearCuentaNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnCrearCuentaNuevoUsuario.Click += new System.EventHandler(this.btnCrearCuentaNuevoUsuario_Click);
             // 
             // pctLogoReestablecerContraseña
             // 
@@ -102,7 +105,7 @@
             // txtNuevaContraseñaUsuarioNuevo
             // 
             this.txtNuevaContraseñaUsuarioNuevo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(223, 65);
+            this.txtNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(171, 65);
             this.txtNuevaContraseñaUsuarioNuevo.Name = "txtNuevaContraseñaUsuarioNuevo";
             this.txtNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtNuevaContraseñaUsuarioNuevo.TabIndex = 12;
@@ -110,7 +113,7 @@
             // txtNuevoUsuario
             // 
             this.txtNuevoUsuario.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevoUsuario.Location = new System.Drawing.Point(223, 28);
+            this.txtNuevoUsuario.Location = new System.Drawing.Point(171, 28);
             this.txtNuevoUsuario.Name = "txtNuevoUsuario";
             this.txtNuevoUsuario.Size = new System.Drawing.Size(150, 25);
             this.txtNuevoUsuario.TabIndex = 11;
@@ -123,9 +126,9 @@
             this.lblNuevaContraseñaUsuarioNuevo.ForeColor = System.Drawing.Color.White;
             this.lblNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(12, 71);
             this.lblNuevaContraseñaUsuarioNuevo.Name = "lblNuevaContraseñaUsuarioNuevo";
-            this.lblNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(157, 19);
+            this.lblNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(106, 19);
             this.lblNuevaContraseñaUsuarioNuevo.TabIndex = 10;
-            this.lblNuevaContraseñaUsuarioNuevo.Text = "Nueva contraseña:";
+            this.lblNuevaContraseñaUsuarioNuevo.Text = "Contraseña:";
             // 
             // lblNuevoUsuario
             // 
@@ -139,6 +142,26 @@
             this.lblNuevoUsuario.TabIndex = 9;
             this.lblNuevoUsuario.Text = "Usuario:";
             // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.lblPerfil.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.White;
+            this.lblPerfil.Location = new System.Drawing.Point(12, 147);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(55, 19);
+            this.lblPerfil.TabIndex = 18;
+            this.lblPerfil.Text = "Perfil:";
+            // 
+            // txtPerfil
+            // 
+            this.txtPerfil.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfil.Location = new System.Drawing.Point(171, 138);
+            this.txtPerfil.Name = "txtPerfil";
+            this.txtPerfil.Size = new System.Drawing.Size(150, 25);
+            this.txtPerfil.TabIndex = 19;
+            // 
             // frmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -146,6 +169,8 @@
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(631, 313);
+            this.Controls.Add(this.txtPerfil);
+            this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.txtRepitaNuevaContraseñaUsuarioNuevo);
             this.Controls.Add(this.lblRepitaNuevaContraseñaUsuarioNuevo);
             this.Controls.Add(this.btnVolverCrearCuenta);
@@ -177,5 +202,7 @@
         private System.Windows.Forms.TextBox txtNuevoUsuario;
         private System.Windows.Forms.Label lblNuevaContraseñaUsuarioNuevo;
         private System.Windows.Forms.Label lblNuevoUsuario;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.TextBox txtPerfil;
     }
 }

@@ -32,8 +32,6 @@
             this.mnsMenuPrincipal = new System.Windows.Forms.MenuStrip();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carpetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarModificarOBorrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eLCLUBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +44,6 @@
             this.mnsMenuPrincipal.BackColor = System.Drawing.Color.CornflowerBlue;
             this.mnsMenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem,
-            this.cargarModificarOBorrarToolStripMenuItem,
             this.eLCLUBToolStripMenuItem,
             this.perfilToolStripMenuItem});
             this.mnsMenuPrincipal.Location = new System.Drawing.Point(0, 0);
@@ -69,23 +66,9 @@
             // carpetasToolStripMenuItem
             // 
             this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
-            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.carpetasToolStripMenuItem.Text = "Carpetas";
             this.carpetasToolStripMenuItem.Click += new System.EventHandler(this.carpetasToolStripMenuItem_Click);
-            // 
-            // cargarModificarOBorrarToolStripMenuItem
-            // 
-            this.cargarModificarOBorrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proveedoresToolStripMenuItem});
-            this.cargarModificarOBorrarToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cargarModificarOBorrarToolStripMenuItem.Name = "cargarModificarOBorrarToolStripMenuItem";
-            this.cargarModificarOBorrarToolStripMenuItem.Size = new System.Drawing.Size(12, 28);
-            // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(70, 22);
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // eLCLUBToolStripMenuItem
             // 
@@ -99,7 +82,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -152,8 +135,6 @@
         private System.Windows.Forms.MenuStrip mnsMenuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarModificarOBorrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eLCLUBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
