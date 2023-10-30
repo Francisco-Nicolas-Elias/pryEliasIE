@@ -17,7 +17,6 @@ namespace pryEliasIE
         OleDbCommand comandoBD = new OleDbCommand(); //Sirve para datos, editar y borrar 
         OleDbDataReader lectorBD;
 
-        OleDbDataAdapter adaptadorBD;
         DataSet objDS;
 
         string cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
@@ -156,14 +155,14 @@ namespace pryEliasIE
                 comandoBD.CommandText = "SOCIOS";
 
                 lectorBD = comandoBD.ExecuteReader();
-
+                
                 grilla.Columns.Add("Nombre", "Nombre");
                 grilla.Columns.Add("Apellido", "Apellido");
                 grilla.Columns.Add("Nacionalidad", "Nacionalidad");
                 grilla.Columns.Add("Edad", "Edad");
                 grilla.Columns.Add("Ingreso", "Ingreso");
                 grilla.Columns.Add("Puntaje", "Puntaje");
-
+                
 
                 if (lectorBD.HasRows)
                 {

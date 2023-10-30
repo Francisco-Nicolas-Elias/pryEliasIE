@@ -194,8 +194,8 @@
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(609, 372);
-            this.Controls.Add(this.pctMostrarContraseña);
             this.Controls.Add(this.pctOcultarConstraseña);
+            this.Controls.Add(this.pctMostrarContraseña);
             this.Controls.Add(this.lblCrearCuenta);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.pctLogo);

@@ -101,6 +101,7 @@
     <Compile Include="frmVentanaPrincipal.Designer.cs">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsLogs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmABM.resx">
