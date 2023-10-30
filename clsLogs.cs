@@ -23,17 +23,18 @@ namespace pryEliasIE
         string cadenaConexionElClub;
 
         public string estadoDeConexion;
-
+        
         public clsLogs()
         {
             try
             {
                 cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
+               
 
                 cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
 
                 conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionBase;
+                conexionBD.ConnectionString =cadenaConexionBase;
                 conexionBD.ConnectionString = cadenaConexionElClub;
                 conexionBD.Open();
 

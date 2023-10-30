@@ -17,6 +17,8 @@ namespace pryEliasIE
         OleDbCommand comandoBD = new OleDbCommand(); //Sirve para datos, editar y borrar 
         OleDbDataReader lectorBD;
 
+        OleDbDataAdapter adaptadorBD;
+
         DataSet objDS;
 
         string cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";

@@ -62,6 +62,8 @@ namespace pryEliasIE
 
             clsLogs objLogs = new clsLogs();
 
+            
+
             objLogs.ValidarUsuario(txtUsuario.Text, txtContraseña.Text);
 
             //Si el usuario y contraseña son correctos, ingresa
