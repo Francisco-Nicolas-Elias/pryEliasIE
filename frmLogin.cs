@@ -44,14 +44,7 @@ namespace pryEliasIE
             
             clsLogs objLogs = new clsLogs();
 
-            objLogs.RegistroLogReestablecerContraseña();
-
-            /*
-            if (objLogs.estadoDeConexion == "Registro exitoso de log")
-            {              
-                objLogs.RegistroLogReestablecerContraseña();
-            }
-            */
+            objLogs.RegistroLogReestablecerContraseña();         
 
             frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
             frmReestablecerContraseña.Show();
