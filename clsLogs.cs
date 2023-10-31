@@ -12,7 +12,7 @@ namespace pryEliasIE
 {
     internal class clsLogs
     {
-        /*
+        
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
@@ -25,16 +25,11 @@ namespace pryEliasIE
         string cadenaConexionElClub;
 
         public string estadoDeConexion;
-        */
-
-        OleDbConnection conexionBD;
-        OleDbCommand comandoBD;
-        OleDbDataAdapter objDataAdap;
-        DataSet objDataSet = new DataSet();
+        
 
         public clsLogs()
         {
-            /*
+            
             try
             {
                 cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
@@ -55,7 +50,7 @@ namespace pryEliasIE
             {
                 estadoDeConexion = error.Message;
             }
-            */
+            
 
             // Constructor para inicializar la conexión y el comando.
             conexionBD = new OleDbConnection();
@@ -77,54 +72,14 @@ namespace pryEliasIE
                 MessageBox.Show(Convert.ToString(ex));
             }
         }
-
-        public void RegistroLogInicioSesionExitoso()
-        {
-            ConectarBD();
-            comandoBD = new OleDbCommand();
-
-            comandoBD.Connection = conexionBD;
-
-
-            // Establece el tipo de comando y la tabla
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            //Que tabla traigo
-            comandoBD.CommandText = "Logs";
-            // crear el objeto DataAdapter pasando como parámetro el objeto comando que queremos vincular
-            objDataAdap = new OleDbDataAdapter(comandoBD);
-            // ejecutar la lectura de la tabla y almacenar su contenido en el dataAdapter
-            objDataAdap.Fill(objDataSet, "Logs");
-            // obtenemos una referencia a la tabla
-
-
-            DataTable dt = objDataSet.Tables["Logs"];
-
-            // creamos el nuevo DataRow con la estructura de campos de la tabla
-            DataRow dr = dt.NewRow();
-            // asignamos los valores a todos los campos del DataRow
-            dr["Categoria"] = "Inicio Sesión";
-            dr["FechaHora"] = DateTime.Now;
-            dr["Descripcion"] = "Inicio exitoso";
-
-            // agregamos el DataRow a la tabla
-
-            dt.Rows.Add(dr);
-
-            // creamos el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
-            OleDbCommandBuilder cb = new OleDbCommandBuilder(objDataAdap);
-
-            // actualizamos la base con los cambios realizados
-            objDataAdap.Update(objDataSet, "Logs");
-            conexionBD.Close();
-        }
-        /*
+        
         public void RegistroLogInicioSesionExitoso()
         {
             try
             {  
-                conexionBD = new OleDbConnection();
+                ConectarBD();
+
                 comandoBD = new OleDbCommand();
-                conexionBD.Open();
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
@@ -158,8 +113,10 @@ namespace pryEliasIE
         {
             try
             {
-                conexionBD = new OleDbConnection();
+                ConectarBD();
+                
                 comandoBD = new OleDbCommand();
+                 
                 conexionBD.Open();
 
                 comandoBD.Connection = conexionBD;
@@ -191,13 +148,10 @@ namespace pryEliasIE
         {
             try
             {
-                conexionBD = new OleDbConnection();
+
+                ConectarBD();
                 
                 comandoBD = new OleDbCommand();
-
-                
-
-                conexionBD.Open();
 
 
                 comandoBD.Connection = conexionBD;
@@ -233,9 +187,12 @@ namespace pryEliasIE
         {
             try
             {
-                conexionBD = new OleDbConnection();
+                ConectarBD();
+                
                 comandoBD = new OleDbCommand();
-                conexionBD.Open();
+                
+
+                comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
@@ -270,9 +227,12 @@ namespace pryEliasIE
         {
             try
             {
-                conexionBD = new OleDbConnection();
+                ConectarBD();
+                
                 comandoBD = new OleDbCommand();
-                conexionBD.Open();
+
+  
+                comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
@@ -301,6 +261,6 @@ namespace pryEliasIE
                 estadoDeConexion = error.Message;
             }
         }
-        */
+        
     }
 }

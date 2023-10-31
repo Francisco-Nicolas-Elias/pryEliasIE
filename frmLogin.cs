@@ -41,9 +41,12 @@ namespace pryEliasIE
 
         private void btnReestablecerContraseña_Click(object sender, EventArgs e)
         {
-            /*
+            
             clsLogs objLogs = new clsLogs();
 
+            objLogs.RegistroLogReestablecerContraseña();
+
+            /*
             if (objLogs.estadoDeConexion == "Registro exitoso de log")
             {              
                 objLogs.RegistroLogReestablecerContraseña();
@@ -73,7 +76,7 @@ namespace pryEliasIE
             if (clsLogin.acceso == true)
             {
                 objLogs.RegistroLogInicioSesionExitoso();
-                //objLogs.RegistroLogInicioSesionExitoso();
+                
 
                 this.Hide();
                 frmMenuPrincipal frmMenuPrincipal = new frmMenuPrincipal();
@@ -81,7 +84,7 @@ namespace pryEliasIE
             }
             else
             {
-                //objLogs.RegistroLogInicioSesionFallido();
+                objLogs.RegistroLogInicioSesionFallido();
 
                 contador = contador + 1;
                 MessageBox.Show("Usuario o contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
