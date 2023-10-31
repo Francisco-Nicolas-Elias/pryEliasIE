@@ -166,6 +166,7 @@
             // 
             // pctOcultarConstraseña
             // 
+            this.pctOcultarConstraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctOcultarConstraseña.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
             this.pctOcultarConstraseña.Location = new System.Drawing.Point(337, 56);
             this.pctOcultarConstraseña.Name = "pctOcultarConstraseña";
@@ -177,6 +178,7 @@
             // 
             // pctMostrarContraseña
             // 
+            this.pctMostrarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctMostrarContraseña.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
             this.pctMostrarContraseña.Location = new System.Drawing.Point(337, 56);
             this.pctMostrarContraseña.Name = "pctMostrarContraseña";
