@@ -125,5 +125,33 @@ namespace pryEliasIE
             pctMostrarContraseña.BringToFront();
             txtContraseña.PasswordChar = '\0';         
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                btnIngresar_Click(sender, e);
+                e.Handled = true;
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                txtContraseña.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }
