@@ -26,7 +26,7 @@ namespace pryEliasIE
 
         public string estadoDeConexion;
         
-
+        frmLogin frmLogin = new frmLogin();
         public clsLogs()
         {
             
@@ -95,6 +95,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -167,6 +168,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio fallido";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -207,6 +209,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Reestablecer contraseña";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -247,6 +250,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Carpetas";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -283,6 +287,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Crear cuenta";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -319,6 +324,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Ver carpetas y archivos";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -355,6 +361,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Grabar registro";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -391,6 +398,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Modificar registro";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -428,6 +436,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Borrar registro";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -465,6 +474,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Buscar socio por ID";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -501,6 +511,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Buscar socio por apellido";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -537,6 +548,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Ver socios del club";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -574,6 +586,7 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Cerrar sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 

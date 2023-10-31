@@ -17,6 +17,8 @@ namespace pryEliasIE
             InitializeComponent();
         }
 
+   
+
         private void btnVolverReestablecerContraseña_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
@@ -26,6 +28,7 @@ namespace pryEliasIE
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
             if (txtUsuarioReestablecerContraseña.Text != "" & txtNuevaContraseña.Text != "" & txtRepitaNuevaContraseña.Text != "")
             {
                 btnContraseñaReestablecida.Enabled = true;
@@ -70,6 +73,7 @@ namespace pryEliasIE
             clsLogs objLogs = new clsLogs();
 
             objLogs.RegistroLogReestablecerContraseña();
+
         }
     }
 }

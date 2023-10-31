@@ -66,9 +66,11 @@
             // 
             // txtUsuarioReestablecerContraseña
             // 
+            this.txtUsuarioReestablecerContraseña.Enabled = false;
             this.txtUsuarioReestablecerContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioReestablecerContraseña.Location = new System.Drawing.Point(223, 18);
             this.txtUsuarioReestablecerContraseña.Name = "txtUsuarioReestablecerContraseña";
+            this.txtUsuarioReestablecerContraseña.ReadOnly = true;
             this.txtUsuarioReestablecerContraseña.Size = new System.Drawing.Size(150, 25);
             this.txtUsuarioReestablecerContraseña.TabIndex = 2;
             this.txtUsuarioReestablecerContraseña.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -177,12 +179,12 @@
 
         private System.Windows.Forms.Label lblUsuarioReestablecerContraseña;
         private System.Windows.Forms.Label lblNuevaContraseña;
-        private System.Windows.Forms.TextBox txtUsuarioReestablecerContraseña;
         private System.Windows.Forms.TextBox txtNuevaContraseña;
         private System.Windows.Forms.PictureBox pctLogoCrearContraseña;
         private System.Windows.Forms.Button btnContraseñaReestablecida;
         private System.Windows.Forms.Button btnVolverReestablecerContraseña;
         private System.Windows.Forms.TextBox txtRepitaNuevaContraseña;
         private System.Windows.Forms.Label lblRepitaNuevaContraseña;
+        public System.Windows.Forms.TextBox txtUsuarioReestablecerContraseña;
     }
 }

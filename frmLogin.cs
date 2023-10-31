@@ -26,10 +26,12 @@ namespace pryEliasIE
         public static string contraseña;
         int contador = 0;
 
+        frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
             btnIngresar.Enabled = false;
+            btnReestablecerContraseña.Enabled = false;
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -38,14 +40,18 @@ namespace pryEliasIE
             frmCrearCuenta.Show();
             this.Hide();
         }
-
+        
         private void btnReestablecerContraseña_Click(object sender, EventArgs e)
         {         
             frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
+
+            frmReestablecerContraseña.txtUsuarioReestablecerContraseña.Text = txtUsuario.Text;
+            frmReestablecerContraseña.txtUsuarioReestablecerContraseña.ReadOnly = true;
+
             frmReestablecerContraseña.Show();
             this.Hide();
         }
-
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             usuario = txtUsuario.Text;
@@ -130,6 +136,15 @@ namespace pryEliasIE
             else
             {
                 btnIngresar.Enabled = false;
+            }
+
+            if (txtUsuario.Text != "")
+            {
+                btnReestablecerContraseña.Enabled = true;
+            }
+            else
+            {
+                btnReestablecerContraseña.Enabled = false;
             }
         }
 

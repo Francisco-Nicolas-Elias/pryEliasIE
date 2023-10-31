@@ -236,7 +236,6 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label lblCrearCuenta;
@@ -245,5 +244,6 @@
         private System.Windows.Forms.Button btnReestablecerContraseña;
         private System.Windows.Forms.PictureBox pctOcultarConstraseña;
         private System.Windows.Forms.PictureBox pctMostrarContraseña;
+        public System.Windows.Forms.TextBox txtUsuario;
     }
 }
