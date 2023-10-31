@@ -29,7 +29,7 @@ namespace pryEliasIE
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            btnIngresar.Enabled = false;
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -40,12 +40,7 @@ namespace pryEliasIE
         }
 
         private void btnReestablecerContraseña_Click(object sender, EventArgs e)
-        {
-            
-            clsLogs objLogs = new clsLogs();
-
-            objLogs.RegistroLogReestablecerContraseña();         
-
+        {         
             frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
             frmReestablecerContraseña.Show();
             this.Hide();
@@ -128,12 +123,26 @@ namespace pryEliasIE
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtUsuario.Text != "" & txtContraseña.Text != "")
+            {
+                btnIngresar.Enabled = true;
+            }
+            else
+            {
+                btnIngresar.Enabled = false;
+            }
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtUsuario.Text != "" & txtContraseña.Text != "")
+            {
+                btnIngresar.Enabled = true;
+            }
+            else
+            {
+                btnIngresar.Enabled = false;
+            }
         }
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)

@@ -95,6 +95,10 @@ namespace pryEliasIE
 
         private void btnBorrarGrilla_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogBorrarRegistro();
+
             //n es el número de fila seleccionado en la grilla
             int n = dtvMostrarArchivo.CurrentCell.RowIndex;
 

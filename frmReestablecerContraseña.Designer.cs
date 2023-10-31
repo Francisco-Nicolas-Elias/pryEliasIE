@@ -30,8 +30,8 @@
         {
             this.lblUsuarioReestablecerContraseña = new System.Windows.Forms.Label();
             this.lblNuevaContraseña = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsuarioReestablecerContraseña = new System.Windows.Forms.TextBox();
+            this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
             this.pctLogoCrearContraseña = new System.Windows.Forms.PictureBox();
             this.btnContraseñaReestablecida = new System.Windows.Forms.Button();
             this.btnVolverReestablecerContraseña = new System.Windows.Forms.Button();
@@ -64,21 +64,23 @@
             this.lblNuevaContraseña.TabIndex = 1;
             this.lblNuevaContraseña.Text = "Nueva contraseña:";
             // 
-            // textBox1
+            // txtUsuarioReestablecerContraseña
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(223, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 25);
-            this.textBox1.TabIndex = 2;
+            this.txtUsuarioReestablecerContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioReestablecerContraseña.Location = new System.Drawing.Point(223, 18);
+            this.txtUsuarioReestablecerContraseña.Name = "txtUsuarioReestablecerContraseña";
+            this.txtUsuarioReestablecerContraseña.Size = new System.Drawing.Size(150, 25);
+            this.txtUsuarioReestablecerContraseña.TabIndex = 2;
+            this.txtUsuarioReestablecerContraseña.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtNuevaContraseña
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(223, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 25);
-            this.textBox2.TabIndex = 3;
+            this.txtNuevaContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(223, 55);
+            this.txtNuevaContraseña.Name = "txtNuevaContraseña";
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(150, 25);
+            this.txtNuevaContraseña.TabIndex = 3;
+            this.txtNuevaContraseña.TextChanged += new System.EventHandler(this.txtNuevaContraseña_TextChanged);
             // 
             // pctLogoCrearContraseña
             // 
@@ -103,6 +105,7 @@
             this.btnContraseñaReestablecida.TabIndex = 5;
             this.btnContraseñaReestablecida.Text = "Reestablecer contraseña";
             this.btnContraseñaReestablecida.UseVisualStyleBackColor = false;
+            this.btnContraseñaReestablecida.Click += new System.EventHandler(this.btnContraseñaReestablecida_Click);
             // 
             // btnVolverReestablecerContraseña
             // 
@@ -126,6 +129,7 @@
             this.txtRepitaNuevaContraseña.Name = "txtRepitaNuevaContraseña";
             this.txtRepitaNuevaContraseña.Size = new System.Drawing.Size(150, 25);
             this.txtRepitaNuevaContraseña.TabIndex = 8;
+            this.txtRepitaNuevaContraseña.TextChanged += new System.EventHandler(this.txtRepitaNuevaContraseña_TextChanged);
             // 
             // lblRepitaNuevaContraseña
             // 
@@ -152,8 +156,8 @@
             this.Controls.Add(this.btnVolverReestablecerContraseña);
             this.Controls.Add(this.btnContraseñaReestablecida);
             this.Controls.Add(this.pctLogoCrearContraseña);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNuevaContraseña);
+            this.Controls.Add(this.txtUsuarioReestablecerContraseña);
             this.Controls.Add(this.lblNuevaContraseña);
             this.Controls.Add(this.lblUsuarioReestablecerContraseña);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,6 +166,7 @@
             this.Name = "frmReestablecerContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
+            this.Load += new System.EventHandler(this.frmReestablecerContraseña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoCrearContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,8 +177,8 @@
 
         private System.Windows.Forms.Label lblUsuarioReestablecerContraseña;
         private System.Windows.Forms.Label lblNuevaContraseña;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsuarioReestablecerContraseña;
+        private System.Windows.Forms.TextBox txtNuevaContraseña;
         private System.Windows.Forms.PictureBox pctLogoCrearContraseña;
         private System.Windows.Forms.Button btnContraseñaReestablecida;
         private System.Windows.Forms.Button btnVolverReestablecerContraseña;

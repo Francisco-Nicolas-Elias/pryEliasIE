@@ -49,6 +49,7 @@
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Name = "txtRepitaNuevaContraseñaUsuarioNuevo";
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtRepitaNuevaContraseñaUsuarioNuevo.TabIndex = 17;
+            this.txtRepitaNuevaContraseñaUsuarioNuevo.TextChanged += new System.EventHandler(this.txtRepitaNuevaContraseñaUsuarioNuevo_TextChanged);
             // 
             // lblRepitaNuevaContraseñaUsuarioNuevo
             // 
@@ -109,6 +110,7 @@
             this.txtNuevaContraseñaUsuarioNuevo.Name = "txtNuevaContraseñaUsuarioNuevo";
             this.txtNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtNuevaContraseñaUsuarioNuevo.TabIndex = 12;
+            this.txtNuevaContraseñaUsuarioNuevo.TextChanged += new System.EventHandler(this.txtNuevaContraseñaUsuarioNuevo_TextChanged);
             // 
             // txtNuevoUsuario
             // 
@@ -117,6 +119,7 @@
             this.txtNuevoUsuario.Name = "txtNuevoUsuario";
             this.txtNuevoUsuario.Size = new System.Drawing.Size(150, 25);
             this.txtNuevoUsuario.TabIndex = 11;
+            this.txtNuevoUsuario.TextChanged += new System.EventHandler(this.txtNuevoUsuario_TextChanged);
             // 
             // lblNuevaContraseñaUsuarioNuevo
             // 
@@ -161,6 +164,7 @@
             this.txtPerfil.Name = "txtPerfil";
             this.txtPerfil.Size = new System.Drawing.Size(150, 25);
             this.txtPerfil.TabIndex = 19;
+            this.txtPerfil.TextChanged += new System.EventHandler(this.txtPerfil_TextChanged);
             // 
             // frmCrearCuenta
             // 
@@ -185,6 +189,7 @@
             this.Name = "frmCrearCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNE Venta de seguros";
+            this.Load += new System.EventHandler(this.frmCrearCuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoReestablecerContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

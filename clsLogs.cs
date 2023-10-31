@@ -148,7 +148,6 @@ namespace pryEliasIE
         {
             try
             {
-
                 ConectarBD();
                 
                 comandoBD = new OleDbCommand();
@@ -261,6 +260,332 @@ namespace pryEliasIE
                 estadoDeConexion = error.Message;
             }
         }
-        
+
+        public void RegistroLogCrearCuenta()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Crear cuenta";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogVerCarpetasProveedoresYAseguradores()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Ver carpetas y archivos";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogGrabarRegistro()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Grabar registro";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogModificarRegistro()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Modificar registro";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+
+        public void RegistroLogBorrarRegistro()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Borrar registro";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+
+        public void RegistroLogBuscarClientePorId()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Buscar socio por ID";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogBuscarClientePorApellido()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Buscar socio por apellido";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogVerSociosDelClub()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Ver socios del club";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+
+        public void RegistroLogCerrarSesion()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Cerrar sesión";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
     }
 }

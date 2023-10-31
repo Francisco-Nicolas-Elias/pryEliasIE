@@ -23,12 +23,10 @@ namespace pryEliasIE
         private void carpetasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clsLogs objLogs = new clsLogs();
-            /*
-            if (objLogs.estadoDeConexion == "Registro exitoso de log")
-            {
-                objLogs.RegistroLogReestablecerContraseña();
-            }
-            */
+                     
+            objLogs.RegistroLogVerCarpetasProveedoresYAseguradores();
+            
+            
             frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
             frmVentanaPrincipal.Show();
             this.Hide();
@@ -64,6 +62,11 @@ namespace pryEliasIE
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogVerSociosDelClub();
+
+
             frmElClub frmElClub = new frmElClub();
             frmElClub.Show();
             this.Hide();
@@ -81,6 +84,10 @@ namespace pryEliasIE
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogCerrarSesion();
+
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
             this.Close();

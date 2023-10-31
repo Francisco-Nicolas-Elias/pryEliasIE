@@ -141,7 +141,12 @@ namespace pryEliasIE
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
-                    
+
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogModificarRegistro();
+
+
             //ID es el Número
             string ID = txtNumero.Text;
 
@@ -196,6 +201,11 @@ namespace pryEliasIE
 
         private void btnGrabar_Click_1(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogGrabarRegistro();
+
+
             string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNumeroDeExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
 
             // Agregue la nueva línea al archivo, usando los datos de la variable nuevaLinea que son los que se ingresan en los txt

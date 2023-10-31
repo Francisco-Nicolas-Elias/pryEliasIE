@@ -45,6 +45,11 @@ namespace pryEliasIE
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogBuscarClientePorId();
+
+
             objBaseDatos.BuscarPorCodigoDatosElClub(int.Parse(txtBuscarCliente.Text));
 
             txtBuscarCliente.Clear();
@@ -52,6 +57,11 @@ namespace pryEliasIE
 
         private void btnBuscarClientePorApellido_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogBuscarClientePorApellido();
+
+
             objBaseDatos.BuscarPorApellidoDatosElClub(txtBuscarClientePorApellido.Text);
 
             txtBuscarClientePorApellido.Clear();

@@ -23,5 +23,53 @@ namespace pryEliasIE
             frmLogin.Show();
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuarioReestablecerContraseña.Text != "" & txtNuevaContraseña.Text != "" & txtRepitaNuevaContraseña.Text != "")
+            {
+                btnContraseñaReestablecida.Enabled = true;
+            }
+            else
+            {
+                btnContraseñaReestablecida.Enabled = false;
+            }
+        }
+
+        private void txtNuevaContraseña_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuarioReestablecerContraseña.Text != "" & txtNuevaContraseña.Text != "" & txtRepitaNuevaContraseña.Text != "")
+            {
+                btnContraseñaReestablecida.Enabled = true;
+            }
+            else
+            {
+                btnContraseñaReestablecida.Enabled = false;
+            }
+        }
+
+        private void txtRepitaNuevaContraseña_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuarioReestablecerContraseña.Text != "" & txtNuevaContraseña.Text != "" & txtRepitaNuevaContraseña.Text != "")
+            {
+                btnContraseñaReestablecida.Enabled = true;
+            }
+            else
+            {
+                btnContraseñaReestablecida.Enabled = false;
+            }
+        }
+
+        private void frmReestablecerContraseña_Load(object sender, EventArgs e)
+        {
+            btnContraseñaReestablecida.Enabled = false;
+        }
+
+        private void btnContraseñaReestablecida_Click(object sender, EventArgs e)
+        {
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogReestablecerContraseña();
+        }
     }
 }

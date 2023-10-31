@@ -26,7 +26,62 @@ namespace pryEliasIE
 
         private void btnCrearCuentaNuevoUsuario_Click(object sender, EventArgs e)
         {
+            clsLogs objLogs = new clsLogs();
 
+            objLogs.RegistroLogCrearCuenta();
+        }
+
+        private void txtNuevoUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNuevoUsuario.Text != "" & txtNuevaContraseñaUsuarioNuevo.Text != "" & txtRepitaNuevaContraseñaUsuarioNuevo.Text != "" & txtPerfil.Text != "")
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = true;
+            }
+            else
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = false;
+            }
+        }
+
+        private void txtNuevaContraseñaUsuarioNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNuevoUsuario.Text != "" & txtNuevaContraseñaUsuarioNuevo.Text != "" & txtRepitaNuevaContraseñaUsuarioNuevo.Text != "" & txtPerfil.Text != "")
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = true;
+            }
+            else
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = false;
+            }
+        }
+
+        private void txtRepitaNuevaContraseñaUsuarioNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNuevoUsuario.Text != "" & txtNuevaContraseñaUsuarioNuevo.Text != "" & txtRepitaNuevaContraseñaUsuarioNuevo.Text != "" & txtPerfil.Text != "")
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = true;
+            }
+            else
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = false;
+            }
+        }
+
+        private void txtPerfil_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNuevoUsuario.Text != "" & txtNuevaContraseñaUsuarioNuevo.Text != "" & txtRepitaNuevaContraseñaUsuarioNuevo.Text != "" & txtPerfil.Text != "")
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = true;
+            }
+            else
+            {
+                btnCrearCuentaNuevoUsuario.Enabled = false;
+            }
+        }
+
+        private void frmCrearCuenta_Load(object sender, EventArgs e)
+        {
+            btnCrearCuentaNuevoUsuario.Enabled = false;
         }
     }
 }
