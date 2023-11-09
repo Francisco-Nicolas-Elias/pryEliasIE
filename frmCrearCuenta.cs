@@ -114,5 +114,30 @@ namespace pryEliasIE
         {
             btnCrearCuentaNuevoUsuario.Enabled = false;
         }
+
+        private void pctOcultarContraseñaCrearCuenta_Click(object sender, EventArgs e)
+        {
+            pctMostrarContraseñaCrearCuenta.BringToFront();
+            txtNuevaContraseñaUsuarioNuevo.PasswordChar = '*';
+        }
+
+        private void pctMostrarContraseñaCrearCuenta_Click(object sender, EventArgs e)
+        {
+            pctOcultarContraseñaCrearCuenta.BringToFront();
+            txtNuevaContraseñaUsuarioNuevo.PasswordChar = '\0';
+
+        }
+
+        private void pctMostrarContraseñaCrearCuentaRepitaContraseña_Click(object sender, EventArgs e)
+        {
+            pctOcultarContraseñaCrearCuentaRepitaContraseña.BringToFront();
+            txtRepitaNuevaContraseñaUsuarioNuevo.PasswordChar = '\0';
+        }
+
+        private void pctOcultarContraseñaCrearCuentaRepitaContraseña_Click(object sender, EventArgs e)
+        {
+            pctMostrarContraseñaCrearCuentaRepitaContraseña.BringToFront();
+            txtRepitaNuevaContraseñaUsuarioNuevo.PasswordChar = '*';
+        }
     }
 }

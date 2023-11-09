@@ -78,5 +78,29 @@ namespace pryEliasIE
             objLogs.RegistroLogReestablecerContraseñaExitoso();
 
         }
+
+        private void pctMostrarContraseñaReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            pctOcultarContraseñaReestablecerContraseña.BringToFront();
+            txtNuevaContraseña.PasswordChar = '\0';
+        }
+
+        private void pctOcultarContraseñaReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            pctMostrarContraseñaReestablecerContraseña.BringToFront();
+            txtNuevaContraseña.PasswordChar = '*';
+        }
+
+        private void pctMostrarRepitaNuevaContraseñaReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            pctOcultarRepitaNuevaContraseñaReestablecerContraseña.BringToFront();
+            txtRepitaNuevaContraseña.PasswordChar = '\0';
+        }
+
+        private void pctOcultarRepitaNuevaContraseñaReestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            pctMostrarRepitaNuevaContraseñaReestablecerContraseña.BringToFront();
+            txtRepitaNuevaContraseña.PasswordChar = '*';
+        }
     }
 }

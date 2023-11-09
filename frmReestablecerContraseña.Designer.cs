@@ -37,7 +37,15 @@
             this.btnVolverReestablecerContraseña = new System.Windows.Forms.Button();
             this.txtRepitaNuevaContraseña = new System.Windows.Forms.TextBox();
             this.lblRepitaNuevaContraseña = new System.Windows.Forms.Label();
+            this.pctMostrarContraseñaReestablecerContraseña = new System.Windows.Forms.PictureBox();
+            this.pctOcultarContraseñaReestablecerContraseña = new System.Windows.Forms.PictureBox();
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña = new System.Windows.Forms.PictureBox();
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoCrearContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaReestablecerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaReestablecerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuarioReestablecerContraseña
@@ -80,6 +88,7 @@
             this.txtNuevaContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNuevaContraseña.Location = new System.Drawing.Point(223, 55);
             this.txtNuevaContraseña.Name = "txtNuevaContraseña";
+            this.txtNuevaContraseña.PasswordChar = '*';
             this.txtNuevaContraseña.Size = new System.Drawing.Size(150, 25);
             this.txtNuevaContraseña.TabIndex = 3;
             this.txtNuevaContraseña.TextChanged += new System.EventHandler(this.txtNuevaContraseña_TextChanged);
@@ -88,7 +97,7 @@
             // 
             this.pctLogoCrearContraseña.BackColor = System.Drawing.SystemColors.Control;
             this.pctLogoCrearContraseña.Image = global::pryEliasIE.Properties.Resources.LogoSistemaDeSeguros;
-            this.pctLogoCrearContraseña.Location = new System.Drawing.Point(393, 12);
+            this.pctLogoCrearContraseña.Location = new System.Drawing.Point(418, 12);
             this.pctLogoCrearContraseña.Name = "pctLogoCrearContraseña";
             this.pctLogoCrearContraseña.Size = new System.Drawing.Size(190, 189);
             this.pctLogoCrearContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -129,6 +138,7 @@
             this.txtRepitaNuevaContraseña.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepitaNuevaContraseña.Location = new System.Drawing.Point(223, 92);
             this.txtRepitaNuevaContraseña.Name = "txtRepitaNuevaContraseña";
+            this.txtRepitaNuevaContraseña.PasswordChar = '*';
             this.txtRepitaNuevaContraseña.Size = new System.Drawing.Size(150, 25);
             this.txtRepitaNuevaContraseña.TabIndex = 8;
             this.txtRepitaNuevaContraseña.TextChanged += new System.EventHandler(this.txtRepitaNuevaContraseña_TextChanged);
@@ -145,6 +155,54 @@
             this.lblRepitaNuevaContraseña.TabIndex = 7;
             this.lblRepitaNuevaContraseña.Text = "Repita nueva contraseña:";
             // 
+            // pctMostrarContraseñaReestablecerContraseña
+            // 
+            this.pctMostrarContraseñaReestablecerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctMostrarContraseñaReestablecerContraseña.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
+            this.pctMostrarContraseñaReestablecerContraseña.Location = new System.Drawing.Point(379, 59);
+            this.pctMostrarContraseñaReestablecerContraseña.Name = "pctMostrarContraseñaReestablecerContraseña";
+            this.pctMostrarContraseñaReestablecerContraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctMostrarContraseñaReestablecerContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrarContraseñaReestablecerContraseña.TabIndex = 18;
+            this.pctMostrarContraseñaReestablecerContraseña.TabStop = false;
+            this.pctMostrarContraseñaReestablecerContraseña.Click += new System.EventHandler(this.pctMostrarContraseñaReestablecerContraseña_Click);
+            // 
+            // pctOcultarContraseñaReestablecerContraseña
+            // 
+            this.pctOcultarContraseñaReestablecerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctOcultarContraseñaReestablecerContraseña.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
+            this.pctOcultarContraseñaReestablecerContraseña.Location = new System.Drawing.Point(379, 59);
+            this.pctOcultarContraseñaReestablecerContraseña.Name = "pctOcultarContraseñaReestablecerContraseña";
+            this.pctOcultarContraseñaReestablecerContraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctOcultarContraseñaReestablecerContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOcultarContraseñaReestablecerContraseña.TabIndex = 19;
+            this.pctOcultarContraseñaReestablecerContraseña.TabStop = false;
+            this.pctOcultarContraseñaReestablecerContraseña.Click += new System.EventHandler(this.pctOcultarContraseñaReestablecerContraseña_Click);
+            // 
+            // pctMostrarRepitaNuevaContraseñaReestablecerContraseña
+            // 
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Location = new System.Drawing.Point(379, 96);
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Name = "pctMostrarRepitaNuevaContraseñaReestablecerContraseña";
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.TabIndex = 20;
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.TabStop = false;
+            this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña.Click += new System.EventHandler(this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña_Click);
+            // 
+            // pctOcultarRepitaNuevaContraseñaReestablecerContraseña
+            // 
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Location = new System.Drawing.Point(379, 96);
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Name = "pctOcultarRepitaNuevaContraseñaReestablecerContraseña";
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Size = new System.Drawing.Size(25, 21);
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.TabIndex = 21;
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.TabStop = false;
+            this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña.Click += new System.EventHandler(this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña_Click);
+            // 
             // frmReestablecerContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -152,7 +210,11 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(595, 301);
+            this.ClientSize = new System.Drawing.Size(651, 301);
+            this.Controls.Add(this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña);
+            this.Controls.Add(this.pctMostrarContraseñaReestablecerContraseña);
+            this.Controls.Add(this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña);
+            this.Controls.Add(this.pctOcultarContraseñaReestablecerContraseña);
             this.Controls.Add(this.txtRepitaNuevaContraseña);
             this.Controls.Add(this.lblRepitaNuevaContraseña);
             this.Controls.Add(this.btnVolverReestablecerContraseña);
@@ -170,6 +232,10 @@
             this.Text = "FNE Venta de seguros";
             this.Load += new System.EventHandler(this.frmReestablecerContraseña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoCrearContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaReestablecerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaReestablecerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarRepitaNuevaContraseñaReestablecerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarRepitaNuevaContraseñaReestablecerContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +252,9 @@
         private System.Windows.Forms.TextBox txtRepitaNuevaContraseña;
         private System.Windows.Forms.Label lblRepitaNuevaContraseña;
         public System.Windows.Forms.TextBox txtUsuarioReestablecerContraseña;
+        private System.Windows.Forms.PictureBox pctMostrarContraseñaReestablecerContraseña;
+        private System.Windows.Forms.PictureBox pctOcultarContraseñaReestablecerContraseña;
+        private System.Windows.Forms.PictureBox pctMostrarRepitaNuevaContraseñaReestablecerContraseña;
+        private System.Windows.Forms.PictureBox pctOcultarRepitaNuevaContraseñaReestablecerContraseña;
     }
 }

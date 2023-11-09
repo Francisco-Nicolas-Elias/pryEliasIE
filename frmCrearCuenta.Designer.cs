@@ -39,7 +39,15 @@
             this.lblNuevoUsuario = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.txtPerfil = new System.Windows.Forms.TextBox();
+            this.pctMostrarContraseñaCrearCuenta = new System.Windows.Forms.PictureBox();
+            this.pctOcultarContraseñaCrearCuenta = new System.Windows.Forms.PictureBox();
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña = new System.Windows.Forms.PictureBox();
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoReestablecerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaCrearCuenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaCrearCuenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaCrearCuentaRepitaContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaCrearCuentaRepitaContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // txtRepitaNuevaContraseñaUsuarioNuevo
@@ -47,6 +55,7 @@
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(171, 102);
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Name = "txtRepitaNuevaContraseñaUsuarioNuevo";
+            this.txtRepitaNuevaContraseñaUsuarioNuevo.PasswordChar = '*';
             this.txtRepitaNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtRepitaNuevaContraseñaUsuarioNuevo.TabIndex = 17;
             this.txtRepitaNuevaContraseñaUsuarioNuevo.TextChanged += new System.EventHandler(this.txtRepitaNuevaContraseñaUsuarioNuevo_TextChanged);
@@ -108,6 +117,7 @@
             this.txtNuevaContraseñaUsuarioNuevo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNuevaContraseñaUsuarioNuevo.Location = new System.Drawing.Point(171, 65);
             this.txtNuevaContraseñaUsuarioNuevo.Name = "txtNuevaContraseñaUsuarioNuevo";
+            this.txtNuevaContraseñaUsuarioNuevo.PasswordChar = '*';
             this.txtNuevaContraseñaUsuarioNuevo.Size = new System.Drawing.Size(150, 25);
             this.txtNuevaContraseñaUsuarioNuevo.TabIndex = 12;
             this.txtNuevaContraseñaUsuarioNuevo.TextChanged += new System.EventHandler(this.txtNuevaContraseñaUsuarioNuevo_TextChanged);
@@ -166,6 +176,54 @@
             this.txtPerfil.TabIndex = 19;
             this.txtPerfil.TextChanged += new System.EventHandler(this.txtPerfil_TextChanged);
             // 
+            // pctMostrarContraseñaCrearCuenta
+            // 
+            this.pctMostrarContraseñaCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctMostrarContraseñaCrearCuenta.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
+            this.pctMostrarContraseñaCrearCuenta.Location = new System.Drawing.Point(327, 46);
+            this.pctMostrarContraseñaCrearCuenta.Name = "pctMostrarContraseñaCrearCuenta";
+            this.pctMostrarContraseñaCrearCuenta.Size = new System.Drawing.Size(27, 19);
+            this.pctMostrarContraseñaCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrarContraseñaCrearCuenta.TabIndex = 20;
+            this.pctMostrarContraseñaCrearCuenta.TabStop = false;
+            this.pctMostrarContraseñaCrearCuenta.Click += new System.EventHandler(this.pctMostrarContraseñaCrearCuenta_Click);
+            // 
+            // pctOcultarContraseñaCrearCuenta
+            // 
+            this.pctOcultarContraseñaCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctOcultarContraseñaCrearCuenta.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
+            this.pctOcultarContraseñaCrearCuenta.Location = new System.Drawing.Point(327, 71);
+            this.pctOcultarContraseñaCrearCuenta.Name = "pctOcultarContraseñaCrearCuenta";
+            this.pctOcultarContraseñaCrearCuenta.Size = new System.Drawing.Size(27, 19);
+            this.pctOcultarContraseñaCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOcultarContraseñaCrearCuenta.TabIndex = 21;
+            this.pctOcultarContraseñaCrearCuenta.TabStop = false;
+            this.pctOcultarContraseñaCrearCuenta.Click += new System.EventHandler(this.pctOcultarContraseñaCrearCuenta_Click);
+            // 
+            // pctMostrarContraseñaCrearCuentaRepitaContraseña
+            // 
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Location = new System.Drawing.Point(327, 108);
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Name = "pctMostrarContraseñaCrearCuentaRepitaContraseña";
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Size = new System.Drawing.Size(27, 19);
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.TabIndex = 22;
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.TabStop = false;
+            this.pctMostrarContraseñaCrearCuentaRepitaContraseña.Click += new System.EventHandler(this.pctMostrarContraseñaCrearCuentaRepitaContraseña_Click);
+            // 
+            // pctOcultarContraseñaCrearCuentaRepitaContraseña
+            // 
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Image = global::pryEliasIE.Properties.Resources.foto_ocultar_contraseña;
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Location = new System.Drawing.Point(327, 108);
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Name = "pctOcultarContraseñaCrearCuentaRepitaContraseña";
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Size = new System.Drawing.Size(27, 19);
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.TabIndex = 23;
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.TabStop = false;
+            this.pctOcultarContraseñaCrearCuentaRepitaContraseña.Click += new System.EventHandler(this.pctOcultarContraseñaCrearCuentaRepitaContraseña_Click);
+            // 
             // frmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -173,6 +231,10 @@
             this.BackgroundImage = global::pryEliasIE.Properties.Resources.fondo_de_ventanas_mejor_calidad;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(631, 313);
+            this.Controls.Add(this.pctMostrarContraseñaCrearCuenta);
+            this.Controls.Add(this.pctOcultarContraseñaCrearCuenta);
+            this.Controls.Add(this.pctMostrarContraseñaCrearCuentaRepitaContraseña);
+            this.Controls.Add(this.pctOcultarContraseñaCrearCuentaRepitaContraseña);
             this.Controls.Add(this.txtPerfil);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.txtRepitaNuevaContraseñaUsuarioNuevo);
@@ -191,6 +253,10 @@
             this.Text = "FNE Venta de seguros";
             this.Load += new System.EventHandler(this.frmCrearCuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoReestablecerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaCrearCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaCrearCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrarContraseñaCrearCuentaRepitaContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOcultarContraseñaCrearCuentaRepitaContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +275,9 @@
         private System.Windows.Forms.Label lblNuevoUsuario;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.TextBox txtPerfil;
+        private System.Windows.Forms.PictureBox pctMostrarContraseñaCrearCuenta;
+        private System.Windows.Forms.PictureBox pctOcultarContraseñaCrearCuenta;
+        private System.Windows.Forms.PictureBox pctMostrarContraseñaCrearCuentaRepitaContraseña;
+        private System.Windows.Forms.PictureBox pctOcultarContraseñaCrearCuentaRepitaContraseña;
     }
 }
