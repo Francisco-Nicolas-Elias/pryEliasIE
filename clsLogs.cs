@@ -122,41 +122,6 @@ namespace pryEliasIE
                 estadoDeConexion = error.Message;
             }
         }
-
-        public void ValidarUsuario(string nombreUsuario, string contraseñaUsuario)
-        {
-            try
-            {
-                ConectarBD();
-                
-                comandoBD = new OleDbCommand();
-                 
-                conexionBD.Open();
-
-                comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = System.Data.CommandType.TableDirect;
-                comandoBD.CommandText = "Usuarios";
-
-                lectorBD = comandoBD.ExecuteReader();
-
-                if (lectorBD.HasRows)
-                {
-                    while (lectorBD.Read())
-                    {
-                        if (lectorBD[1].ToString() == nombreUsuario && lectorBD[2].ToString() == contraseñaUsuario)
-                        {
-                            estadoDeConexion = "Usuario EXISTE";
-                        }
-                    }
-                }
-            }
-            catch (Exception error)
-            {
-
-                estadoDeConexion = error.Message;
-            }
-        }
-
         
         public void RegistroLogInicioSesionFallido()
         {
