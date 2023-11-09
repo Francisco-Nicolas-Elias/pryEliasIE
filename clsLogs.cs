@@ -32,10 +32,7 @@ namespace pryEliasIE
             
             try
             {
-                cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
-               
-
-               cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
+                cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";              
 
                 conexionBD = new OleDbConnection();
                 conexionBD.ConnectionString = cadenaConexionBase;
@@ -62,14 +59,14 @@ namespace pryEliasIE
             try
             {
                 string conexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
-                string cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
+
                 conexionBD.ConnectionString = conexion;
                 conexionBD.Open();
 
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show(Convert.ToString(ex));
+                MessageBox.Show(Convert.ToString(error));
             }
         }
         
@@ -82,24 +79,40 @@ namespace pryEliasIE
                 comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
+
+                //Establezco el tipo de comando, con este comando le indico que voy a trabajar con una tabla específica
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
+
+                //Le digo que tabla quiero traer
                 comandoBD.CommandText = "Logs";
 
+                //Creo el objeto DataAdapter pasando como parámetro el objeto comando que quiero vincular
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
 
+                //Ejecuto la lectura de la tabla y almaceno su contenido en el dataAdapter
                 adaptadorBD.Fill(objDS, "Logs");
 
+                //Obtengo una referencia a la tabla
+
                 DataTable objTabla = objDS.Tables["Logs"];
+
+                //Creo el nuevo DataRow con la estructura de campos de la tabla de la cual quiero traer los datos
                 DataRow nuevoRegistro = objTabla.NewRow();
 
+                //Asigno los valores a todos los campos del DataRow
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio exitoso";
                 nuevoRegistro["Usuario"] = frmLogin.usuario;
 
+                //Agrego el DataRow a la tabla
                 objTabla.Rows.Add(nuevoRegistro);
 
+
+                //Creo el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+
+                //Actualizo la base con los cambios realizados
                 adaptadorBD.Update(objDS, "Logs");
 
                 estadoDeConexion = "Registro exitoso de log";

@@ -52,35 +52,44 @@ namespace pryEliasIE
             {
                 estadoConexion = error.Message;
             }
+
+            // Constructor para inicializar la conexión y el comando.
+            conexionBD = new OleDbConnection();
+            comandoBD = new OleDbCommand();
         }
 
         public void ConectarBD()
         {
             try
             {
-                conexionBD = new OleDbConnection();
                 conexionBD.ConnectionString = cadenaConexionBase;
                 conexionBD.Open();
             }
             catch(Exception error)
             {
-                estadoConexion = error.Message;
+                MessageBox.Show(Convert.ToString(error));
             }
         }
 
         public void BuscarUsuario()
         {
             try
-            { 
-                conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionBase;
-                conexionBD.Open();
+            {
+                ConectarBD();
+
+                //Creo una instancia de la clase OleDbCommand para ejecutar los comandos en la base de datos 
                 comandoBD = new OleDbCommand();
 
+                //Establezco la conexión, para que cuando se ejecute el comando lo opere en la base de datos que debe hacerse
                 comandoBD.Connection = conexionBD;
+
+                //Establezco el tipo de comando, con este comando le indico que voy a leer una tabla en específica
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
+
+                //Le digo que tabla es la que se va a leer
                 comandoBD.CommandText = "Usuarios";
 
+                //Ejecuto el comando y leo la los resultados de la consulta
                 lectorBD = comandoBD.ExecuteReader();
 
                 //Si tiene filas quiere decir que hay datos 
@@ -88,9 +97,14 @@ namespace pryEliasIE
                 {
                     while (lectorBD.Read())
                     {
+                        //Almaceno los datos del registro que estoy leyendo en dos variables
+                        //Columna[1] (campo Usuario), columna[2] (campo Contraseña)
                         string usuarioBD = lectorBD[1].ToString();
                         string contraseñaBD = lectorBD[2].ToString();
 
+                        //Si las variables del formulario inicio sesión donde esta guardado el usuario
+                        //y la contraseña que ingreso el usuario son iguales entonces
+                        //la variable booleana acceso va a ser verdadera y rompo el bucle
                         if (usuarioBD == frmLogin.usuario & contraseñaBD == frmLogin.contraseña)
                         {
                             acceso = true;
