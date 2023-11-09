@@ -162,7 +162,7 @@ namespace pryEliasIE
             }
         }
 
-        public void RegistroLogReestablecerContraseña()
+        public void RegistroLogReestablecerContraseñaExitoso()
         {
             try
             {
@@ -187,7 +187,47 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Reestablecer contraseña";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
-                nuevoRegistro["Usuario"] = frmLogin.usuario;
+                nuevoRegistro["Usuario"] = frmReestablecerContraseña.usuarioReestablecerContraseña;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogReestablecerContraseñaFallido()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Reestablecer contraseña";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Fallido";
+                nuevoRegistro["Usuario"] = frmReestablecerContraseña.usuarioReestablecerContraseña;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -243,7 +283,7 @@ namespace pryEliasIE
             }
         }
 
-        public void RegistroLogCrearCuenta()
+        public void RegistroLogCrearCuentaExitoso()
         {
             try
             {
@@ -265,7 +305,44 @@ namespace pryEliasIE
                 nuevoRegistro["Categoria"] = "Crear cuenta";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Exitoso";
-                nuevoRegistro["Usuario"] = frmLogin.usuario;
+                nuevoRegistro["Usuario"] = frmCrearCuenta.usuarioCrearCuenta;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
+
+        public void RegistroLogCrearCuentaFallido()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Crear cuenta";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Fallido";
+                nuevoRegistro["Usuario"] = frmCrearCuenta.usuarioCrearCuenta;
 
                 objTabla.Rows.Add(nuevoRegistro);
 

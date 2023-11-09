@@ -17,7 +17,10 @@ namespace pryEliasIE
             InitializeComponent();
         }
 
-   
+        public static string usuarioReestablecerContraseña;
+        public static string contraseñaReestablecerContraseña;
+        public static string repitaContraseñaReestablecerContraseña;
+        public static string contraseñasIguales;
 
         private void btnVolverReestablecerContraseña_Click(object sender, EventArgs e)
         {
@@ -72,7 +75,7 @@ namespace pryEliasIE
         {
             clsLogs objLogs = new clsLogs();
 
-            objLogs.RegistroLogReestablecerContraseña();
+            objLogs.RegistroLogReestablecerContraseñaExitoso();
 
         }
     }

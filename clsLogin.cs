@@ -139,27 +139,6 @@ namespace pryEliasIE
             }
         }
 
-        //Al final no la uso
-        /*
-        public void TraerDatosElClub()
-        {
-            comandoBD = new OleDbCommand();
-
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
-
-            lectorBD = comandoBD.ExecuteReader();
-
-            if (lectorBD.HasRows)
-            {
-                while (lectorBD.Read())
-                {
-                    datosTabla += "-" + lectorBD[0]; //El 0 muestra la primer columna(Los ID)
-                }
-            }
-        }
-        */
         public void TraerDatosElClub(DataGridView grilla)
         {
             try
@@ -268,6 +247,58 @@ namespace pryEliasIE
             catch (Exception EX)
             {
                 estadoConexion = "Error:" + EX.Message;
+            }
+        }
+
+        public void CrearCuenta()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+
+                //Establezco el tipo de comando, con este comando le indico que voy a trabajar con una tabla específica
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+
+                //Le digo que tabla quiero traer
+                comandoBD.CommandText = "Usuarios";
+
+                //Creo el objeto DataAdapter pasando como parámetro el objeto comando que quiero vincular
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                //Ejecuto la lectura de la tabla y almaceno su contenido en el dataAdapter
+                adaptadorBD.Fill(objDS, "Usuarios");
+
+                //Obtengo una referencia a la tabla
+
+                DataTable objTabla = objDS.Tables["Usuarios"];
+
+                //Creo el nuevo DataRow con la estructura de campos de la tabla de la cual quiero traer los datos
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                //Asigno los valores a todos los campos del DataRow
+                nuevoRegistro["Usuario"] = frmCrearCuenta.usuarioCrearCuenta;               
+                nuevoRegistro["Contraseña"] = frmCrearCuenta.lasContraseñasSonIguales;
+                nuevoRegistro["Perfil"] = frmCrearCuenta.perfilCrearCuenta;
+
+                //Agrego el DataRow a la tabla
+                objTabla.Rows.Add(nuevoRegistro);
+
+
+                //Creo el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+
+                //Actualizo la base con los cambios realizados
+                adaptadorBD.Update(objDS, "Usuarios");
+
+                estadoConexion = "Cuenta creada con éxito";
+            }
+            catch (Exception error)
+            {
+                estadoConexion = error.Message;
             }
         }
     }
