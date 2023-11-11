@@ -140,6 +140,9 @@ namespace pryEliasIE
 
         public void TraerDatosElClub(DataGridView grilla)
         {
+            string estadoCliente = "";
+            string sexo = "";
+
             try
             { 
                 comandoBD = new OleDbCommand();
@@ -158,16 +161,32 @@ namespace pryEliasIE
                 grilla.Columns.Add("Sexo", "Sexo");
                 grilla.Columns.Add("Ingreso", "Ingreso");
                 grilla.Columns.Add("Puntaje", "Puntaje");
-                grilla.Columns.Add("Estado activo", "Estado activo");
-                
+                grilla.Columns.Add("Estado", "Estado");
 
                 if (lectorBD.HasRows)
                 {
                     while (lectorBD.Read())
                     {
+                        if (lectorBD.GetBoolean(8) == true)
+                        {
+                            estadoCliente = "Activo";
+                        }
+                        else
+                        {
+                            estadoCliente = "Inactivo";
+                        }
+                        
+                        if (lectorBD.GetBoolean(5) == true)
+                        {
+                            sexo = "Masculino";
+                        }
+                        else
+                        {
+                            sexo = "Femenino";|
+                        }
 
                         datosTabla += "-" + lectorBD[0]; //El 0 muestra la primer columna(Los ID)
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);   
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], sexo, lectorBD[6], lectorBD[7], estadoCliente);   
                         
                     }
                 }
