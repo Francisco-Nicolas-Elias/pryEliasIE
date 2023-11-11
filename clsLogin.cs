@@ -155,6 +155,7 @@ namespace pryEliasIE
                 grilla.Columns.Add("Apellido", "Apellido");
                 grilla.Columns.Add("Nacionalidad", "Nacionalidad");
                 grilla.Columns.Add("Edad", "Edad");
+                grilla.Columns.Add("Sexo", "Sexo");
                 grilla.Columns.Add("Ingreso", "Ingreso");
                 grilla.Columns.Add("Puntaje", "Puntaje");
                 grilla.Columns.Add("Estado activo", "Estado activo");
@@ -164,8 +165,10 @@ namespace pryEliasIE
                 {
                     while (lectorBD.Read())
                     {
-                        datosTabla += "-" + lectorBD[0] ; //El 0 muestra la primer columna(Los ID)
-                        grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], lectorBD[8]);
+
+                        datosTabla += "-" + lectorBD[0]; //El 0 muestra la primer columna(Los ID)
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7], lectorBD[8]);   
+                        
                     }
                 }
             }
@@ -336,10 +339,11 @@ namespace pryEliasIE
             }
         }
 
-        public void ModificarEstadoActivo(int id)
+        public void ModificarEstadoSocio(int id)
         {
+
             OleDbCommand comandoBD = new OleDbCommand();
-            OleDbDataAdapter adaptadorBD;
+            OleDbDataAdapter objAdaptador;
             DataSet objDataSet = new DataSet();
 
             try
@@ -359,14 +363,16 @@ namespace pryEliasIE
             comandoBD.CommandType = CommandType.TableDirect;
             comandoBD.CommandText = "SOCIOS";
 
-            adaptadorBD = new OleDbDataAdapter(comandoBD);
+            objAdaptador = new OleDbDataAdapter(comandoBD);
 
-            adaptadorBD.Fill(objDataSet, "SOCIOS");
+            objAdaptador.Fill(objDataSet, "SOCIOS");
 
-            DataTable objTabla = objDataSet.Tables["SOCIOS"];
 
-            foreach (DataRow registro in objTabla.Rows)
-            {
+            DataTable dt = objDataSet.Tables["SOCIOS"];
+
+
+            foreach (DataRow registro in dt.Rows)
+            { 
 
                 if ((int)registro["CODIGO_SOCIO"] == id)
                 {
@@ -385,12 +391,12 @@ namespace pryEliasIE
                     break;
                 }
             }
+            OleDbCommandBuilder constructor = new OleDbCommandBuilder(objAdaptador);
 
-            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-
-            adaptadorBD.Update(objDS, "SOCIOS");
+            objAdaptador.Update(objDataSet, "SOCIOS");
 
             MessageBox.Show("¡Estado cambiado con éxito!");
+
         }
     }
 }

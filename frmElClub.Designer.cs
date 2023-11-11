@@ -53,7 +53,7 @@
             this.dtvDatosElClub.Location = new System.Drawing.Point(12, 12);
             this.dtvDatosElClub.Name = "dtvDatosElClub";
             this.dtvDatosElClub.ReadOnly = true;
-            this.dtvDatosElClub.Size = new System.Drawing.Size(882, 198);
+            this.dtvDatosElClub.Size = new System.Drawing.Size(953, 198);
             this.dtvDatosElClub.TabIndex = 1;
             this.dtvDatosElClub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDatosElClub_CellContentClick);
             // 

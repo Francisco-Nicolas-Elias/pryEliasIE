@@ -39,6 +39,8 @@ namespace pryEliasIE
             btnBuscarCliente.Enabled = false;
 
             btnBuscarClientePorApellido.Enabled = false;
+
+            btnCambiarEstadoActivo.Enabled = false;
         }
 
         private void dtvDatosElClub_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -112,7 +114,7 @@ namespace pryEliasIE
 
             clsLogin objLogin = new clsLogin();
 
-            objLogin.ModificarEstadoActivo(id);
+            objLogin.ModificarEstadoSocio(id);
 
             txtCambiarEstadoActivo.Clear();
         }
