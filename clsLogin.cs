@@ -182,7 +182,7 @@ namespace pryEliasIE
                         }
                         else
                         {
-                            sexo = "Femenino";|
+                            sexo = "Femenino";
                         }
 
                         datosTabla += "-" + lectorBD[0]; //El 0 muestra la primer columna(Los ID)
