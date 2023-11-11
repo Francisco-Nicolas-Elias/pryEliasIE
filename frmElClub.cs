@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace pryEliasIE
         {
             InitializeComponent();
         }
+
+        int id = 0;
 
         private void frmElClub_Load(object sender, EventArgs e)
         {
@@ -100,6 +103,29 @@ namespace pryEliasIE
             else
             {
                 btnBuscarClientePorApellido.Enabled = false;
+            }
+        }
+
+        private void btnCambiarEstadoActivo_Click(object sender, EventArgs e)
+        {
+            id = Convert.ToInt32(txtCambiarEstadoActivo.Text);
+
+            clsLogin objLogin = new clsLogin();
+
+            objLogin.ModificarEstadoActivo(id);
+
+            txtCambiarEstadoActivo.Clear();
+        }
+
+        private void txtCambiarEstadoActivo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCambiarEstadoActivo.Text != "")
+            {
+                btnCambiarEstadoActivo.Enabled = true;
+            }
+            else
+            {
+                btnCambiarEstadoActivo.Enabled = false;
             }
         }
     }

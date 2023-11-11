@@ -73,10 +73,30 @@ namespace pryEliasIE
 
         private void btnContraseñaReestablecida_Click(object sender, EventArgs e)
         {
+            usuarioReestablecerContraseña = txtUsuarioReestablecerContraseña.Text;
+            contraseñaReestablecerContraseña = txtNuevaContraseña.Text;
+            repitaContraseñaReestablecerContraseña = txtRepitaNuevaContraseña.Text;
+
             clsLogs objLogs = new clsLogs();
 
-            objLogs.RegistroLogReestablecerContraseñaExitoso();
+            if (contraseñaReestablecerContraseña == repitaContraseñaReestablecerContraseña)
+            {
+                contraseñasIguales = contraseñaReestablecerContraseña;
 
+                MessageBox.Show("Contraseña reestablecida con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                clsLogin objLogin = new clsLogin();
+
+                objLogin.ReestablecerContraseña();
+
+                objLogs.RegistroLogReestablecerContraseñaExitoso();
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas ingresadas no son iguales.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                objLogs.RegistroLogReestablecerContraseñaFallido();
+            }
         }
 
         private void pctMostrarContraseñaReestablecerContraseña_Click(object sender, EventArgs e)

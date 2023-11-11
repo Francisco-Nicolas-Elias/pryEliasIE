@@ -131,11 +131,10 @@ namespace pryEliasIE
                 conexionBD.ConnectionString = cadenaConexionElClub;
                 conexionBD.Open();
                 estadoConexion = "Conectado";
-
             }
-            catch (Exception EX)
+            catch (Exception error)
             {
-                estadoConexion = "Error:" + EX.Message;
+                estadoConexion = "Error:" + error.Message;
             }
         }
 
@@ -150,13 +149,15 @@ namespace pryEliasIE
                 comandoBD.CommandText = "SOCIOS";
 
                 lectorBD = comandoBD.ExecuteReader();
-                
+
+                grilla.Columns.Add("ID", "ID");
                 grilla.Columns.Add("Nombre", "Nombre");
                 grilla.Columns.Add("Apellido", "Apellido");
                 grilla.Columns.Add("Nacionalidad", "Nacionalidad");
                 grilla.Columns.Add("Edad", "Edad");
                 grilla.Columns.Add("Ingreso", "Ingreso");
                 grilla.Columns.Add("Puntaje", "Puntaje");
+                grilla.Columns.Add("Estado activo", "Estado activo");
                 
 
                 if (lectorBD.HasRows)
@@ -164,13 +165,13 @@ namespace pryEliasIE
                     while (lectorBD.Read())
                     {
                         datosTabla += "-" + lectorBD[0] ; //El 0 muestra la primer columna(Los ID)
-                        grilla.Rows.Add(lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                        grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], lectorBD[8]);
                     }
                 }
             }
-            catch (Exception EX)
+            catch (Exception error)
             {
-                estadoConexion = "Error:" + EX.Message;
+                estadoConexion = "Error:" + error.Message;
             }
         }
 
@@ -206,9 +207,9 @@ namespace pryEliasIE
                     }
                 }
             }
-            catch (Exception EX)
+            catch (Exception error)
             {
-                estadoConexion = "Error:" + EX.Message;
+                estadoConexion = "Error:" + error.Message;
             }
         }
 
@@ -244,9 +245,9 @@ namespace pryEliasIE
                     }
                 }
             }
-            catch (Exception EX)
+            catch (Exception error)
             {
-                estadoConexion = "Error:" + EX.Message;
+                estadoConexion = "Error:" + error.Message;
             }
         }
 
@@ -300,6 +301,96 @@ namespace pryEliasIE
             {
                 estadoConexion = error.Message;
             }
+        }
+        
+        public void ReestablecerContraseña()
+        {
+            try
+            {
+                string usuario = frmReestablecerContraseña.usuarioReestablecerContraseña;
+                string contraseña = frmReestablecerContraseña.contraseñasIguales;
+
+                string sql = "";
+
+                sql = "UPDATE Usuarios SET Contraseña = contraseña WHERE Usuario = usuario" ;
+
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Parameters.AddWithValue("contraseña", frmReestablecerContraseña.contraseñasIguales);
+                comandoBD.Parameters.AddWithValue("usuario", frmReestablecerContraseña.usuarioReestablecerContraseña);
+
+                int filasAfectadas = comandoBD.ExecuteNonQuery();
+
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Registro actualizado correctamente.");
+                }
+
+                estadoConexion = "Contraseña reestablecida con éxito";
+            }
+            catch(Exception error)
+            {
+                estadoConexion = "Error:" + error.Message;
+            }
+        }
+
+        public void ModificarEstadoActivo(int id)
+        {
+            OleDbCommand comandoBD = new OleDbCommand();
+            OleDbDataAdapter adaptadorBD;
+            DataSet objDataSet = new DataSet();
+
+            try
+            {
+                conexionBD = new OleDbConnection();
+                conexionBD.ConnectionString = cadenaConexionElClub;
+                conexionBD.Open();
+                estadoConexion = "Conectado";
+
+            }
+            catch (Exception ex)
+            {
+                estadoConexion = "Error" + ex.Message;
+            }
+
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = CommandType.TableDirect;
+            comandoBD.CommandText = "SOCIOS";
+
+            adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+            adaptadorBD.Fill(objDataSet, "SOCIOS");
+
+            DataTable objTabla = objDataSet.Tables["SOCIOS"];
+
+            foreach (DataRow registro in objTabla.Rows)
+            {
+
+                if ((int)registro["CODIGO_SOCIO"] == id)
+                {
+                    registro.BeginEdit();
+
+                    if ((bool)registro["ESTADO"])
+                    {
+                        registro["ESTADO"] = false;
+                    }
+                    else
+                    {
+                        registro["ESTADO"] = true;
+                    }
+
+                    registro.EndEdit();
+                    break;
+                }
+            }
+
+            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+
+            adaptadorBD.Update(objDS, "SOCIOS");
+
+            MessageBox.Show("¡Estado cambiado con éxito!");
         }
     }
 }

@@ -38,6 +38,9 @@
             this.txtBuscarClientePorApellido = new System.Windows.Forms.TextBox();
             this.btnBuscarClientePorApellido = new System.Windows.Forms.Button();
             this.btnVolverElClub = new System.Windows.Forms.Button();
+            this.lblCambiarEstadoActivo = new System.Windows.Forms.Label();
+            this.txtCambiarEstadoActivo = new System.Windows.Forms.TextBox();
+            this.btnCambiarEstadoActivo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvDatosElClub)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +53,7 @@
             this.dtvDatosElClub.Location = new System.Drawing.Point(12, 12);
             this.dtvDatosElClub.Name = "dtvDatosElClub";
             this.dtvDatosElClub.ReadOnly = true;
-            this.dtvDatosElClub.Size = new System.Drawing.Size(710, 198);
+            this.dtvDatosElClub.Size = new System.Drawing.Size(882, 198);
             this.dtvDatosElClub.TabIndex = 1;
             this.dtvDatosElClub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDatosElClub_CellContentClick);
             // 
@@ -89,9 +92,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblEstadoConexion});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 432);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 438);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(818, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1051, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -144,11 +147,45 @@
             this.btnVolverElClub.UseVisualStyleBackColor = true;
             this.btnVolverElClub.Click += new System.EventHandler(this.btnVolverElClub_Click);
             // 
+            // lblCambiarEstadoActivo
+            // 
+            this.lblCambiarEstadoActivo.AutoSize = true;
+            this.lblCambiarEstadoActivo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarEstadoActivo.Location = new System.Drawing.Point(576, 238);
+            this.lblCambiarEstadoActivo.Name = "lblCambiarEstadoActivo";
+            this.lblCambiarEstadoActivo.Size = new System.Drawing.Size(452, 19);
+            this.lblCambiarEstadoActivo.TabIndex = 10;
+            this.lblCambiarEstadoActivo.Text = "Ingresar ID del cliente que quiere cambiar el estado activo:";
+            // 
+            // txtCambiarEstadoActivo
+            // 
+            this.txtCambiarEstadoActivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCambiarEstadoActivo.Location = new System.Drawing.Point(580, 267);
+            this.txtCambiarEstadoActivo.Name = "txtCambiarEstadoActivo";
+            this.txtCambiarEstadoActivo.Size = new System.Drawing.Size(143, 26);
+            this.txtCambiarEstadoActivo.TabIndex = 11;
+            this.txtCambiarEstadoActivo.TextChanged += new System.EventHandler(this.txtCambiarEstadoActivo_TextChanged);
+            // 
+            // btnCambiarEstadoActivo
+            // 
+            this.btnCambiarEstadoActivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarEstadoActivo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarEstadoActivo.Location = new System.Drawing.Point(580, 299);
+            this.btnCambiarEstadoActivo.Name = "btnCambiarEstadoActivo";
+            this.btnCambiarEstadoActivo.Size = new System.Drawing.Size(100, 35);
+            this.btnCambiarEstadoActivo.TabIndex = 12;
+            this.btnCambiarEstadoActivo.Text = "Cambiar";
+            this.btnCambiarEstadoActivo.UseVisualStyleBackColor = true;
+            this.btnCambiarEstadoActivo.Click += new System.EventHandler(this.btnCambiarEstadoActivo_Click);
+            // 
             // frmElClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 454);
+            this.ClientSize = new System.Drawing.Size(1051, 460);
+            this.Controls.Add(this.btnCambiarEstadoActivo);
+            this.Controls.Add(this.txtCambiarEstadoActivo);
+            this.Controls.Add(this.lblCambiarEstadoActivo);
             this.Controls.Add(this.btnVolverElClub);
             this.Controls.Add(this.btnBuscarClientePorApellido);
             this.Controls.Add(this.txtBuscarClientePorApellido);
@@ -185,5 +222,8 @@
         private System.Windows.Forms.Button btnVolverElClub;
         public System.Windows.Forms.Button btnBuscarCliente;
         public System.Windows.Forms.Button btnBuscarClientePorApellido;
+        private System.Windows.Forms.Label lblCambiarEstadoActivo;
+        private System.Windows.Forms.TextBox txtCambiarEstadoActivo;
+        private System.Windows.Forms.Button btnCambiarEstadoActivo;
     }
 }
