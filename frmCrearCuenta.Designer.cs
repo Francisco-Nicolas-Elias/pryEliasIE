@@ -180,7 +180,7 @@
             // 
             this.pctMostrarContraseñaCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctMostrarContraseñaCrearCuenta.Image = global::pryEliasIE.Properties.Resources.foto_mostrar_contraseña;
-            this.pctMostrarContraseñaCrearCuenta.Location = new System.Drawing.Point(327, 46);
+            this.pctMostrarContraseñaCrearCuenta.Location = new System.Drawing.Point(327, 71);
             this.pctMostrarContraseñaCrearCuenta.Name = "pctMostrarContraseñaCrearCuenta";
             this.pctMostrarContraseñaCrearCuenta.Size = new System.Drawing.Size(27, 19);
             this.pctMostrarContraseñaCrearCuenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

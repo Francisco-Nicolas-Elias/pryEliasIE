@@ -42,13 +42,14 @@ namespace pryEliasIE
         }
         
         private void btnReestablecerContraseña_Click(object sender, EventArgs e)
-        {         
+        {
             frmReestablecerContraseña frmReestablecerContraseña = new frmReestablecerContraseña();
 
             frmReestablecerContraseña.txtUsuarioReestablecerContraseña.Text = txtUsuario.Text;
             frmReestablecerContraseña.txtUsuarioReestablecerContraseña.ReadOnly = true;
 
             frmReestablecerContraseña.Show();
+            
             this.Hide();
         }
         

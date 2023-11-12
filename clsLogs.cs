@@ -655,5 +655,42 @@ namespace pryEliasIE
                 estadoDeConexion = error.Message;
             }
         }
+
+        public void RegistroLogCambiarEstado()
+        {
+            try
+            {
+                ConectarBD();
+
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Cambiar estado de socio";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Exitoso";
+                nuevoRegistro["Usuario"] = frmLogin.usuario;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoDeConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+                estadoDeConexion = error.Message;
+            }
+        }
     }
 }

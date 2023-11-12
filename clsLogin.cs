@@ -324,39 +324,6 @@ namespace pryEliasIE
                 estadoConexion = error.Message;
             }
         }
-        
-        public void ReestablecerContraseña()
-        {
-            try
-            {
-                string usuario = frmReestablecerContraseña.usuarioReestablecerContraseña;
-                string contraseña = frmReestablecerContraseña.contraseñasIguales;
-
-                string sql = "";
-
-                sql = "UPDATE Usuarios SET Contraseña = contraseña WHERE Usuario = usuario" ;
-
-                ConectarBD();
-
-                comandoBD = new OleDbCommand();
-
-                comandoBD.Parameters.AddWithValue("contraseña", frmReestablecerContraseña.contraseñasIguales);
-                comandoBD.Parameters.AddWithValue("usuario", frmReestablecerContraseña.usuarioReestablecerContraseña);
-
-                int filasAfectadas = comandoBD.ExecuteNonQuery();
-
-                if (filasAfectadas > 0)
-                {
-                    MessageBox.Show("Registro actualizado correctamente.");
-                }
-
-                estadoConexion = "Contraseña reestablecida con éxito";
-            }
-            catch(Exception error)
-            {
-                estadoConexion = "Error:" + error.Message;
-            }
-        }
 
         public void ModificarEstadoSocio(int id)
         {
@@ -415,6 +382,55 @@ namespace pryEliasIE
             objAdaptador.Update(objDataSet, "SOCIOS");
 
             MessageBox.Show("¡Estado cambiado con éxito!");
+
+        }
+
+        public void ReestablecerContraseña(string usuario)
+        {
+
+            OleDbCommand comandoBD = new OleDbCommand();
+            OleDbDataAdapter objAdaptador;
+            DataSet objDataSet = new DataSet();
+
+            try
+            {
+                ConectarBD();
+                estadoConexion = "Conectado";
+
+            }
+            catch (Exception ex)
+            {
+                estadoConexion = "Error" + ex.Message;
+            }
+
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = CommandType.TableDirect;
+            comandoBD.CommandText = "Usuarios";
+
+            objAdaptador = new OleDbDataAdapter(comandoBD);
+
+            objAdaptador.Fill(objDataSet, "USUARIOS");
+
+
+            DataTable dt = objDataSet.Tables["USUARIOS"];
+
+
+            foreach (DataRow registro in dt.Rows)
+            {
+
+                if (registro["Usuario"].ToString() == usuario)
+                {
+                    registro.BeginEdit();
+
+                    registro["Contraseña"] = frmReestablecerContraseña.contraseñasIguales;
+
+                    registro.EndEdit();
+                    break;
+                }
+            }
+            OleDbCommandBuilder constructor = new OleDbCommandBuilder(objAdaptador);
+
+            objAdaptador.Update(objDataSet, "Usuarios");
 
         }
     }

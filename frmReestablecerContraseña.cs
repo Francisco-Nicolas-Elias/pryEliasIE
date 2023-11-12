@@ -87,7 +87,7 @@ namespace pryEliasIE
 
                 clsLogin objLogin = new clsLogin();
 
-                objLogin.ReestablecerContraseña();
+                objLogin.ReestablecerContraseña(usuarioReestablecerContraseña);
 
                 objLogs.RegistroLogReestablecerContraseñaExitoso();
             }

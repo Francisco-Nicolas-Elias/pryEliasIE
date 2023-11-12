@@ -116,6 +116,11 @@ namespace pryEliasIE
 
             objLogin.ModificarEstadoSocio(id);
 
+
+            clsLogs objLogs = new clsLogs();
+
+            objLogs.RegistroLogCambiarEstado();
+
             txtCambiarEstadoActivo.Clear();
         }
 
