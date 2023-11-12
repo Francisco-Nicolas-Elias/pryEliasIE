@@ -31,8 +31,6 @@ namespace pryEliasIE
 
             lblEstadoConexion.BackColor = Color.Green;
 
-            //objBaseDatos.TraerDatosElClub(); //Al final no la uso
-
 
             objBaseDatos.TraerDatosElClub(dtvDatosElClub);
 

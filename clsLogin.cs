@@ -13,19 +13,25 @@ namespace pryEliasIE
 {
     internal class clsLogin
     {
+        //Creo una instancia de la clase OleDbConnection, que utilizaré para establecer la conexión con la base de datos 
         OleDbConnection conexionBD = new OleDbConnection();
-        OleDbCommand comandoBD = new OleDbCommand(); //Sirve para datos, editar y borrar 
+
+        //Creo una instancia de la clase OleDbCommand que sirve para enviar comandos a la base de datos, consultas, actualizaciones, etc
+        OleDbCommand comandoBD = new OleDbCommand(); 
+
+        //Declaro una variable de tipo OleDbDataReader que voy a utilizar para leer un conjunto de datos obtenidos de la base de datos 
         OleDbDataReader lectorBD;
 
+        //Declaro una variable de tipo OleDbDataAdapter que voy a utilizar para llenar un conjunto de datos (Ej: DataSet) y 
+        //actualizar la base de datos con los cambios realizados en dicho conjunto
         OleDbDataAdapter adaptadorBD;
 
+        //Delaro una variable de tipo DataSet que voy a utilizar como contenedor de datos de las tablas de la base de datos 
         DataSet objDS;
 
         string cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
 
         string cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
-
-        public string datosTabla = "";
 
         public string estadoConexion = "";
 
@@ -35,15 +41,16 @@ namespace pryEliasIE
         {
             try
             {
-                cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
-
-                cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
-
+                //Creo una nueva instancia de la clase OleDbConecction
                 conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionBase;
+
+                //Establezco la cadena de conexión del objeto creado 
                 conexionBD.ConnectionString = cadenaConexionElClub;
+
+                //Abro la conexión con la base de datos 
                 conexionBD.Open();
 
+                //Creo una instancia de la clase DataSet que voy a usar para contener datos 
                 objDS = new DataSet();
 
                 estadoConexion = "Conectado";
@@ -53,7 +60,7 @@ namespace pryEliasIE
                 estadoConexion = error.Message;
             }
 
-            // Constructor para inicializar la conexión y el comando.
+            //Creo las instancias para la conexión y el comando.
             conexionBD = new OleDbConnection();
             comandoBD = new OleDbCommand();
         }
@@ -62,7 +69,9 @@ namespace pryEliasIE
         {
             try
             {
+                //Establezco la cadena de conexión con la base de datos 
                 conexionBD.ConnectionString = cadenaConexionBase;
+                //Abro la conexión con la base de datos 
                 conexionBD.Open();
             }
             catch(Exception error)
@@ -151,6 +160,7 @@ namespace pryEliasIE
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
                 comandoBD.CommandText = "SOCIOS";
 
+                //Ejecuto un comando y creo un lector de datos para leer los resultados 
                 lectorBD = comandoBD.ExecuteReader();
 
                 grilla.Columns.Add("ID", "ID");
@@ -185,7 +195,6 @@ namespace pryEliasIE
                             sexo = "Femenino";
                         }
 
-                        datosTabla += "-" + lectorBD[0]; //El 0 muestra la primer columna(Los ID)
                         grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], sexo, lectorBD[6], lectorBD[7], estadoCliente);   
                         
                     }
@@ -292,7 +301,7 @@ namespace pryEliasIE
                 //Creo el objeto DataAdapter pasando como parámetro el objeto comando que quiero vincular
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
 
-                //Ejecuto la lectura de la tabla y almaceno su contenido en el dataAdapter
+                //Ejecuto la lectura de la tabla y almaceno su contenido en el dataSet
                 adaptadorBD.Fill(objDS, "Usuarios");
 
                 //Obtengo una referencia a la tabla
@@ -328,42 +337,64 @@ namespace pryEliasIE
         public void ModificarEstadoSocio(int id)
         {
 
+            //Creo una instancia de la clase OleDbCommand, que voy a utilizar para mandar comandos a la base
             OleDbCommand comandoBD = new OleDbCommand();
+
+            //Declaro una variable de tipo OleDbDataAdapter para luego llenar un conjunto de datos (objDataSet) con datos de la base de datos 
             OleDbDataAdapter objAdaptador;
+
+            //Creo una instancia de la clase DataSet, que usaré como contenedor de los datos de la base de datos 
             DataSet objDataSet = new DataSet();
 
             try
             {
+                //Creo una instancia de la clase OleDbConecction que representa una conexión a la base de datos 
                 conexionBD = new OleDbConnection();
+
+                //Establezco la cadena de conexión
                 conexionBD.ConnectionString = cadenaConexionElClub;
+
+                //Abro la conexión a la base de datos
                 conexionBD.Open();
+                
+                //Si abre correctamente estadoConexion va a valer "Conectado"
                 estadoConexion = "Conectado";
 
             }
             catch (Exception ex)
             {
+                //Si no se logra la conexión estadoConexión va a valer "Error"
                 estadoConexion = "Error" + ex.Message;
             }
 
+            //Establezco la conexión, para que cuando se ejecute el comando lo opere en la base de datos que debe hacerse
             comandoBD.Connection = conexionBD;
+
+            //Establezco el tipo de comando, con este comando le indico que voy a modificar una tabla en específica
             comandoBD.CommandType = CommandType.TableDirect;
+
+            //Le digo que tabla es la que se va a modificar 
             comandoBD.CommandText = "SOCIOS";
 
+            //Creo el objeto DataAdapter pasando como parámetro el objeto comando que quiero vincular
             objAdaptador = new OleDbDataAdapter(comandoBD);
 
+            //Ejecuto la lectura de la tabla y almaceno su contenido en el dataSet
             objAdaptador.Fill(objDataSet, "SOCIOS");
 
-
+            //Obtengo la referencia a la tabla del conjunto de datos 
             DataTable dt = objDataSet.Tables["SOCIOS"];
 
-
+            //Itero sobre cada fila de la tabla
             foreach (DataRow registro in dt.Rows)
             { 
-
+                //Comparo si el valor de la columna código socio es igual al id ingresado por el usuario
                 if ((int)registro["CODIGO_SOCIO"] == id)
                 {
+                    //Comienzo a editar la fila 
                     registro.BeginEdit();
 
+                    //Cambio el valor de true a false o viceversa dependiendo el estado actual del socio
                     if ((bool)registro["ESTADO"])
                     {
                         registro["ESTADO"] = false;
@@ -373,16 +404,21 @@ namespace pryEliasIE
                         registro["ESTADO"] = true;
                     }
 
+                    //Finalizo la edición de la fila 
                     registro.EndEdit();
+
+                    //Salgo del bucle después de modificar al socio
                     break;
                 }
             }
+
+            //Creo un constructor de comandos para actualizar la base de datos con las nuevas actualizaciones 
             OleDbCommandBuilder constructor = new OleDbCommandBuilder(objAdaptador);
 
+            //Actualiza la base de datos con los cambios realizados 
             objAdaptador.Update(objDataSet, "SOCIOS");
 
             MessageBox.Show("¡Estado cambiado con éxito!");
-
         }
 
         public void ReestablecerContraseña(string usuario)

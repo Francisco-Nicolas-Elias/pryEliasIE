@@ -35,8 +35,7 @@ namespace pryEliasIE
                 cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";              
 
                 conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionBase;
-                conexionBD.ConnectionString = cadenaConexionElClub;
+                conexionBD.ConnectionString = cadenaConexionBase;              
                 conexionBD.Open();
 
                 objDS = new DataSet();
